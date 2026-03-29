@@ -220,7 +220,7 @@ h6 {
   min-width: 320px;
   box-sizing: border-box;
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .hero__container {
     padding: 0 4px;
   }
@@ -232,9 +232,9 @@ h6 {
   align-items: center;
   justify-content: flex-start;
   background-color: #858280;
-  height: 544px;
+  height: 600px;
   border-radius: 30px;
-  padding-top: 100px;
+  padding-top: 120px;
   overflow: hidden;
   color: #FFFFFF;
   background-size: cover;
@@ -242,25 +242,27 @@ h6 {
 }
 @media (max-width: 1239px) {
   .hero__inner {
-    height: 400px;
-    padding: 50px 0;
+    height: 500px;
+    padding: 90px 0;
   }
 }
 @media (max-width: 1023px) {
   .hero__inner {
-    height: 300px;
+    height: 400px;
     padding: 40px 0;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
   .hero__inner {
     height: auto;
-    padding: 30px 0;
+    padding: 40px 0;
     justify-content: center;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .hero__inner {
+    padding: 30px 0;
     min-height: 500px;
   }
 }
@@ -290,25 +292,32 @@ h6 {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 720px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+@media (max-width: 1239px) {
+  .hero__content {
+    max-width: 600px;
+  }
+}
 @media (max-width: 1023px) {
   .hero__content {
+    max-width: 500px;
     padding: 0 20px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .hero__content {
-    padding: 0 14px;
+    max-width: 400px;
+    padding: 0 20px;
   }
 }
 .hero__title {
   font-size: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1239px) {
   .hero__title {
@@ -320,7 +329,7 @@ h6 {
     font-size: 40px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .hero__title {
     font-size: 32px;
   }
@@ -343,7 +352,7 @@ h6 {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .hero__subtitle {
     font-size: 16px;
     margin-bottom: 30px;
@@ -369,6 +378,13 @@ h6 {
 @media (max-width: 767px) {
   .hero__btns {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .hero__btns {
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
   }
 }
 .hero__address {

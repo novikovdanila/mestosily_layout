@@ -24,31 +24,33 @@
         align-items: center;
         justify-content: flex-start;
         background-color: $color-gray;
-        height: 544px;
+        height: 600px;
         border-radius: $radius-xlarge;
-        padding-top: 100px;
+        padding-top: 120px;
         overflow: hidden;
         color: $color-white;
         background-size: cover;
         background-position: center;
 
         @include tab-1024 {
-            height: 400px;
-            padding: 50px 0;
+            height: 500px;
+            padding: 90px 0;
         }
 
         @include tab-768 {
-            height: 300px;
+            height: 400px;
             padding: 40px 0;
+            justify-content: center;
         }
 
         @include mobile-lg {
             height: auto;
-            padding: 30px 0;
+            padding: 40px 0;
             justify-content: center;
         }
 
         @include mobile {
+            padding: 30px 0;
             min-height: 500px;
         }
 
@@ -80,24 +82,30 @@
         position: relative;
         z-index: 2;
         width: 100%;
-        max-width: 720px;
+        max-width: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
+        @include tab-1024 {
+            max-width: 600px;
+        }
+
         @include tab-768 {
+            max-width: 500px;
             padding: 0 20px;
         }
 
         @include mobile {
-            padding: 0 14px;
+            max-width: 400px;
+            padding: 0 20px;
         }
     }
 
     &__title {
         font-size: 60px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         @include tab-1024 {
             font-size: 52px;
@@ -151,6 +159,12 @@
 
         @include mobile-lg {
             margin-bottom: 30px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+            flex-grow: 1;
         }
     }
 
