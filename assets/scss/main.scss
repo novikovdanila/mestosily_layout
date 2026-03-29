@@ -1,0 +1,40 @@
+// =============================================
+// main.scss — Главный файл стилей
+// =============================================
+
+// 1. ABSTRACTS — Сначала всё, что нужно для конфигурации
+@use 'base/variables' as *; // цвета, шрифты, размеры, z-index и т.д.
+// @use 'abstracts/mixins' as *; // все миксины (responsive, flex, buttons и др.)
+
+// 2. BASE — Базовые стили (сброс + типографика + общие правила)
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
+
+// 3. LAYOUT — Глобальная структура сайта (повторяется на всех страницах)
+@use 'layout/header';
+@use 'layout/footer';
+
+// 4. COMPONENTS — Переиспользуемые UI-компоненты
+@use 'components/buttons';
+@use 'components/modal';
+// @use 'components/card';
+// @use 'components/teacher-card';
+// @use 'components/schedule';
+// @use 'components/form';
+// добавляй новые компоненты сюда
+
+// 5. PAGES — Специфичные стили для отдельных страниц
+@use 'pages/home';
+// @use 'pages/about';
+// @use 'pages/schedule';
+// @use 'pages/contact';
+// @use 'pages/prices';
+// и т.д. для остальных 8 шаблонов
+
+// =============================================
+// Примечание:
+// - Порядок очень важен!
+// - Abstracts идут первыми
+// - Base → Layout → Components → Pages
+// =============================================
