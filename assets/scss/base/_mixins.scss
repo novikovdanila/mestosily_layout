@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+@mixin tab-1024 {
+    @media (max-width: #{$tab_1024}) {
+        @content;
+    }
+}
+
+@mixin tab-768 {
+    @media (max-width: #{$tab_768}) {
+        @content;
+    }
+}
+
+@mixin mobile-lg {
+    @media (max-width: #{$mobile_lg}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}

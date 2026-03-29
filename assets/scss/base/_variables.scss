@@ -1,0 +1,49 @@
+// Colors
+
+$color-dark: #211D1C;
+$color-white: #FFFFFF;
+$color-gray-dark: #5E5C5B;
+$color-gray: #858280;
+
+$color-primary: #B59992;
+$color-secondary: #B16958;
+$color-accent: #DEA293;
+
+$color-border: #E5E2E1;
+
+$color-bg-main: #F6F1EE;
+$color-bg-light: #F6F9FC;
+$color-bg-promo: #E7E6E3;
+
+$color-text-main: $color-dark;
+$color-text-secondary: $color-gray;
+$color-text-accent: $color-secondary;
+
+
+// Fonts
+
+$font-main: 'Google Sans', sans-serif;
+
+
+// Grid & Layout
+$container-width: 1268px;
+$container-padding: 20px;
+$container-hero-width: 1600px;
+$container-hero-padding: 20px;
+
+
+// Corners
+
+$radius-small: 6px;
+$radius-medium: 10px;
+$radius-large: 20px;
+$radius-xlarge: 30px;
+$radius-2xlarge: 60px;
+
+
+// Breakpoints
+$desktop: 1312px;
+$tab_1024: 1239px;
+$tab_768: 1023px;
+$mobile_lg: 767px;
+$mobile: 480px;

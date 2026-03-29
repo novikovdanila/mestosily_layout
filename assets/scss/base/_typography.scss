@@ -1,0 +1,95 @@
+@use 'variables' as *;
+@forward 'mixins';
+@use 'mixins' as *;
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: $font-main;
+    font-size: 16px;
+    color: $color-text-main;
+}
+
+h1 {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 60px;
+
+    @include tab-1024 {
+        font-size: 46px;
+    }
+
+    @include tab-768 {
+        font-size: 40px;
+    }
+
+    @include mobile-lg {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 44px;
+
+    @include tab-1024 {
+        font-size: 34px;
+    }
+
+    @include tab-768 {
+        font-size: 30px;
+    }
+
+    @include mobile-lg {
+        font-size: 26px;
+    }
+}
+
+h3 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 32px;
+
+    @include tab-1024 {
+        font-size: 28px;
+    }
+
+    @include tab-768 {
+        font-size: 24px;
+    }
+
+    @include mobile-lg {
+        font-size: 20px;
+    }
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}

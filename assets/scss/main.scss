@@ -1,17 +1,9 @@
-// =============================================
-// main.scss — Главный файл стилей
-// =============================================
-
-// 1. ABSTRACTS — Сначала всё, что нужно для конфигурации
 @use 'base/variables' as *; // цвета, шрифты, размеры, z-index и т.д.
-// @use 'abstracts/mixins' as *; // все миксины (responsive, flex, buttons и др.)
 
-// 2. BASE — Базовые стили (сброс + типографика + общие правила)
 @use 'base/reset';
 @use 'base/typography';
-@use 'base/base';
+@use 'base/common';
 
-// 3. LAYOUT — Глобальная структура сайта (повторяется на всех страницах)
 @use 'layout/header';
 @use 'layout/footer';
 
