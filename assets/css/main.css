@@ -193,10 +193,11 @@ h6 {
 }
 
 .card-class {
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 408px;
 }
 .card-class__img {
   border-radius: 20px;
@@ -214,6 +215,13 @@ h6 {
   font-size: 16px;
   line-height: 1.4;
   color: #858280;
+}
+
+.swiper-lazy-preloader {
+  --swiper-preloader-color: #E5E2E1;
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
 }
 
 .custom-slider {
@@ -583,6 +591,11 @@ h6 {
 .slider-classes__slider-wrapper {
   position: relative;
   width: 100%;
+}
+.slider-classes__item {
+  width: auto;
+  min-width: 408px;
+  max-width: 408px;
 }
 .slider-classes__button-prev, .slider-classes__button-next {
   background-color: #FFFFFF;

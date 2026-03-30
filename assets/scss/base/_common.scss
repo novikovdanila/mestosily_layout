@@ -38,10 +38,11 @@
 //Карточки классов
 
 .card-class {
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    width: 408px;
 
     &__img {
         border-radius: $radius-large;
@@ -68,6 +69,13 @@
 
 
 //Слайдер
+.swiper-lazy-preloader {
+    --swiper-preloader-color: #E5E2E1;
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
 .custom-slider {
     position: relative;
     width: 100%;

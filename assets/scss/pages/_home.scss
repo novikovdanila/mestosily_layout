@@ -244,6 +244,12 @@
         width: 100%;
     }
 
+    &__item {
+        width: auto;
+        min-width: 408px;
+        max-width: 408px;
+    }
+
     &__button-prev,
     &__button-next {
         background-color: $color-white;
