@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Место силы</title>
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -151,18 +151,18 @@
                 </div>
             </div>
         </section>
-        <section class="slide-classes">
+        <section class="slider-classes">
             <div class="container">
-                <div class="slide-classes__inner">
+                <div class="slider-classes__inner">
                     <div class="section-header">
-                        <h2 class="slide-classes__title">Направления для <span class="text-accent">любого уровня</span>
+                        <h2 class="slider-classes__title">Направления для <span class="text-accent">любого уровня</span>
                         </h2>
-                        <p class="slide-classes__subtitle subtitle">Бережно адаптируем нагрузку для новичков и подберём
+                        <p class="slider-classes__subtitle subtitle">Бережно адаптируем нагрузку для новичков и подберём
                             интенсивный
                             темп для тех, кто готов к большему</p>
                     </div>
-                    <div class="slide-classes__wrapper">
-                        <div class="slide-classes__filter filter">
+                    <div class="slider-classes__wrapper ">
+                        <div class="slider-classes__filter filter">
                             <button class="filter__btn filter__btn--active">Все</button>
                             <button class="filter__btn">Йога</button>
                             <button class="filter__btn">Фитнес</button>
@@ -171,67 +171,55 @@
                             <button class="filter__btn">Спецклассы</button>
                         </div>
 
-                        <div class="slide-classes__slider js-classes-swiper swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#" aria-label="Хатха-йога" class="card-class">
-                                        <div class="card-class__img">
-                                            <img src="assets/img/classes/hatha-yoga.webp" alt="Хатха-йога">
-                                        </div>
-                                        <div class="card-class__content">
-                                            <h3 class="card-class__title">Хатха-йога</h3>
-                                            <p class="card-class__text">Основы йоги с акцентом на асаны и дыхание.</p>
-                                        </div>
-                                    </a>
+                        <div class="slider-classes__slider-wrapper custom-slider">
+
+                            <div class="custom-slider__nav">
+                                <div
+                                    class="swiper-button-prev slider-classes__button-prev custom-slider__nav-prev slider-btn">
+                                    <svg width="14" height="14">
+                                        <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
+                                    </svg>
                                 </div>
-                                <div class="swiper-slide">
-                                    <a href="#" aria-label="Айенгара-йога" class="card-class">
-                                        <div class="card-class__img">
-                                            <img src="assets/img/classes/iyengar-yoga.webp" alt="Айенгара-йога">
-                                        </div>
-                                        <div class="card-class__content">
-                                            <h3 class="card-class__title">Айенгара-йога</h3>
-                                            <p class="card-class__text">Точность асан с пропсами для поддержки.</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" aria-label="Fly Stretching" class="card-class">
-                                        <div class="card-class__img">
-                                            <img src="assets/img/classes/fly-stretching.webp" alt="Fly Stretching">
-                                        </div>
-                                        <div class="card-class__content">
-                                            <h3 class="card-class__title">Fly Stretching</h3>
-                                            <p class="card-class__text">Глубокая растяжка в гамаках
-                                                без нагрузки на спину.</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" aria-label="Фитбол" class="card-class">
-                                        <div class="card-class__img">
-                                            <img src="assets/img/classes/fitball.webp" alt="Фитбол">
-                                        </div>
-                                        <div class="card-class__content">
-                                            <h3 class="card-class__title">Фитбол</h3>
-                                            <p class="card-class__text">Упражнения на мяче для баланса, кора и тонуса
-                                            </p>
-                                        </div>
-                                    </a>
+                                <div
+                                    class="swiper-button-next slider-classes__button-next custom-slider__nav-next slider-btn">
+                                    <svg width="14" height="14">
+                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="classes-slider__pagination swiper-pagination "></div>
-                            <div class="classes-slider__button-prev swiper-button-prev"></div>
-                            <div class="classes-slider__button-next swiper-button-next"></div>
+
+                            <div class="swiper js-slider-classes">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide card-test">
+                                        <!-- loading="lazy"   <div class="swiper-lazy-preloader"></div>  -->
+                                        Slide 1<br>fghfghfg<br>fghfghfg<br>fghfghfg<br>fghfghfg
+                                    </div>
+                                    <div class="swiper-slide card-test">
+                                        Slide 2<br>fghfghfg<br>fghfghfg<br>fghfghfg<br>fghfghfg
+                                    </div>
+                                    <div class="swiper-slide card-test">
+                                        Slide 3<br>fghfghfg<br>fghfghfg<br>fghfghfg<br>fghfghfg
+                                    </div>
+                                    <div class="swiper-slide card-test">
+                                        Slide 4<br>fghfghfg<br>fghfghfg<br>fghfghfg<br>fghfghfg
+                                    </div>
+                                    <div class="swiper-slide card-test">
+                                        Slide 5<br>fghfghfg<br>fghfghfg<br>fghfghfg<br>fghfghfg
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination slider-classes__pagination custom-slider__pagination"></div>
                     </div>
-                    <a href="#" class="btn btn--outline slide-classes__btn">
-                        Смотреть все классы
-                        <svg width="14" height="14">
-                            <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
-                        </svg>
-                    </a>
-                </div>
+
+                    <div class="slider-classes__btn-wrapper">
+                        <a href="#" class="btn btn--outline slider-classes__btn">
+                            Смотреть все классы
+                            <svg width="14" height="14">
+                                <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
         </section>
     </main>
 

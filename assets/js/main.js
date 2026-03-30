@@ -1,25 +1,35 @@
-const swiper = new Swiper('.js-classes-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 24,
+// Инициализируем конкретный слайдер
+const classesSwiper = new Swiper(".js-slider-classes", {
+    direction: "horizontal",
+    speed: 400,
+    // loop: false, // Рекомендую false, если будет фильтрация
+    slidesPerView: "auto",
+    watchOverflow: true, // Скроет навигацию, если слайдов мало
 
-    // If we need pagination
     pagination: {
-        el: '.classes-slider__pagination',
+        el: ".swiper-pagination, .slider-classes__pagination",
         clickable: true,
+        dynamicBullets: true,
     },
 
-    // Navigation arrows
     navigation: {
-        nextEl: '.classes-slider__button-next',
-        prevEl: '.classes-slider__button-prev',
+        addIcons: false,
+        nextEl: ".swiper-button-next, .slider-classes__button-next",
+        prevEl: ".swiper-button-prev, .slider-classes__button-prev",
     },
 
     breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
+        320: {
+            spaceBetween: 10,
+        },
+        768: {
+            spaceBetween: 20,
+        },
+        1024: {
+            spaceBetween: 20,
+        },
+        1312: {
+            spaceBetween: 24,
+        }
     }
-
 });

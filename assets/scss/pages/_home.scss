@@ -204,7 +204,7 @@
     }
 }
 
-.slide-classes {
+.slider-classes {
     margin-bottom: 120px;
 
     &__inner {
@@ -239,12 +239,46 @@
         }
     }
 
-    &__slider {
-        padding-bottom: 60px; // space for pagination
-        overflow: visible; // allows buttons/pagination outside the main flow if needed
+    &__slider-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    &__button-prev,
+    &__button-next {
+        background-color: $color-white;
+        color: #6C5752;
+        border: 1px solid #A6918C;
+
+        &:hover {
+            border-color: $color-secondary;
+            color: $color-secondary;
+        }
+    }
+
+    &__btn-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
+
+    .card-test {
+        width: auto;
+        min-width: 408px;
+        max-width: 408px;
+        height: auto;
+        background-color: $color-gray;
+        border-radius: $radius-large;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__btn {
         align-self: center;

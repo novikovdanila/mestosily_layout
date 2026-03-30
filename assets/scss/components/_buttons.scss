@@ -11,7 +11,8 @@
     line-height: normal;
     text-align: center;
     border-radius: $radius-large;
-    transition: background-color 0.3s ease;
+    transition: background-color $transition-base;
+    transition: color $transition-base;
     cursor: pointer;
     border: 1px solid transparent;
     gap: 10px;
@@ -47,5 +48,34 @@
             background-color: $color-secondary;
             color: $color-white;
         }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 2px solid $color-border;
+        color: $color-dark;
+
+        &:hover {
+            color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+}
+
+.slider-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color $transition-base;
+    transition: color $transition-base;
+    transition: border-color $transition-base;
+
+    svg {
+        width: 14px;
+        height: 14px;
     }
 }
