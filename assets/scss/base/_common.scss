@@ -1,8 +1,65 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 
 .container {
     max-width: $container-width + ($container-padding * 2);
+    width: 100%;
     margin: 0 auto;
     padding: 0 $container-padding;
+}
+
+.text-accent {
+    color: $color-secondary;
+}
+
+//Заголовки секций
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+
+    @include tab-768 {
+        font-size: 18px;
+    }
+
+    @include mobile {
+        font-size: 16px;
+    }
+}
+
+
+//Карточки классов
+
+.card-class {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 408px;
+
+    &__img {
+        border-radius: $radius-large;
+        overflow: hidden;
+    }
+
+    &__content {
+        padding: 0 4px;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.4;
+        color: $color-gray;
+    }
 }

@@ -49,4 +49,12 @@
         <circle cx="13" cy="10" r="1" fill="currentColor"/>
         <circle cx="13" cy="13" r="1" fill="currentColor"/>
     </symbol>
+    <symbol id="arrow-right" viewBox="0 0 14 14">
+        <path d="M7 1L12 7L7 13" stroke="currentColor" stroke-width="2" fill="none" />
+        <path d="M1 7H12" stroke="currentColor" stroke-width="2" fill="none" />
+    </symbol>
+    <symbol id="arrow-left" viewBox="0 0 14 14">
+        <path d="M7 1L2 7L7 13" stroke="currentColor" stroke-width="2" fill="none" />
+        <path d="M13 7H2" stroke="currentColor" stroke-width="2" fill="none" />
+    </symbol>
 </svg>
