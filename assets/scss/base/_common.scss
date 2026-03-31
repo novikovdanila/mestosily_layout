@@ -38,6 +38,7 @@
 //Карточки классов
 
 .card-class {
+    position: relative;
     width: auto;
     height: auto;
     display: flex;
@@ -45,6 +46,7 @@
     gap: 14px;
 
     &__img {
+        position: relative;
         border-radius: $radius-large;
         overflow: hidden;
     }
@@ -63,6 +65,25 @@
         font-size: 16px;
         line-height: 1.4;
         color: $color-gray;
+    }
+
+    &__tag {
+        position: absolute;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: $radius-large;
+        font-size: 16px;
+        pointer-events: none;
+        z-index: 2;
+        bottom: 10px;
+        left: 10px;
+
+        &--personally {
+            background-color: #A78BFB;
+            color: $color-white;
+        }
     }
 }
 

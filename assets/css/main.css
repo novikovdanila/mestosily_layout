@@ -193,6 +193,7 @@ h6 {
 }
 
 .card-class {
+  position: relative;
   width: auto;
   height: auto;
   display: flex;
@@ -200,6 +201,7 @@ h6 {
   gap: 14px;
 }
 .card-class__img {
+  position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -215,6 +217,23 @@ h6 {
   font-size: 16px;
   line-height: 1.4;
   color: #858280;
+}
+.card-class__tag {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+  bottom: 10px;
+  left: 10px;
+}
+.card-class__tag--personally {
+  background-color: #A78BFB;
+  color: #FFFFFF;
 }
 
 .swiper-lazy-preloader {
