@@ -44,11 +44,39 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        .card-class__img img {
+            transform: scale(1.05);
+        }
+
+        .card-class__title {
+            color: $color-secondary;
+        }
+
+        .card-class__text {
+            color: $color-secondary;
+        }
+    }
 
     &__img {
         position: relative;
         border-radius: $radius-large;
         overflow: hidden;
+
+        @include mobile {
+            border-radius: $radius-medium;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $transition-base;
+        }
     }
 
     &__content {
@@ -59,12 +87,23 @@
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 4px;
+        color: $color-dark;
+        transition: color $transition-base;
+
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
     &__text {
         font-size: 16px;
         line-height: 1.4;
         color: $color-gray;
+        transition: color $transition-base;
+
+        @include mobile {
+            font-size: 14px;
+        }
     }
 
     &__tag {
@@ -87,6 +126,7 @@
     }
 }
 
+//--Карточки классов
 
 
 //Слайдер
@@ -101,6 +141,15 @@
     position: relative;
     width: 100%;
 
+    &__swiper {
+        overflow: hidden;
+
+        @include tab-1024 {
+            overflow: visible;
+        }
+    }
+
+
     &__nav {
         position: absolute;
         top: 50%;
@@ -114,6 +163,10 @@
         align-items: center;
 
         pointer-events: none;
+
+        @include tab-1024 {
+            display: none;
+        }
 
         &-prev,
         &-next {
@@ -138,6 +191,14 @@
         bottom: 0px !important;
         margin-top: 40px !important;
 
+        @include tab-1024 {
+            margin-top: 30px !important;
+        }
+
+        @include mobile {
+            margin-top: 20px !important;
+        }
+
         >.swiper-pagination-bullet {
             width: 8px;
             height: 8px;
@@ -158,3 +219,59 @@
         }
     }
 }
+
+//--Слайдер
+
+//Фильтр
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    @include tab-768 {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    &__btn {
+        padding: 12px 26px;
+        border-radius: $radius-large;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition:
+            border-color $transition-base,
+            color $transition-base,
+            background-color $transition-base;
+        border: 1px solid $color-border;
+        background-color: $color-white;
+        color: $color-dark;
+        white-space: nowrap;
+
+        &:hover {
+            border-color: $color-secondary;
+            color: $color-secondary;
+        }
+
+        &--active {
+            border-color: $color-secondary;
+            background-color: $color-secondary;
+            color: $color-white;
+            pointer-events: none;
+        }
+
+        @include tab-768 {
+            padding: 10px 16px;
+            font-size: 16px;
+        }
+
+        @include mobile {
+            padding: 8px 14px;
+            font-size: 16px;
+        }
+    }
+}
+
+//--Фильтр

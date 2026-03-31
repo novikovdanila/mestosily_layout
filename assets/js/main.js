@@ -21,7 +21,7 @@ const classesSwiper = new Swiper(".js-slider-classes", {
 
     breakpoints: {
         320: {
-            spaceBetween: 10,
+            spaceBetween: 8,
         },
         768: {
             spaceBetween: 20,
