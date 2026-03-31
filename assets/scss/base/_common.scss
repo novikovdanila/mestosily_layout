@@ -229,10 +229,37 @@
     align-items: center;
     gap: 6px;
     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    @include tab-768 {
+    @include mobile-lg {
+        justify-content: flex-start;
         flex-wrap: nowrap;
         overflow-x: auto;
+        padding: 0 $container-padding;
+        margin: 0 (-$container-padding);
+        scroll-padding: 0 $container-padding;
+
+        // Скрытие скроллбара
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        // Плавность и прилипание
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        // Сглаживание (маска)
+        // mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+    }
+
+    &__item {
+        @include tab-768 {
+            scroll-snap-align: start;
+        }
     }
 
     &__btn {

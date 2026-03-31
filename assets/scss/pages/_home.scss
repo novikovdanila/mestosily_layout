@@ -64,6 +64,7 @@
             height: auto;
             padding: 40px 0;
             justify-content: center;
+            border-radius: $radius-large;
         }
 
         @include mobile {
@@ -81,6 +82,10 @@
             background-color: rgba(42, 38, 37, 0.7);
             z-index: 1;
             pointer-events: none;
+
+            @include mobile-lg {
+                border-radius: $radius-large;
+            }
         }
     }
 
@@ -222,6 +227,7 @@
 
 .slider-classes {
     margin-bottom: 120px;
+    overflow: hidden;
 
     &__inner {
         display: flex;

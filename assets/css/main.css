@@ -359,11 +359,31 @@ h6 {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .filter {
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding: 0 20px;
+    margin: 0 -20px;
+    scroll-padding: 0 20px;
+    scrollbar-width: none;
+  }
+  .filter::-webkit-scrollbar {
+    display: none;
+  }
+  .filter {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1023px) {
+  .filter__item {
+    scroll-snap-align: start;
   }
 }
 .filter__btn {
@@ -540,6 +560,7 @@ h6 {
     height: auto;
     padding: 40px 0;
     justify-content: center;
+    border-radius: 20px;
   }
 }
 @media (max-width: 560px) {
@@ -558,6 +579,11 @@ h6 {
   background-color: rgba(42, 38, 37, 0.7);
   z-index: 1;
   pointer-events: none;
+}
+@media (max-width: 767px) {
+  .hero__inner::before {
+    border-radius: 20px;
+  }
 }
 .hero__video {
   position: absolute;
@@ -702,6 +728,7 @@ h6 {
 
 .slider-classes {
   margin-bottom: 120px;
+  overflow: hidden;
 }
 .slider-classes__inner {
   display: flex;
