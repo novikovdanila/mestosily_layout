@@ -164,22 +164,22 @@
                     <div class="slider-classes__wrapper ">
                         <ul class="slider-classes__filter filter">
                             <li class="filter__item">
-                                <button class="filter__btn filter__btn--active">Все</button>
+                                <button class="filter__btn filter__btn--active" data-filter="all">Все</button>
                             </li>
                             <li class="filter__item">
-                                <button class="filter__btn">Йога</button>
+                                <button class="filter__btn" data-filter="yoga">Йога</button>
                             </li>
                             <li class="filter__item">
-                                <button class="filter__btn">Фитнес</button>
+                                <button class="filter__btn" data-filter="fitness">Фитнес</button>
                             </li>
                             <li class="filter__item">
-                                <button class="filter__btn">Гамаки</button>
+                                <button class="filter__btn" data-filter="hammocks">Гамаки</button>
                             </li>
                             <li class="filter__item">
-                                <button class="filter__btn">Разумное тело</button>
+                                <button class="filter__btn" data-filter="soft">Мягкие практики</button>
                             </li>
                             <li class="filter__item">
-                                <button class="filter__btn">Спецклассы</button>
+                                <button class="filter__btn" data-filter="special">Спецклассы</button>
                             </li>
                         </ul>
 
@@ -203,7 +203,7 @@
                             <div class="swiper js-slider-classes custom-slider__swiper">
                                 <div class="swiper-wrapper">
                                     <!-- карточки -->
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/hatha-yoga.webp" alt="Хатха-йога"
@@ -218,7 +218,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga soft">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/iyengar-yoga.webp" alt="Айенгара"
@@ -231,7 +231,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="hammocks">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/fly-stretching.webp" alt="Fly Stretching"
@@ -245,7 +245,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/fitball.webp" alt="Фитбол" loading="lazy">
@@ -258,7 +258,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/suspension-training.webp"
@@ -272,7 +272,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="soft">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/pilates.webp" alt="Пилатес" loading="lazy">
@@ -285,7 +285,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/ishvara-yoga.webp" alt="Ишвара-йога"
@@ -299,7 +299,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga fitness special">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/acro-yoga.webp" alt="Акройога"
@@ -313,7 +313,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga soft special">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/prenatal-yoga.webp"
@@ -327,7 +327,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga hammocks">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/aerial-yoga.webp" alt="Йога в гамаках"
@@ -341,7 +341,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="hammocks fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/fly-fitness.webp" alt="Fly fitness"
@@ -355,7 +355,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/yoga-fitness.webp" alt="Йога фитнес"
@@ -369,7 +369,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="soft">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/healthy-back.webp" alt="Здоровая спина"
@@ -383,7 +383,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/functional-training.webp"
@@ -397,7 +397,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="fitness">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <img src="assets/img/classes/zumba.webp" alt="Зумба" loading="lazy">
@@ -409,7 +409,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide slider-classes__item">
+                                    <div class="swiper-slide slider-classes__item" data-category="yoga soft">
                                         <a href="#" class="card-class">
                                             <div class="card-class__img">
                                                 <div class="card-class__tag card-class__tag--personally">Персонально
@@ -445,8 +445,8 @@
         </section>
     </main>
 
-    <script src="assets/js/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/extensions/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>

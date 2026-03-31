@@ -240,20 +240,14 @@
         padding: 0 $container-padding;
         margin: 0 (-$container-padding);
         scroll-padding: 0 $container-padding;
-
-        // Скрытие скроллбара
         scrollbar-width: none;
 
         &::-webkit-scrollbar {
             display: none;
         }
 
-        // Плавность и прилипание
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-
-        // Сглаживание (маска)
-        // mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
     }
 
     &__item {
@@ -263,7 +257,7 @@
     }
 
     &__btn {
-        padding: 12px 26px;
+        padding: 10px 26px;
         border-radius: $radius-large;
         font-size: 18px;
         font-weight: 500;

@@ -1,36 +1,10 @@
-// Инициализируем конкретный слайдер
-const classesSwiper = new Swiper(".js-slider-classes", {
-    direction: "horizontal",
-    speed: 400,
-    // loop: false, // Рекомендую false, если будет фильтрация
-    slidesPerView: "auto",
-    watchOverflow: true, // Скроет навигацию, если слайдов мало
+import { initSliders } from './modules/sliders.js';
+import { initFilter } from './modules/filter.js';
 
-    pagination: {
-        el: ".swiper-pagination, .slider-classes__pagination",
-        clickable: true,
-        dynamicBullets: true,
-        // dynamicMainBullets: 1,
-    },
+document.addEventListener('DOMContentLoaded', () => {
+    // Инициализация слайдеров
+    const classesSwiper = initSliders();
 
-    navigation: {
-        addIcons: false,
-        nextEl: ".swiper-button-next, .slider-classes__button-next",
-        prevEl: ".swiper-button-prev, .slider-classes__button-prev",
-    },
-
-    breakpoints: {
-        320: {
-            spaceBetween: 8,
-        },
-        768: {
-            spaceBetween: 20,
-        },
-        1024: {
-            spaceBetween: 20,
-        },
-        1312: {
-            spaceBetween: 24,
-        }
-    }
+    // Инициализация фильтрации
+    initFilter(classesSwiper);
 });
