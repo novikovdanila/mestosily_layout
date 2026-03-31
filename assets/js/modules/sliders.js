@@ -7,6 +7,10 @@ export function initSliders() {
         slidesPerView: "auto",
         watchOverflow: true, // Скроет навигацию, если слайдов мало
 
+        // lazyPreloaderClass: "swiper-lazy-preloader",
+        lazyPreloadPrevNext: 0, // подгружаем по 1 слайду по бокам
+
+
         pagination: {
             el: ".swiper-pagination, .slider-classes__pagination",
             clickable: true,

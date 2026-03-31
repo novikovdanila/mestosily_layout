@@ -65,18 +65,23 @@
         position: relative;
         border-radius: $radius-large;
         overflow: hidden;
+        height: 238px;
+        background-color: #f8f8f8;
 
         @include mobile {
             border-radius: $radius-medium;
+            height: auto;
         }
 
         img {
-            display: block;
+            // display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform $transition-base;
+            z-index: 20 !important;
         }
+
     }
 
     &__content {
@@ -106,8 +111,18 @@
         }
     }
 
-    &__tag {
+    &__tag-wrapper {
         position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        z-index: 2;
+    }
+
+    &__tag {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -115,12 +130,20 @@
         border-radius: $radius-large;
         font-size: 16px;
         pointer-events: none;
-        z-index: 2;
-        bottom: 10px;
-        left: 10px;
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+
+        @include mobile {
+            font-size: 14px;
+            padding: 3px 8px;
+        }
 
         &--personally {
             background-color: #A78BFB;
+            color: $color-white;
+        }
+
+        &--special {
+            background-color: #69C983;
             color: $color-white;
         }
     }
@@ -132,9 +155,12 @@
 //Слайдер
 .swiper-lazy-preloader {
     --swiper-preloader-color: #E5E2E1;
-    width: 20px;
-    height: 20px;
+    // --swiper-preloader-color: #00f84a;
+    // width: 20px;
+    // height: 20px;
     border-width: 2px;
+    pointer-events: none;
+    z-index: 0 !important;
 }
 
 .custom-slider {
@@ -174,6 +200,10 @@
             top: auto !important;
             margin: 0;
             pointer-events: auto;
+
+            &.swiper-button-lock {
+                display: none;
+            }
         }
 
         &-prev {
@@ -186,6 +216,10 @@
     }
 
     &__pagination {
+        &.swiper-pagination-lock {
+            display: none !important;
+        }
+
         width: 100%;
         position: relative;
         bottom: 0px !important;
@@ -271,10 +305,11 @@
         color: $color-dark;
         white-space: nowrap;
 
-        &:hover {
+        @include hover {
             border-color: $color-secondary;
             color: $color-secondary;
         }
+
 
         &--active {
             border-color: $color-secondary;

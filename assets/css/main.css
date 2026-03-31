@@ -215,19 +215,22 @@ h6 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  height: 238px;
+  background-color: #f8f8f8;
 }
 @media (max-width: 560px) {
   .card-class__img {
     border-radius: 10px;
+    height: auto;
   }
 }
 .card-class__img img {
-  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.2s ease;
+  z-index: 20 !important;
 }
 .card-class__content {
   padding: 0 4px;
@@ -255,8 +258,17 @@ h6 {
     font-size: 14px;
   }
 }
-.card-class__tag {
+.card-class__tag-wrapper {
   position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  z-index: 2;
+}
+.card-class__tag {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -264,20 +276,28 @@ h6 {
   border-radius: 20px;
   font-size: 16px;
   pointer-events: none;
-  z-index: 2;
-  bottom: 10px;
-  left: 10px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 560px) {
+  .card-class__tag {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
 }
 .card-class__tag--personally {
   background-color: #A78BFB;
   color: #FFFFFF;
 }
+.card-class__tag--special {
+  background-color: #69C983;
+  color: #FFFFFF;
+}
 
 .swiper-lazy-preloader {
   --swiper-preloader-color: #E5E2E1;
-  width: 20px;
-  height: 20px;
   border-width: 2px;
+  pointer-events: none;
+  z-index: 0 !important;
 }
 
 .custom-slider {
@@ -315,11 +335,17 @@ h6 {
   margin: 0;
   pointer-events: auto;
 }
+.custom-slider__nav-prev.swiper-button-lock, .custom-slider__nav-next.swiper-button-lock {
+  display: none;
+}
 .custom-slider__nav-prev {
   margin-left: -90px;
 }
 .custom-slider__nav-next {
   margin-right: -90px;
+}
+.custom-slider__pagination.swiper-pagination-lock {
+  display: none !important;
 }
 .custom-slider__pagination {
   width: 100%;
@@ -398,9 +424,11 @@ h6 {
   color: #211D1C;
   white-space: nowrap;
 }
-.filter__btn:hover {
-  border-color: #B16958;
-  color: #B16958;
+@media (hover: hover) {
+  .filter__btn:hover {
+    border-color: #B16958;
+    color: #B16958;
+  }
 }
 .filter__btn--active {
   border-color: #B16958;
@@ -453,26 +481,32 @@ h6 {
   background-color: #B59992;
   color: #FFFFFF;
 }
-.btn--primary:hover {
-  background-color: #B16958;
-  color: #FFFFFF;
+@media (hover: hover) {
+  .btn--primary:hover {
+    background-color: #B16958;
+    color: #FFFFFF;
+  }
 }
 .btn--secondary {
   background-color: #FFFFFF;
   color: #211D1C;
 }
-.btn--secondary:hover {
-  background-color: #B16958;
-  color: #FFFFFF;
+@media (hover: hover) {
+  .btn--secondary:hover {
+    background-color: #B16958;
+    color: #FFFFFF;
+  }
 }
 .btn--outline {
   background-color: transparent;
   border: 2px solid #E5E2E1;
   color: #211D1C;
 }
-.btn--outline:hover {
-  color: #B16958;
-  border-color: #B16958;
+@media (hover: hover) {
+  .btn--outline:hover {
+    color: #B16958;
+    border-color: #B16958;
+  }
 }
 
 .slider-btn {

@@ -34,7 +34,7 @@
         background-color: $color-primary;
         color: $color-white;
 
-        &:hover {
+        @include hover {
             background-color: $color-secondary;
             color: $color-white;
         }
@@ -44,7 +44,7 @@
         background-color: $color-white;
         color: $color-dark;
 
-        &:hover {
+        @include hover {
             background-color: $color-secondary;
             color: $color-white;
         }
@@ -55,7 +55,7 @@
         border: 2px solid $color-border;
         color: $color-dark;
 
-        &:hover {
+        @include hover {
             color: $color-secondary;
             border-color: $color-secondary;
         }
