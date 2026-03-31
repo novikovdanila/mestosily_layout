@@ -1,0 +1,188 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: $color-white;
+    padding: 10px 0;
+    // box-shadow: 0 4px 14px 0 rgba(98, 84, 81, 0.08);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-white, 0.98);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__logo-description {
+        font-size: 15px;
+        font-weight: 400;
+        color: $color-dark;
+        line-height: 1.2;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__nav-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-dark;
+        line-height: 1.4;
+        padding: 6px 12px;
+        border-radius: 10px;
+        background-color: transparent;
+        transition:
+            color $transition-base,
+            background-color $transition-base;
+
+        @include hover {
+            color: $color-secondary;
+        }
+
+
+        &--more {
+            justify-content: flex-start;
+            gap: 4px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-color: currentColor;
+                -webkit-mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+                mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+                mask-size: contain;
+                -webkit-mask-size: contain;
+            }
+        }
+
+        &--active {
+            color: $color-dark;
+            background-color: $color-bg-light;
+            pointer-events: none;
+        }
+    }
+
+    &__lang-btn {
+        display: flex;
+        gap: 0px;
+        justify-content: start;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-dark;
+        line-height: 1;
+        padding: 4px 12px;
+        border-radius: 10px;
+        background-color: transparent;
+        transition:
+            color $transition-base,
+            background-color $transition-base;
+
+        @include hover {
+            color: $color-secondary;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin-left: 2px;
+            background-color: currentColor;
+            -webkit-mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+            mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+        }
+
+    }
+
+    &__lang-flag {
+        margin-right: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__social-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__social-item {
+        display: flex;
+    }
+
+    &__social-link {
+        transition:
+            opacity $transition-base;
+
+        @include hover {
+            opacity: 0.7;
+        }
+    }
+
+
+    &__tel {
+        display: flex;
+
+        &-link {
+            font-size: 18px;
+            font-weight: 500;
+            color: $color-dark;
+            line-height: 1.4;
+            transition:
+                color $transition-base;
+
+            @include hover {
+                color: $color-secondary;
+            }
+        }
+    }
+}

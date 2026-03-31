@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <header class="header" hidden>
+    <header class="header">
         <div class="container">
             <div class="header__inner">
-                <div class="logo">
+                <div class="header__logo">
                     <a href="#" class="logo__link">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="30" cy="30" r="30" fill="white" />
@@ -48,64 +48,68 @@
                             <path d="M46.5034 42.3283H45.2895V32.8195H46.5034V42.3283Z" fill="white" />
                         </svg>
                     </a>
-                    <span class="logo__description">Студия йоги<br>в Батуми</span>
+                    <span class="header__logo-description">Студия йоги<br>в Батуми</span>
                 </div>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Классы</a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">Классы</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Расписание</a>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link header__nav-link--active">Расписание</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Цены</a>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">Цены</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Преподаватели</a>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">Преподаватели</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Контакты</a>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">Контакты</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Ещё</a>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link header__nav-link--more">Ещё</a>
                         </li>
                     </ul>
+                    <div class="header__lang">
+                        <button class="header__lang-btn">
+                            <img src="assets/img/flag-ru.svg" alt="flag-ru" class="header__lang-flag flag-img">
+                            RU</button>
+                    </div>
                 </nav>
-                <div class="header__lang">
-                    <button class="header__lang-btn">RU</button>
-                </div>
-                <div class="header__social social">
-                    <ul class="social__list">
-                        <li class="social__item">
-                            <a href="https://www.instagram.com/mesto_sily_batumi/" class="social__link"
+
+                <div class="header__contacts">
+                    <ul class="header__social-list">
+                        <li class="header__social-item">
+                            <a href="https://www.instagram.com/mesto_sily_batumi/" class="header__social-link"
                                 aria-label="Instagram" target="_blank">
-                                <svg class="social__icon" width="26" height="26">
+                                <svg class="header__social-icon" width="26" height="26">
                                     <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social__item">
-                            <a href="https://t.me/silabatumi" class="social__link" aria-label="Telegram"
+                        <li class="header__social-item">
+                            <a href="https://t.me/silabatumi" class="header__social-link" aria-label="Telegram"
                                 target="_blank">
-                                <svg class="social__icon" width="26" height="26">
+                                <svg class="header__social-icon" width="26" height="26">
                                     <use xlink:href="assets/img/sprite.svg#icon-telegram"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social__item">
-                            <a href="https://api.whatsapp.com/send?phone=995598592000" class="social__link"
+                        <li class="header__social-item">
+                            <a href="https://api.whatsapp.com/send?phone=995598592000" class="header__social-link"
                                 aria-label="WhatsApp" target="_blank">
-                                <svg class="social__icon" width="26" height="26">
+                                <svg class="header__social-icon" width="26" height="26">
                                     <use xlink:href="assets/img/sprite.svg#icon-whatsapp"></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
+                    <div class="header__tel">
+                        <a href="tel:+995598592000" class="header__tel-link">+995 598 59 20 00</a>
+                    </div>
                 </div>
-                <div class="header__tel">
-                    <a href="tel:+995598592000" class="header__tel-link">+995 598 59 20 00</a>
-                </div>
+
             </div>
         </div>
     </header>

@@ -192,6 +192,15 @@ h6 {
   }
 }
 
+.flag-img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #E5E2E1;
+}
+
 .card-class {
   position: relative;
   width: auto;
@@ -449,6 +458,165 @@ h6 {
   }
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #FFFFFF;
+  padding: 10px 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.98);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__logo-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: #211D1C;
+  line-height: 1.2;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+.header__nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #211D1C;
+  line-height: 1.4;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .header__nav-link:hover {
+    color: #B16958;
+  }
+}
+.header__nav-link--more {
+  justify-content: flex-start;
+  gap: 4px;
+}
+.header__nav-link--more::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+  mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.header__nav-link--active {
+  color: #211D1C;
+  background-color: #F6F9FC;
+  pointer-events: none;
+}
+.header__lang-btn {
+  display: flex;
+  gap: 0px;
+  justify-content: start;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #211D1C;
+  line-height: 1;
+  padding: 4px 12px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+@media (hover: hover) {
+  .header__lang-btn:hover {
+    color: #B16958;
+  }
+}
+.header__lang-btn::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+  mask: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23211D1C' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") no-repeat 50% 50%;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.header__lang-flag {
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+}
+.header__contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.header__social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.header__social-item {
+  display: flex;
+}
+.header__social-link {
+  transition: opacity 0.2s ease;
+}
+@media (hover: hover) {
+  .header__social-link:hover {
+    opacity: 0.7;
+  }
+}
+.header__tel {
+  display: flex;
+}
+.header__tel-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #211D1C;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+@media (hover: hover) {
+  .header__tel-link:hover {
+    color: #B16958;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -527,7 +695,6 @@ h6 {
 }
 
 .hero {
-  margin-top: 80px;
   margin-bottom: 120px;
 }
 @media (max-width: 1239px) {

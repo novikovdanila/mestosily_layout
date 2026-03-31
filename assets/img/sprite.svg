@@ -57,4 +57,7 @@
         <path d="M7 1L2 7L7 13" stroke="currentColor" stroke-width="2" fill="none" />
         <path d="M13 7H2" stroke="currentColor" stroke-width="2" fill="none" />
     </symbol>
+    <symbol id="small-arrow-down" viewBox="0 0 12 12">
+        <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
 </svg>
