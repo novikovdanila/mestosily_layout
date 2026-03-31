@@ -10,6 +10,7 @@ const classesSwiper = new Swiper(".js-slider-classes", {
         el: ".swiper-pagination, .slider-classes__pagination",
         clickable: true,
         dynamicBullets: true,
+        // dynamicMainBullets: 1,
     },
 
     navigation: {
