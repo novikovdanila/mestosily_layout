@@ -6,6 +6,7 @@ export function initHeader() {
     if (!burgerBtn || !menuWrapper) return;
 
     burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.add('is-clicked');
         burgerBtn.classList.toggle('active');
         menuWrapper.classList.toggle('is-open');
         body.classList.toggle('lock');

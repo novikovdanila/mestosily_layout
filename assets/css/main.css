@@ -585,16 +585,27 @@ body.lock {
   width: 20px;
   height: 2px;
   background-color: #211D1C;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 .header .menu__burger-btn.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  animation-name: burgerTopOpen;
 }
 .header .menu__burger-btn.active span:nth-child(2) {
-  opacity: 0;
+  animation-name: burgerMiddleOpen;
 }
 .header .menu__burger-btn.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  animation-name: burgerBottomOpen;
+}
+.header .menu__burger-btn.is-clicked:not(.active) span:nth-child(1) {
+  animation-name: burgerTopClose;
+}
+.header .menu__burger-btn.is-clicked:not(.active) span:nth-child(2) {
+  animation-name: burgerMiddleClose;
+}
+.header .menu__burger-btn.is-clicked:not(.active) span:nth-child(3) {
+  animation-name: burgerBottomClose;
 }
 .header .menu__header {
   display: none;
@@ -881,6 +892,72 @@ body.lock {
   }
 }
 
+@keyframes burgerTopOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+@keyframes burgerTopClose {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes burgerMiddleOpen {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes burgerMiddleClose {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes burgerBottomOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+@keyframes burgerBottomClose {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
 .btn {
   display: inline-flex;
   align-items: center;
