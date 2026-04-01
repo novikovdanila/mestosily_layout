@@ -1,13 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.is-open {
-    display: flex !important;
-}
 
-body.lock {
-    overflow: hidden;
-}
 
 .header {
     position: sticky;
@@ -134,9 +128,11 @@ body.lock {
                     &:nth-child(1) {
                         transform: translateY(7px) rotate(45deg);
                     }
+
                     &:nth-child(2) {
                         opacity: 0;
                     }
+
                     &:nth-child(3) {
                         transform: translateY(-7px) rotate(-45deg);
                     }

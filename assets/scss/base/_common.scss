@@ -1,7 +1,13 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+.is-open {
+    display: flex !important;
+}
 
+body.lock {
+    overflow: hidden !important;
+}
 
 .container {
     max-width: $container-width + ($container-padding * 2);

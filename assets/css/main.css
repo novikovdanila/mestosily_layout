@@ -160,6 +160,14 @@ h6 {
   line-height: 1.2;
 }
 
+.is-open {
+  display: flex !important;
+}
+
+body.lock {
+  overflow: hidden !important;
+}
+
 .container {
   max-width: 1312px;
   width: 100%;
@@ -461,10 +469,6 @@ h6 {
   }
 }
 
-.is-open {
-  display: block !important;
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -581,6 +585,16 @@ h6 {
   width: 20px;
   height: 2px;
   background-color: #211D1C;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.header .menu__burger-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.header .menu__burger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.header .menu__burger-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 .header .menu__header {
   display: none;
