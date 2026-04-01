@@ -213,6 +213,16 @@
             @include tab-1024 {
                 width: auto;
             }
+
+            @include hover {
+                .menu__sub-menu {
+                    display: flex;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                    transform: translateY(0);
+                }
+            }
         }
 
         &__link {
@@ -273,10 +283,12 @@
 
         &__sub-menu {
             position: absolute;
-            top: 0;
-            margin-top: 40px;
-            margin-left: -6px;
-            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            top: 100%;
+            left: -6px;
+            z-index: 10;
             flex-direction: column;
             justify-content: start;
             align-items: start;
@@ -285,8 +297,14 @@
             background-color: $color-white;
             border-radius: $radius-medium;
             box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+            transform: translateY(10px);
+            transition: opacity $transition-base, visibility $transition-base, transform $transition-base;
 
             @include tab-1024 {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
                 position: static;
                 width: 100%;
                 gap: 18px;
@@ -294,6 +312,7 @@
                 padding: 0;
                 background-color: transparent;
                 box-shadow: none;
+                transform: none;
             }
 
 
