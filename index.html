@@ -12,107 +12,128 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header__wrapper">
                 <div class="header__logo">
                     <a href="#" class="logo__link">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="30" cy="30" r="30" fill="white" />
-                            <circle cx="30.015" cy="29.9857" r="28.2904" fill="#A6918C" />
-                            <path
-                                d="M18.6506 27.3571H17.4367V20.7358L14.9752 23.6479L12.5137 20.7358V27.3571H11.2998V17.4436L14.9752 21.8125L18.6506 17.4436V27.3571Z"
-                                fill="white" />
-                            <path
-                                d="M25.5294 18.9944H21.9551V23.243H24.9224V24.3894H21.9551V26.2103H25.5294V27.3567H20.7412V17.8479H25.5294V18.9944Z"
-                                fill="white" />
-                            <path
-                                d="M31.7335 17.7131C32.6761 17.7131 33.5551 17.9933 34.2961 18.4769V20.0036C33.6467 19.298 32.7385 18.8596 31.7335 18.8596C29.7595 18.8596 28.1592 20.5504 28.1592 22.6361C28.1592 24.7219 29.7595 26.4127 31.7335 26.4127C32.7385 26.4127 33.6467 25.9743 34.2961 25.2687V26.7953C33.5551 27.279 32.6761 27.5592 31.7335 27.5592C29.089 27.5592 26.9453 25.355 26.9453 22.6361C26.9453 19.9172 29.089 17.7131 31.7335 17.7131Z"
-                                fill="white" />
-                            <path d="M41.2422 17.8479V18.9944H38.8818V27.3567H37.668V18.9944H35.3076V17.8479H41.2422Z"
-                                fill="white" />
-                            <path d="M42.7261 26.2104H48.5258V27.3568H42.7261V26.2104Z" fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M45.6597 17.7131C47.615 17.7131 49.2002 19.2983 49.2002 21.2537C49.2002 23.209 47.615 24.7942 45.6597 24.7942C43.7043 24.7942 42.1191 23.209 42.1191 21.2537C42.1191 19.2983 43.7043 17.7131 45.6597 17.7131ZM45.6597 18.927C44.3747 18.927 43.333 19.9687 43.333 21.2537C43.333 22.5386 44.3747 23.5803 45.6597 23.5803C46.9446 23.5803 47.9863 22.5386 47.9863 21.2537C47.9863 19.9687 46.9446 18.927 45.6597 18.927Z"
-                                fill="white" />
-                            <path
-                                d="M15.6163 32.6848C16.5589 32.6848 17.4379 32.965 18.1789 33.4486V34.9753C17.5295 34.2696 16.6214 33.8313 15.6163 33.8313C13.6423 33.8313 12.042 35.5221 12.042 37.6078C12.042 39.6936 13.6423 41.3844 15.6163 41.3844C16.6214 41.3844 17.5295 40.946 18.1789 40.2403V41.767C17.4379 42.2507 16.5589 42.5308 15.6163 42.5308C12.9719 42.5308 10.8281 40.3267 10.8281 37.6078C10.8281 34.8889 12.9719 32.6848 15.6163 32.6848Z"
-                                fill="white" />
-                            <path
-                                d="M26.5416 42.3285H25.3277V34.9085L21.1465 38.1323V42.3285H19.9326V32.8197H21.1465V36.5994L26.5419 32.4396L26.5416 42.3285Z"
-                                fill="white" />
-                            <path
-                                d="M35.5103 42.3283H34.2963V33.9659H30.7896V39.4949C30.7896 41.1389 29.4556 42.4639 27.8223 42.464V41.2502C28.7875 41.2497 29.5756 40.4665 29.5757 39.4949V32.8195H35.5103V42.3283Z"
-                                fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M38.8828 35.9891H41.0409C42.7169 35.9891 44.0756 37.3478 44.0756 39.0238V39.2935C44.0756 40.9696 42.7169 42.3283 41.0409 42.3283H37.6689V32.8195H38.8828V35.9891ZM38.8828 41.1144H41.0409C42.0465 41.1144 42.8617 40.2992 42.8617 39.2935V39.0238C42.8617 38.0182 42.0465 37.203 41.0409 37.203H38.8828V41.1144Z"
-                                fill="white" />
-                            <path d="M46.5034 42.3283H45.2895V32.8195H46.5034V42.3283Z" fill="white" />
-                        </svg>
+                        <img src="assets/img/logo-mestosily.svg" alt="logo-mestosily" class="logo-img">
                     </a>
                     <span class="header__logo-description">Студия йоги<br>в Батуми</span>
                 </div>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Классы</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link header__nav-link--active">Расписание</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Цены</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Преподаватели</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Контакты</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link header__nav-link--more">Ещё</a>
-                        </li>
-                    </ul>
+                <nav class="header__menu menu">
+                    <button class="menu__burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="menu__wrapper">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Классы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link menu__link--active">Расписание</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Цены</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Преподаватели</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Контакты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link menu__link--more">Ещё</a>
+                                <ul class="menu__sub-menu sub-menu">
+                                    <li class="menu__sub-menu-item"><a href="#"
+                                            class="menu__link menu__link--active">Массаж</a>
+                                    </li>
+                                    <li class="menu__sub-menu-item"><a href="#" class="menu__link ">Подарочный
+                                            сертификат</a>
+                                    </li>
+                                    <li class="menu__sub-menu-item"><a href="#" class="menu__link ">Правила студии</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                        <div class="menu__mobile-contacts">
+                            <ul class="menu__social-list">
+                                <li class="menu__social-item">
+                                    <a href="https://www.instagram.com/mesto_sily_batumi/" class="menu__social-link"
+                                        aria-label="Instagram" target="_blank">
+                                        <svg class="menu__social-icon">
+                                            <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__social-item">
+                                    <a href="https://t.me/silabatumi" class="menu__social-link" aria-label="Telegram"
+                                        target="_blank">
+                                        <svg class="menu__social-icon">
+                                            <use xlink:href="assets/img/sprite.svg#icon-telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__social-item">
+                                    <a href="https://api.whatsapp.com/send?phone=995598592000" class="menu__social-link"
+                                        aria-label="WhatsApp" target="_blank">
+                                        <svg class="menu__social-icon">
+                                            <use xlink:href="assets/img/sprite.svg#icon-whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="menu__tel">
+                                <a href="tel:+995598592000" class="menu__tel-link">+995 598 59 20 00</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header__actions">
                     <div class="header__lang">
                         <button class="header__lang-btn">
                             <img src="assets/img/flag-ru.svg" alt="flag-ru" class="header__lang-flag flag-img">
                             RU</button>
                     </div>
-                </nav>
-
-                <div class="header__contacts">
-                    <ul class="header__social-list">
-                        <li class="header__social-item">
-                            <a href="https://www.instagram.com/mesto_sily_batumi/" class="header__social-link"
-                                aria-label="Instagram" target="_blank">
-                                <svg class="header__social-icon" width="26" height="26">
-                                    <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="header__social-item">
-                            <a href="https://t.me/silabatumi" class="header__social-link" aria-label="Telegram"
-                                target="_blank">
-                                <svg class="header__social-icon" width="26" height="26">
-                                    <use xlink:href="assets/img/sprite.svg#icon-telegram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="header__social-item">
-                            <a href="https://api.whatsapp.com/send?phone=995598592000" class="header__social-link"
-                                aria-label="WhatsApp" target="_blank">
-                                <svg class="header__social-icon" width="26" height="26">
-                                    <use xlink:href="assets/img/sprite.svg#icon-whatsapp"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="header__tel">
-                        <a href="tel:+995598592000" class="header__tel-link">+995 598 59 20 00</a>
+                    <div class="header__contacts">
+                        <ul class="header__social-list">
+                            <li class="header__social-item">
+                                <a href="https://www.instagram.com/mesto_sily_batumi/" class="header__social-link"
+                                    aria-label="Instagram" target="_blank">
+                                    <svg class="header__social-icon" width="26" height="26">
+                                        <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__social-item">
+                                <a href="https://t.me/silabatumi" class="header__social-link" aria-label="Telegram"
+                                    target="_blank">
+                                    <svg class="header__social-icon" width="26" height="26">
+                                        <use xlink:href="assets/img/sprite.svg#icon-telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__social-item">
+                                <a href="https://api.whatsapp.com/send?phone=995598592000" class="header__social-link"
+                                    aria-label="WhatsApp" target="_blank">
+                                    <svg class="header__social-icon" width="26" height="26">
+                                        <use xlink:href="assets/img/sprite.svg#icon-whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="header__tel">
+                            <a href="tel:+995598592000" class="header__tel-link">+995 598 59 20 00</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </header>
+
     <main class="main">
         <section class="hero">
             <div class="hero__container">

@@ -87,7 +87,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform $transition-base;
-            z-index: 20 !important;
+            // z-index: 20 !important;
         }
 
     }
@@ -224,6 +224,8 @@
     }
 
     &__pagination {
+        z-index: 1 !important;
+
         &.swiper-pagination-lock {
             display: none !important;
         }
@@ -299,10 +301,11 @@
     }
 
     &__btn {
-        padding: 10px 26px;
+        padding: 16px 22px;
         border-radius: $radius-large;
         font-size: 18px;
         font-weight: 500;
+        line-height: 1;
         cursor: pointer;
         transition:
             border-color $transition-base,
@@ -327,12 +330,12 @@
         }
 
         @include tab-768 {
-            padding: 10px 16px;
+            padding: 12px 16px;
             font-size: 16px;
         }
 
         @include mobile {
-            padding: 8px 14px;
+            padding: 10px 14px;
             font-size: 16px;
         }
     }
