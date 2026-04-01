@@ -212,6 +212,7 @@
             justify-content: start;
             align-items: center;
             width: 100%;
+            cursor: pointer;
 
             @include tab-1024 {
                 width: auto;
@@ -279,7 +280,6 @@
 
             &--active {
                 color: $color-dark;
-                // background-color: $color-bg-light;
                 background-color: #F5F5F5;
                 pointer-events: none;
             }
@@ -402,10 +402,6 @@
                 visibility: visible;
                 transform: translateY(0);
             }
-
-            .header__lang-btn::after {
-                transform: rotate(180deg);
-            }
         }
     }
 
@@ -416,6 +412,7 @@
         font-size: 14px;
         font-weight: 500;
         color: $color-dark;
+        text-transform: uppercase;
         line-height: 1;
         padding: 6px 12px;
         border-radius: 10px;
@@ -453,7 +450,7 @@
         left: -10px;
         z-index: calc($menu-z-index - 1);
         flex-direction: column;
-        min-width: 80px;
+        min-width: 100px;
         gap: 4px;
         padding: 10px;
         background-color: $color-white;
@@ -463,14 +460,6 @@
         visibility: hidden;
         transform: translateY(10px);
         transition: opacity $transition-base, visibility $transition-base, transform $transition-base;
-
-
-        // ------- 
-        // display: flex;
-        // opacity: 1;
-        // visibility: visible;
-        // transform: translateY(0);
-        // ------- 
     }
 
     &__lang-item {
@@ -483,23 +472,29 @@
         align-items: center;
         gap: 6px;
         width: 100%;
-        padding: 6px 12px;
+        padding: 6px 14px;
         font-size: 16px;
         font-weight: 500;
+        text-transform: uppercase;
         color: $color-dark;
         border-radius: 10px;
         transition: background-color $transition-base, color $transition-base;
 
         @include hover {
+            color: $color-secondary;
+        }
+
+        &--active {
             background-color: #F5F5F5;
             color: $color-dark;
+            pointer-events: none;
         }
     }
 
     &__lang-flag {
         margin-right: 4px;
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     &__contacts {
