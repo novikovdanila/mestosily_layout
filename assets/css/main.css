@@ -497,7 +497,7 @@ body.lock {
   gap: 6px;
   z-index: 4;
 }
-@media (max-width: 560px) {
+@media (max-width: 767px) {
   .header__logo {
     width: 100%;
   }
@@ -724,7 +724,7 @@ body.lock {
 }
 .header .menu__link--active {
   color: #211D1C;
-  background-color: #F6F9FC;
+  background-color: #F5F5F5;
   pointer-events: none;
 }
 .header .menu__sub-menu {

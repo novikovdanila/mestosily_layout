@@ -32,7 +32,7 @@
         gap: 6px;
         z-index: $menu-z-index + 1;
 
-        @include mobile {
+        @include mobile-lg {
             width: 100%;
         }
 
@@ -276,7 +276,8 @@
 
             &--active {
                 color: $color-dark;
-                background-color: $color-bg-light;
+                // background-color: $color-bg-light;
+                background-color: #F5F5F5;
                 pointer-events: none;
             }
         }
