@@ -767,6 +767,11 @@ body.lock {
     transform: none;
   }
 }
+@media (max-width: 767px) {
+  .header .menu__sub-menu {
+    gap: 10px;
+  }
+}
 .header .menu__sub-menu-item {
   display: flex;
   justify-content: start;
@@ -845,6 +850,18 @@ body.lock {
     visibility: visible;
     transform: translateY(0);
   }
+  .header__lang:hover .header__lang-btn::after {
+    transform: rotate(180deg);
+  }
+}
+.header__lang.is-active .header__lang-list {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.header__lang.is-active .header__lang-btn::after {
+  transform: rotate(180deg);
 }
 .header__lang-btn {
   display: flex;

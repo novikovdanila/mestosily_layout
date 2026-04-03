@@ -320,6 +320,10 @@
                 transform: none;
             }
 
+            @include mobile-lg {
+                gap: 10px;
+            }
+
 
             &-item {
                 display: flex;
@@ -401,6 +405,23 @@
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
+            }
+
+            .header__lang-btn::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &.is-active {
+            .header__lang-list {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .header__lang-btn::after {
+                transform: rotate(180deg);
             }
         }
     }
