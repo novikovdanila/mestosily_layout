@@ -843,15 +843,9 @@ body.lock {
   position: relative;
   z-index: 2;
 }
-@media (hover: hover) {
-  .header__lang:hover .header__lang-list {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .header__lang:hover .header__lang-btn::after {
-    transform: rotate(180deg);
+@media (max-width: 560px) {
+  .header__lang {
+    position: static;
   }
 }
 .header__lang.is-active .header__lang-list {
@@ -915,6 +909,13 @@ body.lock {
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+@media (max-width: 560px) {
+  .header__lang-list {
+    left: 0;
+    right: 0;
+    margin: 0px 20px;
+  }
 }
 .header__lang-item {
   display: flex;
