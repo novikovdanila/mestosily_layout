@@ -45,8 +45,8 @@
         color: $color-dark;
 
         @include hover {
-            background-color: $color-secondary;
-            color: $color-white;
+            background-color: $color-bg-light;
+            color: $color-secondary;
         }
     }
 

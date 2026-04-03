@@ -174,9 +174,23 @@ body.lock {
   margin: 0 auto;
   padding: 0 20px;
 }
+@media (max-width: 1239px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 
 .text-accent {
   color: #B16958;
+}
+
+.text-opacity-70 {
+  opacity: 0.7;
 }
 
 .section-header {
@@ -1110,8 +1124,8 @@ body.lock {
 }
 @media (hover: hover) {
   .btn--secondary:hover {
-    background-color: #B16958;
-    color: #FFFFFF;
+    background-color: #F6F9FC;
+    color: #B16958;
   }
 }
 .btn--outline {
@@ -1152,11 +1166,6 @@ body.lock {
   }
 }
 @media (max-width: 1023px) {
-  .hero {
-    margin-bottom: 60px;
-  }
-}
-@media (max-width: 560px) {
   .hero {
     margin-bottom: 60px;
   }
@@ -1398,6 +1407,18 @@ body.lock {
 
 .slider-classes {
   margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .slider-classes {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .slider-classes {
+    margin-bottom: 60px;
+  }
+}
+.slider-classes {
   overflow: hidden;
 }
 .slider-classes__inner {
@@ -1478,4 +1499,179 @@ body.lock {
     width: 100%;
     justify-content: center;
   }
+}
+
+.benefits {
+  background-color: #F6F1EE;
+  border-radius: 60px;
+  padding: 120px 0;
+  margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .benefits {
+    padding: 90px 0;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .benefits {
+    padding: 60px 0;
+    margin-bottom: 60px;
+    border-radius: 0px;
+  }
+}
+.benefits__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1239px) {
+  .benefits__inner {
+    gap: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .benefits__inner {
+    gap: 20px;
+  }
+}
+.benefits__title {
+  color: #211D1C;
+  text-align: center;
+}
+.benefits__subtitle {
+  color: #211D1C;
+  text-align: center;
+}
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1239px) {
+  .benefits__list {
+    gap: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .benefits__list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.benefits__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 408px;
+  width: 100%;
+  height: 448px;
+  height: auto;
+}
+.benefits__item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.benefits__item-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 30px;
+  max-width: 360px;
+  z-index: 2;
+}
+@media (max-width: 1239px) {
+  .benefits__item-content {
+    border-radius: 20px;
+    padding: 16px;
+  }
+}
+.benefits__item-content--top {
+  order: -1;
+  margin-bottom: -60px;
+}
+.benefits__item-content--bottom {
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+.benefits__item-title {
+  color: #211D1C;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.4;
+}
+@media (max-width: 1239px) {
+  .benefits__item-title {
+    font-size: 18px;
+  }
+}
+.benefits__item-text {
+  color: #858280;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.4;
+}
+@media (max-width: 1239px) {
+  .benefits__item-text {
+    font-size: 14px;
+  }
+}
+.benefits__banner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #B59992;
+  border-radius: 30px;
+  padding: 40px;
+}
+@media (max-width: 1239px) {
+  .benefits__banner {
+    padding: 28px;
+  }
+}
+.benefits__banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.benefits__banner-title {
+  text-align: left;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1;
+  color: #FFFFFF;
+}
+@media (max-width: 1239px) {
+  .benefits__banner-title {
+    font-size: 34px;
+  }
+}
+.benefits__banner-text {
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+@media (max-width: 1239px) {
+  .benefits__banner-text {
+    font-size: 17px;
+  }
+}
+.benefits__banner-text-accent {
+  font-weight: 700;
+  background-color: #CEB1AA;
+  border-radius: 10px;
+  padding: 1px 6px 3px 6px;
+  white-space: nowrap;
 }/*# sourceMappingURL=main.css.map */
