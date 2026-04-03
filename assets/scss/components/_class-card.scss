@@ -14,7 +14,7 @@
     color: inherit;
     background-color: $color-white;
 
-    &:hover {
+    @include hover {
         .card-class__img img {
             transform: scale(1.05);
         }

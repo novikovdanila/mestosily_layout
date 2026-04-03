@@ -30,4 +30,9 @@
             @content;
         }
     }
+
+    &:focus-visible {
+        @content;
+        outline: none;
+    }
 }

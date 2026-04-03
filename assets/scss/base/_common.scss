@@ -150,7 +150,7 @@ body.lock {
 
             background-color: #E4DFD9;
 
-            &:hover {
+            @include hover {
                 background-color: $color-secondary;
             }
 
