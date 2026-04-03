@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeader();
 
     // Инициализация слайдеров
-    const classesSwiper = initSliders();
+    const { classesSwiper } = initSliders();
 
     // Инициализация фильтрации
     initFilter(classesSwiper);

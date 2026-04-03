@@ -1,26 +1,24 @@
 export function initSliders() {
-    // Инициализируем конкретный слайдер
+    // Сладер классы
     const classesSwiper = new Swiper(".js-slider-classes", {
         direction: "horizontal",
         speed: 400,
-        // loop: false, // Рекомендуется false, если будет фильтрация
         slidesPerView: "auto",
-        watchOverflow: true, // Скроет навигацию, если слайдов мало
+        watchOverflow: true,
 
-        // lazyPreloaderClass: "swiper-lazy-preloader",
-        lazyPreloadPrevNext: 0, // подгружаем по 1 слайду по бокам
+        lazyPreloadPrevNext: 0,
 
 
         pagination: {
-            el: ".swiper-pagination, .slider-classes__pagination",
+            el: ".slider-classes__pagination",
             clickable: true,
             dynamicBullets: true,
         },
 
         navigation: {
             addIcons: false,
-            nextEl: ".swiper-button-next, .slider-classes__button-next",
-            prevEl: ".swiper-button-prev, .slider-classes__button-prev",
+            nextEl: ".slider-classes__button-next",
+            prevEl: ".slider-classes__button-prev",
         },
 
         breakpoints: {
@@ -39,5 +37,43 @@ export function initSliders() {
         }
     });
 
-    return classesSwiper;
+    // Сладер преподаватели
+    const teachersSwiper = new Swiper(".js-slider-teachers", {
+        direction: "horizontal",
+        speed: 400,
+        slidesPerView: "auto",
+        watchOverflow: true,
+
+        lazyPreloadPrevNext: 0,
+
+
+        pagination: {
+            el: ".slider-teachers__pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        navigation: {
+            addIcons: false,
+            nextEl: ".slider-teachers__button-next",
+            prevEl: ".slider-teachers__button-prev",
+        },
+
+        breakpoints: {
+            320: {
+                spaceBetween: 8,
+            },
+            768: {
+                spaceBetween: 20,
+            },
+            1024: {
+                spaceBetween: 20,
+            },
+            1312: {
+                spaceBetween: 24,
+            }
+        }
+    });
+
+    return { classesSwiper, teachersSwiper };
 }

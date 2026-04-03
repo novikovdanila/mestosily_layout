@@ -1,0 +1,88 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.slider-teachers {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @include tab-1024 {
+            gap: 30px;
+        }
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+
+
+    &__title {
+        color: $color-text-main;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: $color-dark;
+        text-align: center;
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    &__item {
+        width: auto;
+        min-width: 300px;
+        max-width: 300px;
+        height: auto;
+
+        @include mobile {
+            min-width: 300px;
+            max-width: 300px;
+        }
+    }
+
+
+    &__btn-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        align-self: center;
+
+        @include mobile {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

@@ -305,17 +305,6 @@
         }
     }
 
-    &__button-prev,
-    &__button-next {
-        background-color: $color-white;
-        color: #6C5752;
-        border: 1px solid #A6918C;
-
-        &:hover {
-            border-color: $color-secondary;
-            color: $color-secondary;
-        }
-    }
 
     &__btn-wrapper {
         position: relative;
@@ -326,11 +315,11 @@
 
 
 
-    .btn-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    // .btn-wrapper {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
 
     &__btn {
         align-self: center;

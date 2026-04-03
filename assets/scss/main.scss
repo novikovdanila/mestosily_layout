@@ -10,9 +10,9 @@
 // 4. COMPONENTS — Переиспользуемые UI-компоненты
 @use 'components/buttons';
 @use 'components/modal';
-// @use 'components/card';
-// @use 'components/teacher-card';
-// @use 'components/schedule';
+@use 'components/class-card';
+@use 'components/teacher-card';
+@use 'components/slider-teachers';
 // @use 'components/form';
 // добавляй новые компоненты сюда
 
