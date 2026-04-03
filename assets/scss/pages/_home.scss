@@ -347,6 +347,7 @@
     border-radius: $radius-2xlarge;
     padding: $margin-bottom-section 0;
     margin-bottom: $margin-bottom-section;
+    overflow-x: hidden;
 
     @include tab-1024 {
         padding: $margin-bottom-section-tab-1024 0;
@@ -357,6 +358,7 @@
         padding: $margin-bottom-section-tab-768 0;
         margin-bottom: $margin-bottom-section-tab-768;
         border-radius: 0px;
+        overflow: visible;
     }
 
     &__inner {
@@ -384,17 +386,48 @@
         text-align: center;
     }
 
-    &__list {
+    &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+        align-items: start;
+
+        @include tab-768 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: contents;
 
         @include tab-1024 {
             gap: 20px;
         }
 
         @include tab-768 {
-            grid-template-columns: repeat(6, 1fr);
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            touch-action: pan-x;
+            overscroll-behavior-x: contain;
+            align-self: stretch;
+            width: auto;
+            padding: 0 $container-padding;
+            margin: 0 (-$container-padding);
+            scroll-padding: 0 $container-padding;
+
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 
@@ -404,12 +437,33 @@
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        // max-width: 408px;
         width: 100%;
         height: auto;
 
+        &:has(.benefits__item-content--top) {
+            padding-top: 80px;
+
+            @include tab-1024 {
+                padding-top: 60px;
+            }
+
+            @include tab-768 {
+                padding-top: 0px;
+            }
+        }
+
+        &:has(.benefits__item-content--bottom) {
+            padding-bottom: 80px;
+
+            @include tab-1024 {
+                padding-bottom: 60px;
+            }
+        }
+
         @include tab-768 {
+            flex-shrink: 0;
             width: 300px;
+            scroll-snap-align: start;
         }
 
         &-img {
@@ -423,7 +477,7 @@
         }
 
         &-content {
-            // position: absolute;
+            position: absolute;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -440,12 +494,16 @@
             }
 
             &--top {
-                order: -1;
-                margin-bottom: -56px;
+                top: 0px;
+
+                @include tab-768 {
+                    top: auto;
+                    bottom: 0px;
+                }
             }
 
             &--bottom {
-                margin-top: -56px;
+                bottom: 0px;
             }
 
         }
@@ -476,6 +534,7 @@
     }
 
     &__banner {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -485,12 +544,28 @@
         border-radius: $radius-xlarge;
         padding: 40px;
 
+        height: 100%;
+
         @include tab-1024 {
             padding: 28px;
         }
 
         @include tab-768 {
-            display: none;
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            padding: 30px 40px;
+        }
+
+        @include mobile-lg {
+            flex-direction: column;
+            justify-self: start;
+            align-items: start;
+            padding: 28px;
+            gap: 30px;
         }
 
         &-content {
@@ -498,6 +573,14 @@
             flex-direction: column;
             align-items: start;
             gap: 20px;
+
+            @include tab-768 {
+                width: clamp(300px, 80%, 500px);
+            }
+
+            @include mobile-lg {
+                width: 100%;
+            }
         }
 
         &-title {
@@ -507,8 +590,24 @@
             line-height: 1;
             color: $color-white;
 
+            &--accent {
+                display: block;
+
+                @include tab-768 {
+                    display: inline;
+                }
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
             @include tab-1024 {
                 font-size: 34px;
+            }
+
+            @include mobile {
+                font-size: 32px;
             }
         }
 
