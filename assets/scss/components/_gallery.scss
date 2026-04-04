@@ -20,9 +20,16 @@
     &__item {
         width: 768px;
         height: auto;
+        // transition: filter $transition-base;
+        transition: opacity $transition-base;
 
         @include tab-768 {
             width: 100%;
+        }
+
+        &:not(.swiper-slide-active) {
+            opacity: .8;
+            // filter: brightness(1.2);
         }
     }
 

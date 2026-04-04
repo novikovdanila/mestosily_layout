@@ -232,6 +232,12 @@ body.lock {
   z-index: 0 !important;
 }
 
+.swiper-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 .custom-slider {
   position: relative;
   width: 100%;
@@ -1602,11 +1608,15 @@ body.lock {
 .gallery__item {
   width: 768px;
   height: auto;
+  transition: opacity 0.2s ease;
 }
 @media (max-width: 1023px) {
   .gallery__item {
     width: 100%;
   }
+}
+.gallery__item:not(.swiper-slide-active) {
+  opacity: 0.8;
 }
 .gallery__img {
   width: auto;

@@ -68,6 +68,13 @@ body.lock {
     z-index: 0 !important;
 }
 
+.swiper-wrapper {
+    -webkit-user-select: none; // Для Safari
+    -moz-user-select: none; // Для Firefox
+    -ms-user-select: none; // Для старых IE
+    user-select: none; // Стандарт
+}
+
 .custom-slider {
     position: relative;
     width: 100%;
