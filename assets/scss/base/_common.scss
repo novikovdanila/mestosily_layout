@@ -20,6 +20,10 @@ body.lock {
     }
 
     @include tab-768 {
+        padding: 0 30px;
+    }
+
+    @include mobile {
         padding: 0 20px;
     }
 }

@@ -419,19 +419,30 @@
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            // scrollbar-width: thin;
-            // scrollbar-color: rgba($color-primary, 0.3) transparent;
 
             &::-webkit-scrollbar {
                 display: none;
-                // height: 4px;
-                // background-color: transparent;
             }
 
-            // &::-webkit-scrollbar-thumb {
-            //     background-color: rgba($color-primary, 0.3);
-            //     border-radius: 2px;
-            // }
+            @include tab-1024 {
+                padding: 0 40px;
+                margin: 0 (-40px);
+                scroll-padding: 0 40px;
+            }
+
+            @include tab-768 {
+                padding: 0 30px;
+                margin: 0 (-30px);
+                scroll-padding: 0 30px;
+            }
+
+            @include mobile {
+                padding: 0 20px;
+                margin: 0 (-20px);
+                scroll-padding: 0 20px;
+            }
+
+
         }
     }
 

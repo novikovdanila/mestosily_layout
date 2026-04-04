@@ -54,12 +54,12 @@
 
     &--outline {
         background-color: transparent;
-        border: 2px solid $color-border;
+        border: 2px solid rgba($color-border, 0.6);
         color: $color-dark;
 
         @include hover {
             color: $color-secondary;
-            border-color: $color-secondary;
+            border-color: rgba($color-secondary, 0.3);
         }
     }
 }
