@@ -104,3 +104,30 @@
     }
 
 }
+
+.btn-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid rgba($color-dark, 0.06);
+    border-radius: $radius-medium;
+    padding: 8px;
+    color: $color-primary;
+    transition:
+        background-color $transition-base,
+        border-color $transition-base,
+        color $transition-base;
+
+
+    svg {
+        width: auto;
+        max-width: 70px;
+        height: 20px;
+    }
+
+    @include hover {
+        border-color: rgba(#DEA293, 0.5);
+        color: $color-secondary;
+    }
+}
