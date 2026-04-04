@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 .gallery {
+    overflow: hidden;
     margin-bottom: $margin-bottom-section;
 
     @include tab-1024 {
@@ -34,7 +35,11 @@
         background-color: $color-gray;
 
         @include tab-768 {
-            min-height: 400px;
+            min-height: auto;
+        }
+
+        @include mobile {
+            border-radius: $radius-medium;
         }
     }
 

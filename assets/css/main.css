@@ -1583,6 +1583,7 @@ body.lock {
 }
 
 .gallery {
+  overflow: hidden;
   margin-bottom: 120px;
 }
 @media (max-width: 1239px) {
@@ -1618,7 +1619,12 @@ body.lock {
 }
 @media (max-width: 1023px) {
   .gallery__img {
-    min-height: 400px;
+    min-height: auto;
+  }
+}
+@media (max-width: 560px) {
+  .gallery__img {
+    border-radius: 10px;
   }
 }
 
