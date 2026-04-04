@@ -1,0 +1,32 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.gallery {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    .swiper {
+        overflow: visible;
+    }
+
+    &__item {
+        width: auto;
+        height: auto;
+    }
+
+    &__img {
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        border-radius: $radius-large;
+        background-color: $color-gray;
+    }
+
+}

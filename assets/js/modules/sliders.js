@@ -113,5 +113,37 @@ export function initSliders() {
         }
     });
 
-    return { classesSwiper, teachersSwiper, reviewsSwiper };
+    // Сладер галерея
+    const gallerySwiper = new Swiper(".js-slider-gallery", {
+        direction: "horizontal",
+        speed: 400,
+        slidesPerView: "auto",
+        watchOverflow: true,
+        loop: true,
+
+        lazyPreloadPrevNext: 0,
+
+        navigation: {
+            addIcons: false,
+            nextEl: ".gallery__button-next",
+            prevEl: ".gallery__button-prev",
+        },
+
+        breakpoints: {
+            320: {
+                spaceBetween: 8,
+            },
+            768: {
+                spaceBetween: 20,
+            },
+            1024: {
+                spaceBetween: 20,
+            },
+            1312: {
+                spaceBetween: 24,
+            }
+        }
+    });
+
+    return { classesSwiper, teachersSwiper, reviewsSwiper, gallerySwiper };
 }

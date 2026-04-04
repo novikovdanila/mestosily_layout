@@ -1575,6 +1575,32 @@ body.lock {
   }
 }
 
+.gallery {
+  margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .gallery {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .gallery {
+    margin-bottom: 60px;
+  }
+}
+.gallery__item {
+  width: auto;
+  height: auto;
+}
+.gallery__img {
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  background-color: #858280;
+}
+
 .banner-promo {
   margin-bottom: 120px;
 }
