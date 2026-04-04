@@ -1,0 +1,120 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.banner-certificate {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+
+        background-color: $color-primary;
+        border-radius: $radius-xlarge;
+        padding: 0 0 0 80px;
+        // overflow: hidden;
+
+        @include tab-1024 {
+            padding: 0 0 0 80px;
+        }
+
+        @include tab-768 {
+            flex-direction: column;
+            padding: 0 50px;
+            align-items: center;
+        }
+
+        @include mobile {
+            padding: 0 20px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding: 50px 0;
+        z-index: 1;
+        width: clamp(300px, 50%, 800px);
+
+        @include tab-768 {
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            padding: 50px 0 10px 0;
+        }
+
+        @include mobile {
+            padding: 30px 0 20px 0;
+            gap: 10px;
+        }
+
+
+    }
+
+
+
+    &__title {
+        font-size: clamp(34px, 3vw, 46px);
+        // font-size: 46px;
+        font-weight: 500;
+        color: $color-white;
+        line-height: 1.2;
+
+        @include mobile {
+            font-size: 26px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        color: $color-white;
+        line-height: 1.4;
+        color: $color-white;
+        margin-bottom: 20px;
+
+        @include tab-1024 {
+            font-size: 18px;
+        }
+
+        @include mobile-lg {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__img {
+        width: auto;
+        height: auto;
+        object-position: right;
+        margin-top: -60px;
+        border-radius: 0 0 $radius-xlarge 0;
+
+        @include tab-1024 {
+            // margin-top: 0;
+            width: 50%;
+        }
+
+        @include tab-768 {
+            object-position: center;
+            margin-top: 0;
+            width: auto;
+            border-radius: 0;
+        }
+
+    }
+
+}
