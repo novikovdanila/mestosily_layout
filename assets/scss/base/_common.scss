@@ -271,3 +271,73 @@ body.lock {
 }
 
 //--Фильтр
+
+//GLightbox 
+.gslide-image {
+    padding: 10px;
+
+    img {
+        border-radius: $radius-large;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+        @include mobile {
+            border-radius: $radius-medium;
+        }
+    }
+}
+
+.gclose {
+    background: $color-white !important;
+    opacity: 1 !important;
+    border-radius: 50% !important;
+    padding: 12px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 2px solid rgba($color-secondary, 0.1) !important;
+
+    @include hover {
+        background-color: rgba($color-white, 0.95) !important;
+
+        svg path {
+            fill: $color-secondary !important;
+        }
+    }
+
+    @include mobile-lg {
+        padding: 10px !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    svg path {
+        fill: $color-dark !important;
+    }
+}
+
+.gnext,
+.gprev {
+    background-color: $color-white !important;
+    border-radius: 50% !important;
+    padding: 16px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 2px solid rgba($color-secondary, 0.1) !important;
+
+
+    @include hover {
+        background-color: rgba($color-white, 0.9) !important;
+        color: $color-secondary !important;
+    }
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    @include tab-1024 {
+        display: none;
+    }
+}
+
+
+//--GLightbox 

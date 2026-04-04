@@ -417,6 +417,90 @@ body.lock {
   }
 }
 
+.gslide-image {
+  padding: 10px;
+}
+.gslide-image img {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 560px) {
+  .gslide-image img {
+    border-radius: 10px;
+  }
+}
+
+.gclose {
+  background: #FFFFFF !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  padding: 12px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: 2px solid rgba(177, 105, 88, 0.1) !important;
+}
+@media (hover: hover) {
+  .gclose:hover {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+  .gclose:hover svg path {
+    fill: #B16958 !important;
+  }
+}
+.gclose:focus-visible {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.gclose:focus-visible svg path {
+  fill: #B16958 !important;
+}
+.gclose:focus-visible {
+  outline: none;
+}
+@media (max-width: 767px) {
+  .gclose {
+    padding: 10px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+.gclose svg path {
+  fill: #211D1C !important;
+}
+
+.gnext,
+.gprev {
+  background-color: #FFFFFF !important;
+  border-radius: 50% !important;
+  padding: 16px !important;
+  width: auto !important;
+  height: auto !important;
+  border: 2px solid rgba(177, 105, 88, 0.1) !important;
+}
+@media (hover: hover) {
+  .gnext:hover,
+  .gprev:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #B16958 !important;
+  }
+}
+.gnext:focus-visible,
+.gprev:focus-visible {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #B16958 !important;
+  outline: none;
+}
+.gnext svg,
+.gprev svg {
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 1239px) {
+  .gnext,
+  .gprev {
+    display: none;
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
