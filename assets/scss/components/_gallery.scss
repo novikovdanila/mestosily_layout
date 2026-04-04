@@ -17,16 +17,25 @@
     }
 
     &__item {
-        width: auto;
+        width: 768px;
         height: auto;
+
+        @include tab-768 {
+            width: 100%;
+        }
     }
 
     &__img {
         width: auto;
         height: auto;
+        min-height: 560px;
         object-fit: cover;
         border-radius: $radius-large;
         background-color: $color-gray;
+
+        @include tab-768 {
+            min-height: 400px;
+        }
     }
 
 }

@@ -6,7 +6,7 @@ export function initSliders() {
         slidesPerView: "auto",
         watchOverflow: true,
 
-        lazyPreloadPrevNext: 0,
+        lazyPreloadPrevNext: 2,
 
 
         pagination: {
@@ -44,7 +44,7 @@ export function initSliders() {
         slidesPerView: "auto",
         watchOverflow: true,
 
-        lazyPreloadPrevNext: 0,
+        lazyPreloadPrevNext: 2,
 
 
         pagination: {
@@ -82,7 +82,7 @@ export function initSliders() {
         slidesPerView: "auto",
         watchOverflow: true,
 
-        lazyPreloadPrevNext: 0,
+        lazyPreloadPrevNext: 2,
 
 
         pagination: {
@@ -116,17 +116,25 @@ export function initSliders() {
     // Сладер галерея
     const gallerySwiper = new Swiper(".js-slider-gallery", {
         direction: "horizontal",
+        slidesPerView: 1,
         speed: 400,
         slidesPerView: "auto",
+        centeredSlides: true,
         watchOverflow: true,
         loop: true,
 
-        lazyPreloadPrevNext: 0,
+        lazyPreloadPrevNext: 2,
 
         navigation: {
             addIcons: false,
             nextEl: ".gallery__button-next",
             prevEl: ".gallery__button-prev",
+        },
+
+        pagination: {
+            el: ".gallery__pagination",
+            clickable: true,
+            dynamicBullets: true,
         },
 
         breakpoints: {

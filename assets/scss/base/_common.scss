@@ -75,6 +75,10 @@ body.lock {
     &__swiper {
         overflow: hidden;
 
+        &--visible {
+            overflow: visible;
+        }
+
         @include tab-1024 {
             overflow: visible;
         }
@@ -117,6 +121,11 @@ body.lock {
 
         &-next {
             margin-right: -90px;
+        }
+
+        &--inside {
+            margin-left: 0px;
+            margin-right: 0px;
         }
     }
 
