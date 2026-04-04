@@ -205,6 +205,7 @@ body.lock {
     &__item {
         @include tab-768 {
             scroll-snap-align: start;
+            scroll-snap-stop: always;
         }
     }
 

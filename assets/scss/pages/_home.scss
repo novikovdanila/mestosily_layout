@@ -468,6 +468,7 @@
             flex-shrink: 0;
             width: 300px;
             scroll-snap-align: start;
+            scroll-snap-stop: always;
         }
 
         &-img {
@@ -639,4 +640,182 @@
     }
 
 
+}
+
+.home-reviews {
+    background-color: $color-bg-main;
+    border-radius: $radius-2xlarge;
+    padding: $margin-bottom-section 0;
+    margin-bottom: $margin-bottom-section;
+    overflow-x: hidden;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+        margin-bottom: $margin-bottom-section-tab-768;
+        border-radius: 0px;
+        // overflow: visible;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @include tab-1024 {
+            gap: 30px;
+        }
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+
+        @include tab-768 {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+            gap: 40px;
+
+            @include tab-768 {
+                margin-left: 20px;
+            }
+
+            @include mobile {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__rate-img {
+        width: auto;
+        height: auto;
+        background-color: $color-white;
+        border-radius: $radius-medium;
+
+        @include tab-768 {
+            width: 180px;
+            height: auto;
+        }
+
+        @include mobile-lg {
+            display: none;
+        }
+    }
+
+    &__client-img {
+        background-color: $color-white;
+        border-radius: $radius-large;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        @include mobile-lg {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__title {
+        color: $color-text-main;
+        text-align: left;
+        font-size: 44px;
+        line-height: 1.2;
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            display: inline-block;
+            font-weight: 400;
+            color: #C4AFAB;
+            font-size: 46px;
+            line-height: 1;
+
+            @include tab-1024 {
+                font-size: 34px;
+            }
+
+            @include tab-768 {
+                font-size: 30px;
+            }
+
+            @include mobile-lg {
+                font-size: 20px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        &::before {
+            content: '«';
+            left: -30px;
+
+            @include tab-1024 {
+                left: -20px;
+            }
+
+            @include tab-768 {
+                left: -16px;
+            }
+
+            @include mobile-lg {
+                left: -10px;
+            }
+
+        }
+
+        &::after {
+            content: '»';
+            margin-left: 4px;
+            margin-top: 4px;
+        }
+
+
+
+        @include tab-1024 {
+            font-size: 34px;
+        }
+
+        @include tab-768 {
+            font-size: 30px;
+        }
+
+        @include mobile-lg {
+            font-size: 24px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle {
+
+        @include tab-768 {
+            margin-left: 20px;
+        }
+
+        @include mobile {
+            margin-left: 10px;
+        }
+    }
 }

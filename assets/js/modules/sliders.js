@@ -75,5 +75,43 @@ export function initSliders() {
         }
     });
 
-    return { classesSwiper, teachersSwiper };
+    // Сладер отзывы
+    const reviewsSwiper = new Swiper(".js-slider-reviews", {
+        direction: "horizontal",
+        speed: 400,
+        slidesPerView: "auto",
+        watchOverflow: true,
+
+        lazyPreloadPrevNext: 0,
+
+
+        pagination: {
+            el: ".slider-reviews__pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        navigation: {
+            addIcons: false,
+            nextEl: ".slider-reviews__button-next",
+            prevEl: ".slider-reviews__button-prev",
+        },
+
+        breakpoints: {
+            320: {
+                spaceBetween: 8,
+            },
+            768: {
+                spaceBetween: 20,
+            },
+            1024: {
+                spaceBetween: 20,
+            },
+            1312: {
+                spaceBetween: 24,
+            }
+        }
+    });
+
+    return { classesSwiper, teachersSwiper, reviewsSwiper };
 }
