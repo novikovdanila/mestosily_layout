@@ -748,6 +748,7 @@
         color: $color-text-main;
         text-align: left;
         font-size: 44px;
+        font-weight: 500;
         line-height: 1.2;
         position: relative;
 
@@ -773,7 +774,7 @@
             }
 
             @include mobile {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
@@ -791,6 +792,12 @@
 
             @include mobile-lg {
                 left: -12px;
+                top: 2px;
+            }
+
+            @include mobile {
+                left: -12px;
+                top: 1px;
             }
 
         }
@@ -826,6 +833,7 @@
     }
 
     &__subtitle {
+        font-weight: 400;
 
         @include tab-768 {
             margin-left: 20px;
