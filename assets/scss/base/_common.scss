@@ -9,6 +9,10 @@ body.lock {
     overflow: hidden !important;
 }
 
+body.body--grey {
+    background-color: $color-bg-light;
+}
+
 .container {
     max-width: $container-width + ($container-padding * 2);
     width: 100%;
