@@ -164,12 +164,65 @@
   </header>
 
   <main class="main">
-    <section class="rules-features">
+    <section class="rules-features section-first">
       <div class="container">
         <div class="rules-features__inner">
-          <div class="section-header">
+          <div class="page-header">
             <h1 class="rules-features__title">Правила студии</h1>
           </div>
+          <ul class="rules-features__grid">
+            <li class="rules-features__item">
+              <div class="rules-features__item-icon">
+                <svg width="32" height="32">
+                  <use xlink:href="assets/img/common/sprite.svg#message-wrong"></use>
+                </svg>
+              </div>
+              <div class="rules-features__item-content">
+                <h3 class="rules-features__item-title">Отмена записи</h3>
+                <p class="rules-features__item-text">Предупредить об отмене занятия нужно <span
+                    class="text-bold text-accent">минимум за 2 часа</span>. При отмене позже этого времени занятие
+                  списывается как пройденное.</p>
+              </div>
+            </li>
+            <li class="rules-features__item">
+              <div class="rules-features__item-icon">
+                <svg width="32" height="32">
+                  <use xlink:href="assets/img/common/sprite.svg#clock"></use>
+                </svg>
+              </div>
+              <div class="rules-features__item-content">
+                <h3 class="rules-features__item-title">Опоздания</h3>
+                <p class="rules-features__item-text">Пожалуйста, приходите вовремя. При опоздании инструктор не
+                  гарантирует полноценную разминку, которая важна для безопасности.</p>
+              </div>
+            </li>
+            <li class="rules-features__item">
+              <div class="rules-features__item-icon">
+                <svg width="32" height="32">
+                  <use xlink:href="assets/img/common/sprite.svg#calendar-2"></use>
+                </svg>
+              </div>
+              <div class="rules-features__item-content">
+                <h3 class="rules-features__item-title">Срок действия абонемента</h3>
+                <p class="rules-features__item-text">Абонементы <span class="text-bold text-accent">активируются в
+                    течение 30 дней</span> после покупки. У каждого пакета есть свой срок действия — следите за ним в <a
+                    href="#" class="link-primary">приложении</a>.</p>
+              </div>
+            </li>
+            <li class="rules-features__item">
+              <div class="rules-features__item-icon">
+                <svg width="32" height="32">
+                  <use xlink:href="assets/img/common/sprite.svg#user-badge"></use>
+                </svg>
+              </div>
+              <div class="rules-features__item-content">
+                <h3 class="rules-features__item-title">Персональный абонемент</h3>
+                <p class="rules-features__item-text">Абонемент закреплён за вами, но его можно переоформить на другого
+                  человека, если вы передумали заниматься.</p>
+              </div>
+            </li>
+
+          </ul>
         </div>
       </div>
     </section>
@@ -177,8 +230,81 @@
     <section class="rules-details">
       <div class="container">
         <div class="rules-details__inner">
+          <h2 class="visually-hidden">Подробные правила студии йоги «Место Силы»</h2>
 
-          список правил
+          <div class="rules-details__block">
+            <h3 class="rules-details__block-title">Абонементы и активация</h3>
+            <ul class="rules-details__block-list">
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class=" rules-details__block-item-text"><span class="text-bold">Все абонементы распространяются на 
+                    все занятия, кроме платных спец.классов и мероприятий.</span> Срок действия абонементов: <span
+                    class="text-accent">1 месяц — 30 дней; 3 месяца — 90 дней; 6 месяцев — 180 дней.</span></p>
+              </li>
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class=" rules-details__block-item-text"><span class="text-bold">Абонемент можно активировать (начать
+                    заниматься) в течение 30 дней со дня покупки. </span>
+                  Срок действия абонемента считается с даты первого занятия. В случае, если оплаченный абонемент
+                  не активирован в течение 30 дней, то по истечении этого срока он открывается и начинает действовать
+                  автоматически. По подарочному сертификату тот же принцип.</p>
+              </li>
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class=" rules-details__block-item-text"><span class="text-bold">Месячные абонементы не продлеваются.
+                  </span>
+                  В случае критической, уважительной причины необходимо обратиться к администратору для решения вопроса
+                  по возможной заморозке и продлению абонемента. Рядовые причины, такие как: изменение графика работы,
+                  незапланированные поездки, лень — не рассматриваются.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="rules-details__block">
+            <h3 class="rules-details__block-title">Правила посещения и записи</h3>
+            <ul class="rules-details__block-list">
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class="rules-details__block-item-text"><span class="text-bold">На занятие необходимо приходить
+                    вовремя. </span>
+                  Если вы присоединяетесь с опозданием, то инструктор не гарантирует вам комфортную подготовку
+                  к основной тренировке и разминка/разогрев тела остаётся под вашу ответственность.</p>
+              </li>
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class="rules-details__block-item-text"><span class="text-bold">У преподавателя и администратора
+                    вы можете предварительно получить всю необходимую информацию по противопоказаниям и нагрузке
+                    каждой
+                    тренировки. </span>
+                  Далее, посещая занятия, вы самостоятельно несёте ответственность за своё здоровье в целом
+                  и самочувствие в конкретный день.</p>
+              </li>
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class="rules-details__block-item-text"><span class="text-bold">Предупредить об отмене своей записи
+                    на занятие необходимо минимум за 2 часа.
+                  </span>
+                  Если отмена происходит позже, то занятие автоматически списывается в системе и занятие считается
+                  реализованным.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="rules-details__block">
+            <h3 class="rules-details__block-title">Безопасность и изменения</h3>
+            <ul class="rules-details__block-list">
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class="rules-details__block-item-text"><span class="text-bold">Студия не несёт ответственность
+                    за сохранность оставленных без присмотра личных вещей и забытые вещи в раздевалке.</span>
+                </p>
+              </li>
+              <li class="rules-details__block-item">
+                <span class="rules-details__block-item-number"></span>
+                <p class="rules-details__block-item-text"><span class="text-bold">Студия оставляет за собой право
+                    вносить изменения в расписание, добавлять и менять тренировки или преподавателей.</span></p>
+              </li>
+
+            </ul>
+          </div>
 
         </div>
       </div>

@@ -1,4 +1,210 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.rules {}
+.rules-features {
+    background-color: $color-bg-light;
+
+    padding-bottom: $margin-bottom-section;
+    margin-bottom: $margin-bottom-section;
+
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // &__title {
+    //     margin-bottom: 20px;
+    // }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        @include mobile-lg {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        padding: 30px;
+        border-radius: $radius-large;
+        background-color: $color-white;
+    }
+
+    &__item-icon {
+        width: 32px;
+        height: 32px;
+        color: $color-secondary;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    &__item-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    &__item-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+
+
+.rules-details {
+    counter-reset: rules-counter; // Сбрасываем счетчик
+    // padding: $margin-bottom-section 0;
+    margin-bottom: $margin-bottom-section;
+
+
+    @include tab-1024 {
+        // padding: $margin-bottom-section-tab-1024 0;
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        // padding: $margin-bottom-section-tab-768 0;
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        border-radius: $radius-large;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        overflow: hidden;
+    }
+
+    &__block-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        width: 100%;
+        border-bottom: 1px solid $color-border;
+
+        background-color: rgba($color-bg-main, 0.2);
+
+        @include tab-768 {
+            padding: 20px;
+        }
+
+        @include mobile {
+            padding: 15px;
+        }
+
+    }
+
+    &__block-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block-item {
+        counter-increment: rules-counter; // Увеличиваем счетчик на +1  
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 30px;
+        border-bottom: 1px solid $color-border;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @include tab-768 {
+            padding: 20px;
+        }
+
+        @include mobile {
+            padding: 15px;
+        }
+    }
+
+    &__block-item-number {
+        &::before {
+            content: counter(rules-counter);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 30px;
+        height: 30px;
+        background: $color-accent; // Твой цвет #A68B7C
+        color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        padding-top: 1px;
+
+        @include mobile {
+            font-size: 15px;
+            flex-basis: 28px;
+            height: 28px;
+        }
+    }
+
+    &__block-item-text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+
+        @include tab-768 {
+            font-size: 18px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+}
