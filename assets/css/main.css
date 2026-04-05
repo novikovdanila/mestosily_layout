@@ -728,7 +728,6 @@ body.body--grey {
   justify-content: start;
   align-items: center;
   width: 100%;
-  cursor: pointer;
 }
 @media (max-width: 1239px) {
   .header .menu__item {
@@ -787,6 +786,7 @@ body.body--grey {
 .header .menu__link--more {
   justify-content: flex-start;
   gap: 4px;
+  cursor: pointer;
 }
 .header .menu__link--more::after {
   content: "";
@@ -808,6 +808,7 @@ body.body--grey {
   color: #211D1C;
   background-color: #F5F5F5;
   pointer-events: none;
+  cursor: default;
 }
 .header .menu__sub-menu {
   position: absolute;
@@ -1422,6 +1423,16 @@ body.body--grey {
   .contacts {
     padding: 60px 0 0 0;
     border-radius: 0px;
+  }
+}
+.contacts--page {
+  border-radius: 0px;
+  background-color: #F6F9FC;
+  padding: 60px 0 0 0;
+}
+@media (max-width: 1023px) {
+  .contacts--page {
+    padding: 40px 0 0 0;
   }
 }
 .contacts__inner {

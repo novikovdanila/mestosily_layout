@@ -212,7 +212,6 @@
             justify-content: start;
             align-items: center;
             width: 100%;
-            cursor: pointer;
 
             @include tab-1024 {
                 width: auto;
@@ -260,6 +259,7 @@
             &--more {
                 justify-content: flex-start;
                 gap: 4px;
+                cursor: pointer;
 
                 &::after {
                     content: "";
@@ -282,6 +282,7 @@
                 color: $color-dark;
                 background-color: #F5F5F5;
                 pointer-events: none;
+                cursor: default;
             }
         }
 
