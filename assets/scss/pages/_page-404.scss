@@ -1,11 +1,79 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.page-404 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+.error-404 {
+    padding: $margin-bottom-section 0;
+    // margin-bottom: $margin-bottom-section;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 110px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #C4AFAB;
+        margin-bottom: -20px;
+
+        @include tab-1024 {
+            font-size: 80px;
+        }
+
+        @include tab-768 {
+            font-size: 60px;
+        }
+
+        @include mobile-lg {
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1;
+        color: $color-dark;
+
+        @include tab-1024 {
+            font-size: 34px;
+        }
+
+        @include tab-768 {
+            font-size: 30px;
+        }
+
+        @include mobile-lg {
+            font-size: 26px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-dark;
+
+        @include tab-768 {
+            font-size: 18px;
+        }
+
+        @include mobile-lg {
+            font-size: 16px;
+        }
+    }
+
+
 }
