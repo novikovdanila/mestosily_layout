@@ -14,7 +14,9 @@
     transition:
         background-color $transition-base,
         border-color $transition-base,
+        transform $transition-base,
         color $transition-base;
+
     cursor: pointer;
     border: 1px solid transparent;
     gap: 10px;
@@ -30,6 +32,10 @@
     svg {
         fill: currentColor;
         flex-shrink: 0;
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 
     &--primary {
@@ -72,9 +78,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color $transition-base;
-    transition: color $transition-base;
-    transition: border-color $transition-base;
+    transition:
+        background-color $transition-base,
+        color $transition-base,
+        border-color $transition-base,
+        transform $transition-base;
+
+
+    &:active {
+        transform: scale(0.95);
+    }
 
     svg {
         width: 14px;
@@ -117,7 +130,12 @@
     transition:
         background-color $transition-base,
         border-color $transition-base,
-        color $transition-base;
+        color $transition-base,
+        transform $transition-base;
+
+    &:active {
+        transform: scale(0.95);
+    }
 
 
     svg {

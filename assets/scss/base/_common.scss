@@ -239,6 +239,7 @@ body.lock {
         transition:
             border-color $transition-base,
             color $transition-base,
+            transform $transition-base,
             background-color $transition-base;
         border: 1px solid $color-border;
         background-color: $color-white;
@@ -248,6 +249,10 @@ body.lock {
         @include hover {
             border-color: $color-secondary;
             color: $color-secondary;
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
 
 
