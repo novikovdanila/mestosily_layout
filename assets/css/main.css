@@ -1832,6 +1832,7 @@ body.lock {
   border-radius: 20px;
   border: 1px solid #E5E2E1;
   height: 100%;
+  background-color: #FFFFFF;
 }
 @media (hover: hover) {
   .card-teacher:hover .card-teacher__img img {
@@ -1973,6 +1974,7 @@ body.lock {
 }
 
 .slider-reviews__item {
+  position: relative;
   width: auto;
   min-width: 408px;
   max-width: 408px;
@@ -2996,6 +2998,7 @@ body.lock {
   .home-reviews {
     padding: 90px 0;
     margin-bottom: 90px;
+    border-radius: 0;
   }
 }
 @media (max-width: 1023px) {

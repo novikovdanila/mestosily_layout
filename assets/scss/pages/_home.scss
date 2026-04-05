@@ -663,6 +663,7 @@
     @include tab-1024 {
         padding: $margin-bottom-section-tab-1024 0;
         margin-bottom: $margin-bottom-section-tab-1024;
+        border-radius: 0;
     }
 
     @include tab-768 {

@@ -9,6 +9,7 @@
     border-radius: $radius-large;
     border: 1px solid $color-border;
     height: 100%;
+    background-color: $color-white;
 
     @include hover {
         .card-teacher__img img {
