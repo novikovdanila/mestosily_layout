@@ -166,8 +166,25 @@ h6 {
   display: flex !important;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 body.lock {
   overflow: hidden !important;
+}
+
+body.body--grey {
+  background-color: #F6F9FC;
 }
 
 .container {
@@ -2176,6 +2193,12 @@ body.lock {
 .gallery .swiper {
   overflow: visible;
 }
+.gallery__slider-wrapper {
+  cursor: grab;
+}
+.gallery__slider-wrapper:active {
+  cursor: grabbing;
+}
 .gallery__item {
   width: 768px;
   height: auto;
@@ -3216,4 +3239,13 @@ body.lock {
   .home-reviews__subtitle {
     margin-left: 10px;
   }
+}
+
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

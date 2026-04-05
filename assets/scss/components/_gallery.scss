@@ -17,6 +17,14 @@
         overflow: visible;
     }
 
+    &__slider-wrapper {
+        cursor: grab; // Открытая ладонь (готовность схватить)
+
+        &:active {
+            cursor: grabbing; // Кулак (в момент перетаскивания)
+        }
+    }
+
     &__item {
         width: 768px;
         height: auto;
@@ -31,6 +39,7 @@
             opacity: .8;
             // filter: brightness(1.2);
         }
+
     }
 
     &__img {

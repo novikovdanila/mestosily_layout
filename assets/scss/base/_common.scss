@@ -5,6 +5,19 @@
     display: flex !important;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 body.lock {
     overflow: hidden !important;
 }
