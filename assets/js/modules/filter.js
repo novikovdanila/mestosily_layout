@@ -23,7 +23,7 @@ export function initFilter() {
                 // Фильтруем элементы через display: none
                 Array.from(items).forEach(item => {
                     const categories = item.dataset.category ? item.dataset.category.split(' ') : [];
-                    
+
                     if (filterValue === 'all' || categories.includes(filterValue)) {
                         item.style.display = '';
                     } else {
@@ -37,7 +37,7 @@ export function initFilter() {
                     bubbles: true,
                     cancelable: true
                 });
-                
+
                 container.dispatchEvent(filterChangedEvent);
             });
         });
