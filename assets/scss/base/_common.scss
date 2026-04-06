@@ -53,6 +53,21 @@ body.body--grey {
     }
 }
 
+.hero-inner-page {
+    padding: 0 $container-hero-padding;
+
+    @include mobile {
+        padding: 0 4px;
+    }
+
+    &__wrapper {
+        max-width: $container-hero-width;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+
 .page-header {
     display: flex;
     flex-direction: column;
