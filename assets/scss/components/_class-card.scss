@@ -32,21 +32,19 @@
         position: relative;
         border-radius: $radius-large;
         overflow: hidden;
-        height: 238px;
+        aspect-ratio: 408 / 238;
+        width: 100%;
         background-color: #f8f8f8;
 
         @include mobile {
             border-radius: $radius-medium;
-            height: auto;
         }
 
         img {
-            // display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform $transition-base;
-            // z-index: 20 !important;
         }
 
     }

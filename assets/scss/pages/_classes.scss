@@ -1,0 +1,168 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.classes-hero {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__wrapper {
+        position: relative;
+        border-radius: $radius-xlarge;
+        overflow: hidden;
+        color: $color-white;
+        background-size: cover;
+        background-position: center;
+        background-color: $color-gray;
+
+        @include mobile-lg {
+            border-radius: $radius-large;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(#2A2625, 0.7);
+            z-index: 1;
+            pointer-events: none;
+            border-radius: $radius-xlarge;
+
+            @include mobile-lg {
+                border-radius: $radius-large;
+            }
+        }
+
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        @include tab-768 {
+            height: auto;
+        }
+    }
+
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        min-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+
+        @include mobile-lg {
+            padding: 20px;
+        }
+
+        @include tab-768 {
+            width: 80%;
+            align-items: center;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        @include mobile-lg {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        // font-size: 60px;
+        font-size: clamp(32px, 3vw, 60px);
+        margin-bottom: 20px;
+
+        @include tab-1024 {
+            font-size: 46px;
+        }
+
+        @include tab-768 {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        opacity: 0.9;
+
+        @include tab-1024 {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+
+}
+
+.classes-grid {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @include mobile-lg {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px
+        }
+    }
+}
