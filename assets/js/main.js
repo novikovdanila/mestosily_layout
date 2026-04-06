@@ -11,7 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const { classesSwiper } = initSliders();
 
     // Инициализация фильтрации
-    initFilter(classesSwiper);
+    initFilter();
+
+    // Связка фильтра со слайдером через кастомное событие
+    if (classesSwiper) {
+        const container = document.querySelector('.js-filter-container');
+        if (container) {
+            container.addEventListener('filter:changed', () => {
+                classesSwiper.update();
+                classesSwiper.slideTo(0);
+            });
+        }
+    }
 
     // Инициализация лайтбокса
     initLightbox();

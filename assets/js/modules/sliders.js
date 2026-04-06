@@ -5,6 +5,8 @@ export function initSliders() {
         speed: 400,
         slidesPerView: "auto",
         watchOverflow: true,
+        observer: true,
+        observeParents: true,
 
         lazyPreloadPrevNext: 2,
 

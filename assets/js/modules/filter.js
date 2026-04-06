@@ -1,39 +1,45 @@
-export function initFilter(classesSwiper) {
-    if (!classesSwiper) return;
+/**
+ * Универсальный модуль фильтрации
+ * Работает через js- префиксы, не зависит от сторонних библиотек.
+ */
+export function initFilter() {
+    const filterButtons = document.querySelectorAll('.js-filter-btn');
+    const filterContainers = document.querySelectorAll('.js-filter-container');
 
-    const filterButtons = document.querySelectorAll('.filter__btn');
-    if (!filterButtons.length) return;
+    if (!filterButtons.length || !filterContainers.length) return;
 
-    // Сохраняем все слайды в массив при загрузке
-    const allSlides = Array.from(document.querySelectorAll('.js-slider-classes .swiper-slide'));
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filterValue = btn.dataset.filter;
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Убираем активный класс у всех кнопок и добавляем текущей
-            filterButtons.forEach(btn => btn.classList.remove('filter__btn--active'));
-            button.classList.add('filter__btn--active');
+            // Переключаем активный класс у кнопок
+            filterButtons.forEach(button => {
+                button.classList.toggle('filter__btn--active', button === btn);
+            });
 
-            const filterValue = button.getAttribute('data-filter');
+            filterContainers.forEach(container => {
+                const items = container.children;
 
-            // Очищаем слайдер
-            classesSwiper.removeAllSlides();
-
-            // Фильтруем слайды
-            const filteredSlides = filterValue === 'all' 
-                ? allSlides 
-                : allSlides.filter(slide => {
-                    const dataCategory = slide.getAttribute('data-category');
-                    if (!dataCategory) return false;
-                    const categories = dataCategory.split(' ');
-                    return categories.includes(filterValue);
+                // Фильтруем элементы через display: none
+                Array.from(items).forEach(item => {
+                    const categories = item.dataset.category ? item.dataset.category.split(' ') : [];
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
 
-            // Добавляем отфильтрованные слайды обратно
-            classesSwiper.appendSlide(filteredSlides);
-            
-            // Обновляем слайдер и возвращаемся к первому слайду
-            classesSwiper.update();
-            classesSwiper.slideTo(0);
+                // Генерируем событие для внешних подписчиков (например, Swiper)
+                const filterChangedEvent = new CustomEvent('filter:changed', {
+                    detail: { filter: filterValue },
+                    bubbles: true,
+                    cancelable: true
+                });
+                
+                container.dispatchEvent(filterChangedEvent);
+            });
         });
     });
 }
