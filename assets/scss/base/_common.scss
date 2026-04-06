@@ -27,10 +27,10 @@ body.body--grey {
 }
 
 .section-first {
-    padding-top: 60px;
+    padding-top: 60px !important;
 
     @include tab-768 {
-        padding-top: 40px;
+        padding-top: 40px !important;
     }
 }
 

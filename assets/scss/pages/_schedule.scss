@@ -1,0 +1,37 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.schedule {
+    background-color: $color-bg-light;
+
+    padding-bottom: $margin-bottom-section;
+    // margin-bottom: $margin-bottom-section;
+
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+        // margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+        // margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__widget {
+        width: 100%;
+        // max-width: 1200px;
+        margin-bottom: 40px;
+    }
+
+    &__btns-wrapper {
+        margin-top: 40px;
+    }
+
+}
