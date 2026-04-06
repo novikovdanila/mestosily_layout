@@ -140,6 +140,7 @@
 
 .classes-grid {
     margin-bottom: $margin-bottom-section;
+    overflow: hidden;
 
     @include tab-1024 {
         margin-bottom: $margin-bottom-section-tab-1024;

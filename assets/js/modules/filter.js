@@ -18,10 +18,24 @@ export function initFilter() {
             });
 
             filterContainers.forEach(container => {
-                const items = container.children;
+                const items = Array.from(container.children);
+
+                // Эффект мигания для карточек
+                items.forEach(item => {
+                    if (item.classList.contains('js-filter-item')) {
+                        item.classList.remove('is-blinking');
+                        void item.offsetWidth; // Рефлоу для перезапуска анимации
+                        item.classList.add('is-blinking');
+                    }
+                });
+
+                // Удаляем класс после завершения анимации (0.3s)
+                setTimeout(() => {
+                    items.forEach(item => item.classList.remove('is-blinking'));
+                }, 300);
 
                 // Фильтруем элементы через display: none
-                Array.from(items).forEach(item => {
+                items.forEach(item => {
                     const categories = item.dataset.category ? item.dataset.category.split(' ') : [];
 
                     if (filterValue === 'all' || categories.includes(filterValue)) {
