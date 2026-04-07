@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.gallery {
+.slider-gallery {
     overflow: hidden;
     margin-bottom: $margin-bottom-section;
 
@@ -26,18 +26,16 @@
     }
 
     &__item {
-        width: 768px;
+        display: flex;
+        justify-content: center;
+        max-width: 768px;
+        width: 100%;
         height: auto;
-        // transition: filter $transition-base;
         transition: opacity $transition-base;
 
-        @include tab-768 {
-            width: 100%;
-        }
 
         &:not(.swiper-slide-active) {
             opacity: .8;
-            // filter: brightness(1.2);
         }
 
     }
