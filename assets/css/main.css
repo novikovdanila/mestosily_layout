@@ -1897,6 +1897,45 @@ body.body--grey {
      object-fit: cover;
   transition: transform 0.2s ease;
 }
+.card-teacher__badge-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.card-teacher__badge {
+  display: flex;
+  align-items: center;
+  padding: 4px 4px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #211D1C;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+.card-teacher__badge::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 3px;
+  border: 1px solid #E5E2E1;
+  background-color: #F6F9FC;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-teacher__badge--en::before {
+  background-image: url("../img/common/flag-en-24x16.svg");
+}
+.card-teacher__badge--ge::before {
+  background-image: url("../img/common/flag-ge-24x16.svg");
+}
 .card-teacher__content {
   padding: 20px;
   background-color: #FFFFFF;
@@ -4493,4 +4532,73 @@ body.body--grey {
   .classes-info__text {
     text-align: center;
   }
+}
+
+.teachers {
+  background-color: #F6F9FC;
+  padding-bottom: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .teachers {
+    padding: 90px 0;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .teachers {
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+}
+.teachers__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teachers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .teachers__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.teachers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.teachers__item-icon {
+  width: 32px;
+  height: 32px;
+  color: #B16958;
+}
+.teachers__item-icon svg {
+  width: 32px;
+  height: 32px;
+}
+.teachers__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.teachers__item-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.teachers__item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
