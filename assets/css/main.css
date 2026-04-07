@@ -1823,9 +1823,10 @@ body.body--grey {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 10px;
-  border-radius: 20px;
+  padding: 6px 10px;
+  border-radius: 6px;
   font-size: 16px;
+  line-height: 1.2;
   pointer-events: none;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
 }
@@ -1836,11 +1837,11 @@ body.body--grey {
   }
 }
 .card-class__tag--personally {
-  background-color: #A78BFB;
+  background-color: #9E87D4;
   color: #FFFFFF;
 }
 .card-class__tag--special {
-  background-color: #69C983;
+  background-color: #72AF34;
   color: #FFFFFF;
 }
 
