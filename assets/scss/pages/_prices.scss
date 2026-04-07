@@ -1,0 +1,36 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.prices-intro {
+    overflow: hidden;
+    padding-bottom: $margin-bottom-section;
+    margin-bottom: $margin-bottom-section;
+
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__nav {
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include mobile {
+            margin-bottom: 24px;
+        }
+    }
+
+}
