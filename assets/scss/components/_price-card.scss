@@ -1,0 +1,133 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+//Карточки абонементов
+
+.price-card {
+    position: relative;
+    background-color: $color-white;
+    border-radius: $radius-large;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    &__title {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-dark;
+        line-height: 1.4;
+    }
+
+    &__duration {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+
+        &--blue {
+            color: #578BFB;
+        }
+
+        &--green {
+            color: #07B435;
+        }
+
+        &--orange {
+            color: #C88200;
+        }
+
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-dark;
+        margin-top: 10px;
+
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    &__prices {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__price-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    &__price-row {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    &__price-value {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: $color-dark;
+    }
+
+    &__price-description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.1;
+        color: $color-dark;
+    }
+
+    &__price-unit {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-dark;
+    }
+
+    &--border {
+        border-color: $color-border;
+    }
+
+    &--recommended {
+        border-color: $color-accent;
+
+        .price-card__label-accent {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            background-color: $color-accent;
+            color: $color-white;
+            padding: 6px 12px;
+            border-radius: 0 0 0 20px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+    }
+
+}

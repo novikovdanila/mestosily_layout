@@ -102,7 +102,7 @@
 
     &__title {
         // font-size: 60px;
-        font-size: clamp(32px, 3vw, 60px);
+        font-size: clamp(32px, 4vw, 60px);
         margin-bottom: 20px;
 
         @include tab-1024 {

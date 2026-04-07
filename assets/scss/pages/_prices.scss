@@ -3,19 +3,8 @@
 
 .prices-intro {
     overflow: hidden;
-    padding-bottom: $margin-bottom-section;
-    margin-bottom: $margin-bottom-section;
+    margin-bottom: 20px;
 
-
-    @include tab-1024 {
-        padding: $margin-bottom-section-tab-1024 0;
-        margin-bottom: $margin-bottom-section-tab-1024;
-    }
-
-    @include tab-768 {
-        padding: $margin-bottom-section-tab-768 0;
-        margin-bottom: $margin-bottom-section-tab-768;
-    }
 
     &__inner {
         display: flex;
@@ -33,4 +22,23 @@
         }
     }
 
+}
+
+.prices-starter {
+    background-color: $color-bg-light;
+    padding: 90px 0;
+
+    @include tab-768 {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 30px 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
 }
