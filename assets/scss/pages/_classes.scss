@@ -167,3 +167,126 @@
         }
     }
 }
+
+.classes-info {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        background-color: $color-bg-light;
+        border-radius: $radius-xlarge;
+        padding: 60px 30px;
+
+        @include tab-768 {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+            border-radius: $radius-large;
+            padding: 60px 40px;
+        }
+
+        @include mobile-lg {
+            gap: 30px;
+            padding: 30px 20px;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+
+        @include tab-768 {
+            flex-direction: row;
+            justify-self: start;
+            align-items: start;
+        }
+
+        @include mobile-lg {
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        color: $color-secondary;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        @include tab-768 {
+            justify-self: start;
+            align-items: start;
+        }
+
+        @include mobile-lg {
+            justify-self: center;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: $color-dark;
+        text-align: center;
+
+        @include tab-768 {
+            text-align: left;
+        }
+
+        @include mobile-lg {
+            text-align: center;
+        }
+
+
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $color-gray-dark;
+        line-height: 1.4;
+        text-align: center;
+
+        @include tab-768 {
+            text-align: left;
+        }
+
+        @include mobile-lg {
+            text-align: center;
+        }
+    }
+
+
+}

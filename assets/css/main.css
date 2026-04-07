@@ -253,6 +253,7 @@ body.body--grey {
 
 .text-accent {
   color: #B16958;
+  display: inline-flex;
 }
 
 .text-bold {
@@ -4210,5 +4211,127 @@ body.body--grey {
   .classes-grid__list {
     grid-template-columns: repeat(1, 1fr);
     gap: 50px;
+  }
+}
+
+.classes-info {
+  margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .classes-info {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .classes-info {
+    margin-bottom: 60px;
+  }
+}
+.classes-info__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  background-color: #F6F9FC;
+  border-radius: 30px;
+  padding: 60px 30px;
+}
+@media (max-width: 1023px) {
+  .classes-info__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    border-radius: 20px;
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 767px) {
+  .classes-info__list {
+    gap: 30px;
+    padding: 30px 20px;
+  }
+}
+.classes-info__item {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+@media (max-width: 1023px) {
+  .classes-info__item {
+    flex-direction: row;
+    justify-self: start;
+    align-items: start;
+  }
+}
+@media (max-width: 767px) {
+  .classes-info__item {
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+}
+.classes-info__img {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #B16958;
+}
+.classes-info__img svg {
+  width: 32px;
+  height: 32px;
+}
+.classes-info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  .classes-info__content {
+    justify-self: start;
+    align-items: start;
+  }
+}
+@media (max-width: 767px) {
+  .classes-info__content {
+    justify-self: center;
+    align-items: center;
+  }
+}
+.classes-info__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #211D1C;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .classes-info__title {
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  .classes-info__title {
+    text-align: center;
+  }
+}
+.classes-info__text {
+  font-size: 16px;
+  color: #5E5C5B;
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .classes-info__text {
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  .classes-info__text {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
