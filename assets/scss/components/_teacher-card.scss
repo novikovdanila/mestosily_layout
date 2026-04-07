@@ -2,26 +2,31 @@
 @use '../base/mixins' as *;
 
 .card-teacher {
-    // max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    background-color: $color-white;
     border-radius: $radius-large;
     border: 1px solid $color-border;
+    overflow: hidden;
     height: 100%;
-    background-color: $color-white;
 
-    @include hover {
-        .card-teacher__img img {
-            transform: scale(1.05);
-        }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
 
-        .card-teacher__title {
-            color: $color-secondary;
-        }
+        @include hover {
+            .card-teacher__img img {
+                transform: scale(1.05);
+            }
 
-        .card-teacher__text {
-            color: $color-secondary;
+            .card-teacher__title {
+                color: $color-secondary;
+            }
+
+            .card-teacher__text {
+                color: $color-secondary;
+            }
         }
     }
 

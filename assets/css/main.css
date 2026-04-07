@@ -1735,36 +1735,38 @@ body.body--grey {
 
 .card-class {
   position: relative;
-  width: auto;
-  height: auto;
+  background-color: #FFFFFF;
+  height: 100%;
+}
+.card-class__link {
   display: flex;
   flex-direction: column;
   gap: 14px;
   text-decoration: none;
   color: inherit;
-  background-color: #FFFFFF;
+  height: 100%;
 }
 @media (hover: hover) {
-  .card-class:hover .card-class__img img {
+  .card-class__link:hover .card-class__img img {
     transform: scale(1.05);
   }
-  .card-class:hover .card-class__title {
+  .card-class__link:hover .card-class__title {
     color: #B16958;
   }
-  .card-class:hover .card-class__text {
+  .card-class__link:hover .card-class__text {
     color: #B16958;
   }
 }
-.card-class:focus-visible .card-class__img img {
+.card-class__link:focus-visible .card-class__img img {
   transform: scale(1.05);
 }
-.card-class:focus-visible .card-class__title {
+.card-class__link:focus-visible .card-class__title {
   color: #B16958;
 }
-.card-class:focus-visible .card-class__text {
+.card-class__link:focus-visible .card-class__text {
   color: #B16958;
 }
-.card-class:focus-visible {
+.card-class__link:focus-visible {
   outline: none;
 }
 .card-class__img {
@@ -1850,35 +1852,40 @@ body.body--grey {
 }
 
 .card-teacher {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  background-color: #FFFFFF;
   border-radius: 20px;
   border: 1px solid #E5E2E1;
+  overflow: hidden;
   height: 100%;
-  background-color: #FFFFFF;
+}
+.card-teacher__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 @media (hover: hover) {
-  .card-teacher:hover .card-teacher__img img {
+  .card-teacher__link:hover .card-teacher__img img {
     transform: scale(1.05);
   }
-  .card-teacher:hover .card-teacher__title {
+  .card-teacher__link:hover .card-teacher__title {
     color: #B16958;
   }
-  .card-teacher:hover .card-teacher__text {
+  .card-teacher__link:hover .card-teacher__text {
     color: #B16958;
   }
 }
-.card-teacher:focus-visible .card-teacher__img img {
+.card-teacher__link:focus-visible .card-teacher__img img {
   transform: scale(1.05);
 }
-.card-teacher:focus-visible .card-teacher__title {
+.card-teacher__link:focus-visible .card-teacher__title {
   color: #B16958;
 }
-.card-teacher:focus-visible .card-teacher__text {
+.card-teacher__link:focus-visible .card-teacher__text {
   color: #B16958;
 }
-.card-teacher:focus-visible {
+.card-teacher__link:focus-visible {
   outline: none;
 }
 .card-teacher__img {

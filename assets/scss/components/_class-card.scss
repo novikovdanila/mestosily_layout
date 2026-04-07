@@ -5,26 +5,29 @@
 
 .card-class {
     position: relative;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    text-decoration: none;
-    color: inherit;
     background-color: $color-white;
+    height: 100%;
 
-    @include hover {
-        .card-class__img img {
-            transform: scale(1.05);
-        }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        text-decoration: none;
+        color: inherit;
+        height: 100%;
 
-        .card-class__title {
-            color: $color-secondary;
-        }
+        @include hover {
+            .card-class__img img {
+                transform: scale(1.05);
+            }
 
-        .card-class__text {
-            color: $color-secondary;
+            .card-class__title {
+                color: $color-secondary;
+            }
+
+            .card-class__text {
+                color: $color-secondary;
+            }
         }
     }
 
