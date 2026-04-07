@@ -2,7 +2,7 @@
 @use '../base/mixins' as *;
 
 .card-teacher {
-    max-width: 300px;
+    // max-width: 300px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -29,7 +29,7 @@
         position: relative;
         border-radius: $radius-large;
         overflow: hidden;
-        height: 300px;
+        aspect-ratio: 300 / 300;
         background-color: #f8f8f8;
 
         @include mobile {
@@ -49,7 +49,7 @@
     &__badge-wrapper {
         position: absolute;
         bottom: 10px;
-        left: 10px;
+        padding: 0 10px;
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
@@ -68,6 +68,7 @@
         box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 
         &::before {
+            align-self: start;
             content: '';
             display: inline-block;
             width: 24px;

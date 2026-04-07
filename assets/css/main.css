@@ -1845,7 +1845,6 @@ body.body--grey {
 }
 
 .card-teacher {
-  max-width: 300px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1881,7 +1880,7 @@ body.body--grey {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  height: 300px;
+  aspect-ratio: 300/300;
   background-color: #f8f8f8;
 }
 @media (max-width: 560px) {
@@ -1900,7 +1899,7 @@ body.body--grey {
 .card-teacher__badge-wrapper {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -1918,6 +1917,7 @@ body.body--grey {
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 }
 .card-teacher__badge::before {
+  align-self: start;
   content: "";
   display: inline-block;
   width: 24px;
@@ -4556,10 +4556,25 @@ body.body--grey {
   flex-direction: column;
   align-items: center;
 }
+.teachers__subtitle {
+  text-align: center;
+}
 .teachers__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+@media (max-width: 1239px) {
+  .teachers__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .teachers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 @media (max-width: 767px) {
   .teachers__grid {
@@ -4568,13 +4583,12 @@ body.body--grey {
   }
 }
 .teachers__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 30px;
-  border-radius: 20px;
-  background-color: #FFFFFF;
+  max-width: 300px;
+}
+@media (max-width: 767px) {
+  .teachers__item {
+    max-width: 400px;
+  }
 }
 .teachers__item-icon {
   width: 32px;
