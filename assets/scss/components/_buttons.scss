@@ -175,7 +175,7 @@
         background-color: darken($color-primary, 10%);
     }
 
-    &--first {
+    &--first-visit {
         background-color: $color-secondary;
 
         &:hover {
@@ -183,6 +183,9 @@
         }
     }
 
-
+    @include mobile-lg {
+        padding: 6px 13px;
+        font-size: 14px;
+    }
 
 }

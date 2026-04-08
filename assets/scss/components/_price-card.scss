@@ -11,16 +11,23 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: space-between;
+    // justify-content: space-between;
     border-width: 3px;
     border-style: solid;
     border-color: transparent;
     overflow: hidden;
+    height: 100%;
+
+    @include mobile-lg {
+        padding: 16px;
+        gap: 10px;
+    }
 
     &__header {
         display: flex;
         flex-direction: column;
         gap: 0px;
+        flex-grow: 1;
     }
 
     &__title {
@@ -29,6 +36,11 @@
         font-weight: 700;
         color: $color-dark;
         line-height: 1.4;
+
+        @include mobile-lg {
+            font-size: 15px;
+            line-height: 1.2;
+        }
     }
 
     &__duration {
@@ -36,6 +48,11 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 1.4;
+
+        @include mobile-lg {
+            font-size: 13px;
+            line-height: 1.2;
+        }
 
         &--blue {
             color: #578BFB;
@@ -58,19 +75,27 @@
         color: $color-dark;
         margin-top: 10px;
 
+        @include mobile-lg {
+            font-size: 13px;
+            line-height: 1.2;
+        }
+
     }
 
     &__body {
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 20px;
+        gap: 10px;
+
+        @include mobile-lg {
+            gap: 4px;
+        }
     }
 
     &__prices {
         display: flex;
         flex-direction: column;
-        gap: 10px;
     }
 
     &__price-column {
@@ -90,6 +115,10 @@
         font-weight: 700;
         line-height: 1.4;
         color: $color-dark;
+
+        @include mobile-lg {
+            font-size: 20px;
+        }
     }
 
     &__price-description {
@@ -104,6 +133,10 @@
         font-weight: 400;
         line-height: 1.4;
         color: $color-dark;
+
+        @include mobile-lg {
+            font-size: 13px;
+        }
     }
 
     &--border {
@@ -128,6 +161,10 @@
             font-weight: 700;
             line-height: 1.4;
         }
+    }
+
+    &--first-visit {
+        border-color: $color-accent;
     }
 
 }

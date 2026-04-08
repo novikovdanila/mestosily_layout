@@ -1,6 +1,11 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
+
+.pricing-header__subtitle {
+    text-align: center;
+}
+
 .prices-intro {
     overflow: hidden;
     margin-bottom: 20px;
@@ -11,6 +16,14 @@
         flex-direction: column;
         align-items: center;
         gap: 30px;
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        text-align: center;
     }
 
     &__nav {
@@ -18,7 +31,7 @@
         margin-bottom: 40px;
 
         @include mobile {
-            margin-bottom: 24px;
+            margin-bottom: 4px;
         }
     }
 
@@ -40,5 +53,80 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
+
+        @include tab-1024 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-lg {
+            gap: 6px;
+        }
+
     }
+
+    //баннер
+    &__banner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: $color-accent;
+        border-radius: $radius-large;
+        padding: 30px;
+        background-image: url(../img/content/banners/banner-start-price.webp);
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100%;
+
+        @include mobile-lg {
+            padding: 14px;
+            background-position: right bottom;
+            background-size: auto 150px;
+        }
+
+        @include mobile {
+            background-size: auto 120px;
+        }
+    }
+
+    &__banner-title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $color-white;
+
+        @include mobile-lg {
+            font-size: 20px;
+        }
+    }
+
+    &__banner-title-accent {
+        display: block;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 0.9;
+
+        @include mobile-lg {
+            font-size: 40px;
+        }
+    }
+
+    &__banner-description {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: $color-white;
+
+        @include mobile-lg {
+            font-size: 13px;
+        }
+    }
+
+
+
 }
