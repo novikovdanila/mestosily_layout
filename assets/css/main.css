@@ -2838,7 +2838,7 @@ body.body--grey {
 }
 @media (max-width: 767px) {
   .price-card__duration {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.2;
   }
 }
