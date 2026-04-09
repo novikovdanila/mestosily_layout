@@ -37,6 +37,20 @@
 
 }
 
+.prices-section-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include tab-768 {
+        gap: 30px;
+    }
+
+    @include mobile-lg {
+        gap: 20px;
+    }
+}
+
 .prices-starter {
     background-color: $color-bg-light;
     padding: 90px 0;
@@ -128,5 +142,199 @@
     }
 
 
+
+}
+
+.pricing-groups {
+    background-color: $color-bg-main;
+    padding: $margin-bottom-section 0;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-lg {
+            gap: 6px;
+        }
+    }
+
+    &__banner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 10px;
+        background-color: $color-white;
+        border-radius: $radius-large;
+        padding: 0px 40px;
+
+        @include tab-1024 {
+            padding: 0 30px;
+        }
+
+        @include tab-768 {
+            grid-template-columns: 1fr;
+            padding: 30px 30px 0 30px;
+            justify-items: center;
+        }
+
+        @include mobile {
+            padding: 20px 20px 0 20px;
+        }
+
+        &-title {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: left;
+            margin: 20px 0;
+
+            @include tab-1024 {
+                font-size: 26px;
+            }
+
+            @include tab-768 {
+                font-size: 20px;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        &-img {
+            align-self: self-end;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            margin-top: -20px;
+
+            @include tab-768 {
+                order: 1;
+                margin-top: 0;
+            }
+        }
+
+        &-description {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.4;
+            text-align: right;
+
+            @include tab-1024 {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            @include tab-768 {
+                font-size: 16px;
+                text-align: center;
+                margin: 0;
+            }
+
+            @include mobile-lg {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+.pricing-private {
+    background-color: $color-white;
+    padding: $margin-bottom-section 0;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-lg {
+            gap: 6px;
+        }
+    }
+
+}
+
+.pricing-special {
+    background-color: #F2F6EE;
+    padding: $margin-bottom-section 0;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-lg {
+            gap: 6px;
+        }
+    }
+
+}
+
+.pricing-unlimited {
+    background-color: $color-bg-light;
+    padding: $margin-bottom-section 0;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+
+        @include tab-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-lg {
+            gap: 6px;
+        }
+    }
 
 }

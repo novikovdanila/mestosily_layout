@@ -195,7 +195,7 @@
 
     <section class="prices-starter">
       <div class="container">
-        <div class="prices-starter__inner">
+        <div class="prices-starter__inner prices-section-inner">
           <h2 class="visually-hidden">Стоимость пробных занятий</h2>
           <ul class="prices-starter__grid">
             <li class="prices-starter__item">
@@ -212,7 +212,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="#" class="price-card__btn btn-price btn-price--border">Записаться</a>
+                  <a href="#" class="price-card__btn btn-price btn-price--first-visit">Записаться</a>
                 </div>
               </article>
             </li>
@@ -237,7 +237,7 @@
             </li>
 
             <li class="prices-starter__item">
-              <article class="price-card price-card--border price-card--first-visit">
+              <article class="price-card price-card--border">
                 <div class="price-card__header">
                   <h3 class="price-card__title">Гостевая неделя</h3>
                   <p class="price-card__description"><span class="text-accent">5 любых занятий</span> · Срок 7 дней</p>
@@ -271,7 +271,7 @@
 
     <section class="pricing-groups">
       <div class="container">
-        <div class="pricing-groups__inner">
+        <div class="pricing-groups__inner prices-section-inner">
           <div class="section-header">
             <h2 class="pricing-groups__title">Групповые занятия</h2>
             <div class="pricing-header__subtitle subtitle">Приобретая абонемент, вы соглашаетесь с <a href="rules.html"
@@ -441,11 +441,11 @@
               </article>
             </li>
           </ul>
-          <div class="prices-group__banner">
-            <h3 class="prices-group__banner-title">Один абонемент на все
-              групповые классы</h3>
-            <img src="assets/img/content/banners/banner-membership.webp" alt="">
-            <p class="prices-group__banner-description">Вы не привязаны к одному классу и можете легко совмещать
+          <div class="pricing-groups__banner">
+            <h3 class="pricing-groups__banner-title"><span class="text-accent">Один абонемент </span>
+              на все групповые классы</h3>
+            <img src="assets/img/content/banners/banner-membership.webp" alt="" class="pricing-groups__banner-img">
+            <p class="pricing-groups__banner-description">Вы не привязаны к одному классу и можете легко совмещать
               или пробовать различные практики</p>
           </div>
         </div>
@@ -454,7 +454,7 @@
 
     <section class="pricing-private">
       <div class="container">
-        <div class="pricing-groups__inner">
+        <div class="pricing-groups__inner prices-section-inner">
           <div class="section-header">
             <h2 class="pricing-groups__title">Персональные занятия</h2>
             <div class="pricing-header__subtitle subtitle">Приобретая абонемент, вы соглашаетесь с <a href="rules.html"
@@ -628,7 +628,7 @@
 
     <section class="pricing-special">
       <div class="container">
-        <div class="pricing-groups__inner">
+        <div class="pricing-groups__inner prices-section-inner">
           <div class="section-header">
             <h2 class="pricing-groups__title">Спецклассы</h2>
             <div class="pricing-header__subtitle subtitle">Приобретая абонемент, вы соглашаетесь с <a href="rules.html"
@@ -732,48 +732,79 @@
       </div>
     </section>
 
-
-
     <section class="pricing-unlimited">
       <div class="container">
-        <div class="pricing-unlimited__inner">
-          <h2 class="pricing-unlimited__title"></h2>
+        <div class="pricing-unlimited__inner prices-section-inner">
+          <div class="section-header">
+            <h2 class="pricing-unlimited__title">Безлимитные абонементы</h2>
+            <div class="pricing-header__subtitle subtitle">Приобретая абонемент, вы соглашаетесь с <a href="rules.html"
+                class="link-primary">правилами студии</a>
+            </div>
+          </div>
+          <ul class="pricing-unlimited__grid">
+
+            <li class="pricing-unlimited__item">
+              <article class="price-card price-card--border price-card--recommended">
+                <span class="price-card__label-accent">Рекомендуем</span>
+                <div class="price-card__header">
+                  <h3 class="price-card__title">1 месяц</h3>
+                  <span class="price-card__duration price-card__duration--blue">Безлимит на 30 дней</span>
+                </div>
+                <div class="price-card__body">
+                  <div class="price-card__prices">
+                    <div class="price-card__price-column">
+                      <div class="price-card__price-row">
+                        <span class="price-card__price-value">440 ₾</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="price-card__btn btn-price">Выбрать</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="prices-starter__item">
+              <article class="price-card price-card--border">
+                <div class="price-card__header">
+                  <h3 class="price-card__title">3 месяца</h3>
+                  <span class="price-card__duration price-card__duration--blue">Безлимит на 90 дней</span>
+                </div>
+                <div class="price-card__body">
+                  <div class="price-card__prices">
+                    <div class="price-card__price-column">
+                      <div class="price-card__price-row">
+                        <span class="price-card__price-value">1 400 ₾</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="price-card__btn btn-price">Выбрать</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="prices-starter__item">
+              <article class="price-card price-card--border">
+                <div class="price-card__header">
+                  <h3 class="price-card__title">6 месяцев</h3>
+                  <span class="price-card__duration price-card__duration--blue">Безлимит на 180 дней</span>
+                </div>
+                <div class="price-card__body">
+                  <div class="price-card__prices">
+                    <div class="price-card__price-column">
+                      <div class="price-card__price-row">
+                        <span class="price-card__price-value">2 500 ₾</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="price-card__btn btn-price">Выбрать</a>
+                </div>
+              </article>
+            </li>
+
+          </ul>
         </div>
       </div>
     </section>
-
-    <!-- <article class="price-card price-card--border price-card--recommended">
-      <span class="price-card__label-accent">Рекомендуем</span>
-      <div class="price-card__header">
-        <h3 class="price-card__title">Акройога</h3>
-        <span class="price-card__duration price-card__duration--blue">на 1,5 час</span>
-        <p class="price-card__description">На все регулярные направления без привязки к датам</p>
-      </div>
-
-      <div class="price-card__body">
-
-        <div class="price-card__prices">
-          <div class="price-card__price-column">
-            <div class="price-card__price-row">
-              <span class="price-card__price-value">15 ₾</span>
-              <span class="price-card__price-description">Первое<br>посещение</span>
-            </div>
-            <span class="price-card__price-unit">25 ₾/занятие — 1 час</span>
-          </div>
-          <div class="price-card__price-column">
-            <div class="price-card__price-row">
-              <span class="price-card__price-value">30 ₾</span>
-              <span class="price-card__price-description">Последующие<br>занятия</span>
-            </div>
-            <span class="price-card__price-unit">25 ₾/занятие — 1 час</span>
-          </div>
-        </div>
-
-        <a href="#" class="price-card__btn btn-price">Выбрать</a>
-
-      </div>
-    </article> -->
-
 
   </main>
   <footer class="footer">

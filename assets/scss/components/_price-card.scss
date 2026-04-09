@@ -19,7 +19,7 @@
     height: 100%;
 
     @include mobile-lg {
-        padding: 16px;
+        padding: 20px 16px;
         gap: 10px;
     }
 
@@ -140,7 +140,7 @@
     }
 
     &--border {
-        border-color: $color-border;
+        border-color: rgba($color-border, 0.4);
     }
 
     &--recommended {
@@ -160,6 +160,12 @@
             font-size: 14px;
             font-weight: 700;
             line-height: 1.4;
+
+            @include mobile-lg {
+                font-size: 10px;
+                padding: 2px 5px;
+                border-radius: 0 0 0 10px;
+            }
         }
     }
 
