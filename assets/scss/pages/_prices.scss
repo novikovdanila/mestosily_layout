@@ -7,7 +7,6 @@
 }
 
 .prices-intro {
-    overflow: hidden;
     margin-bottom: 20px;
 
 
@@ -26,13 +25,28 @@
         text-align: center;
     }
 
+    &__nav-wrapper {
+        position: sticky;
+        will-change: transform;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-color: rgba($color-white, 0.95);
+        backdrop-filter: blur(8px);
+        padding: 20px 0;
+        margin-bottom: 40px;
+        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+        @include mobile-lg {
+            top: $header-height-mobile;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+    }
+
     &__nav {
         width: 100%;
-        margin-bottom: 40px;
-
-        @include mobile {
-            margin-bottom: 4px;
-        }
     }
 
 }
@@ -52,7 +66,13 @@
 }
 
 .prices-starter {
+    scroll-margin-top: 170px;
     background-color: $color-bg-light;
+
+    @include mobile-lg {
+        scroll-margin-top: 130px;
+    }
+
     padding: 90px 0;
 
     @include tab-768 {
@@ -146,7 +166,13 @@
 }
 
 .pricing-groups {
+    scroll-margin-top: 170px;
     background-color: $color-bg-main;
+
+    @include mobile-lg {
+        scroll-margin-top: 130px;
+    }
+
     padding: $margin-bottom-section 0;
 
     @include tab-1024 {
@@ -253,7 +279,13 @@
 }
 
 .pricing-private {
+    scroll-margin-top: 170px;
     background-color: $color-white;
+
+    @include mobile-lg {
+        scroll-margin-top: 130px;
+    }
+
     padding: $margin-bottom-section 0;
 
     @include tab-1024 {
@@ -282,7 +314,13 @@
 }
 
 .pricing-special {
+    scroll-margin-top: 170px;
     background-color: #F2F6EE;
+
+    @include mobile-lg {
+        scroll-margin-top: 130px;
+    }
+
     padding: $margin-bottom-section 0;
 
     @include tab-1024 {
@@ -311,7 +349,13 @@
 }
 
 .pricing-unlimited {
+    scroll-margin-top: 170px;
     background-color: $color-bg-light;
+
+    @include mobile-lg {
+        scroll-margin-top: 130px;
+    }
+
     padding: $margin-bottom-section 0;
 
     @include tab-1024 {
@@ -340,6 +384,7 @@
 }
 
 .pricing-banners {
+    scroll-margin-top: 80px;
     background-color: $color-white;
     padding: $margin-bottom-section 0;
 
