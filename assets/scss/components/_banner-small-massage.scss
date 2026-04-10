@@ -20,6 +20,10 @@
         justify-content: start;
     }
 
+    @include mobile-lg {
+        gap: 30px;
+    }
+
 
     &__content {
         display: flex;

@@ -57,6 +57,10 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include mobile-lg {
+            gap: 30px;
+        }
     }
 
     &__description {

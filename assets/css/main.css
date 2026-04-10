@@ -2970,6 +2970,11 @@ body.body--grey {
     justify-content: start;
   }
 }
+@media (max-width: 767px) {
+  .banner-small-massage {
+    gap: 30px;
+  }
+}
 .banner-small-massage__content {
   display: flex;
   flex-direction: column;
@@ -3090,6 +3095,11 @@ body.body--grey {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 767px) {
+  .banner-small-certificate__content {
+    gap: 30px;
+  }
 }
 .banner-small-certificate__description {
   font-size: 18px;
@@ -5380,11 +5390,11 @@ body.body--grey {
 .pricing-banners__inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 @media (max-width: 767px) {
   .pricing-banners__inner {
     grid-template-columns: repeat(1, 1fr);
-    gap: 6px;
+    gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
