@@ -39,6 +39,7 @@
 
     @include mobile-lg {
         top: calc($header-height-mobile - 2px);
+        margin-bottom: 20px;
     }
 }
 

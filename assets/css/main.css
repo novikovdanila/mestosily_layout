@@ -5063,6 +5063,7 @@ body.body--grey {
 @media (max-width: 767px) {
   .prices-nav {
     top: 68px;
+    margin-bottom: 20px;
   }
 }
 
