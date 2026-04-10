@@ -1,0 +1,237 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+// grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+.teacher {
+    background-color: $color-bg-light;
+
+    padding-bottom: $margin-bottom-section;
+    margin-bottom: $margin-bottom-section;
+
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 30px;
+        background-color: $color-white;
+        border-radius: $radius-large;
+    }
+
+    &__preview {
+        align-self: start;
+        aspect-ratio: 1/1;
+        max-width: 300px;
+        width: 100%;
+        min-width: 220px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: $radius-large;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__video-btn {
+        margin-top: -50px;
+        align-self: center;
+    }
+
+    &__main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-self: start;
+        align-items: start;
+    }
+
+    &__name {
+        font-size: 50px;
+        text-align: left;
+    }
+
+    &__badge {
+        margin-top: -10px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: $radius-medium;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 0.9;
+        background-color: $color-white;
+        color: $color-dark;
+        border: 1px solid $color-border;
+        white-space: nowrap;
+
+        &::before {
+            align-self: start;
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            border-radius: $radius-small;
+            border: 1px solid $color-border;
+            background-color: $color-bg-light;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--en::before {
+            background-image: url('../img/common/flag-en-24x16.svg');
+        }
+
+        &--ge::before {
+            background-image: url('../img/common/flag-ge-24x16.svg');
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 1.4;
+        color: $color-dark;
+        text-align: left;
+        padding-right: clamp(0px, 1vw, 60px);
+    }
+
+
+    //----Нижняя информация
+    &__details {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    //Занятия с преподавателем
+
+    &__sidebar {
+        flex: 0 0 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        background-color: $color-white;
+        border-radius: $radius-large;
+    }
+
+    &__sidebar-title {
+        text-align: left;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $color-dark;
+    }
+
+    &__sidebar-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 10px;
+        row-gap: 30px;
+
+        // ПРАВИЛО ДЛЯ ОДНОЙ КАРТОЧКИ:
+        // Если элемент единственный в списке (первый и он же последний)
+        // заставляем его растянуться на обе колонки
+        &>.teacher__sidebar-item:first-child:last-child {
+            grid-column: 1 / -1;
+            max-width: 100%; // Снимаем ограничение в 220px для полной ширины
+        }
+    }
+
+    &__sidebar-item {
+        width: 100%;
+        max-width: none;
+
+        container-type: inline-size;
+        container-name: classCard;
+    }
+
+    //Инофрмация о преподавателе
+
+    &__info {
+        flex: 1 1 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+        background-color: $color-white;
+        border-radius: $radius-large;
+    }
+
+    &__bio-title,
+    &__experience-title {
+        text-align: left;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $color-dark;
+    }
+
+    &__bio,
+    &__experience {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: $color-dark;
+        text-align: left;
+    }
+
+    &__experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__experience-item {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: $color-dark;
+        text-align: left;
+
+        &::before {
+            margin-top: 8px;
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $color-primary;
+        }
+    }
+}

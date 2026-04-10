@@ -782,8 +782,6 @@ body.body--grey {
 .header .menu__link--active {
   color: #211D1C;
   background-color: #F5F5F5;
-  pointer-events: none;
-  cursor: default;
 }
 .header .menu__sub-menu {
   position: absolute;
@@ -1765,6 +1763,48 @@ body.body--grey {
   }
 }
 
+.btn-video-play {
+  display: flex;
+  align-items: center;
+  padding: 5px 14px 5px 5px;
+  gap: 6px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  background-color: #FFFFFF;
+  color: #211D1C;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.btn-video-play:active {
+  transform: scale(0.95);
+}
+.btn-video-play:hover {
+  color: #B16958;
+}
+.btn-video-play:hover .btn-video-play__icon {
+  background-color: #B16958;
+}
+.btn-video-play__icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #211D1C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-video-play__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
 .card-class {
   position: relative;
   background-color: #FFFFFF;
@@ -1809,6 +1849,11 @@ body.body--grey {
   width: 100%;
   background-color: #f8f8f8;
 }
+@container classCard (max-width: 300px) {
+  .card-class__img {
+    border-radius: 10px;
+  }
+}
 @media (max-width: 560px) {
   .card-class__img {
     border-radius: 10px;
@@ -1831,6 +1876,11 @@ body.body--grey {
   color: #211D1C;
   transition: color 0.2s ease;
 }
+@container classCard (max-width: 300px) {
+  .card-class__title {
+    font-size: 18px;
+  }
+}
 @media (max-width: 560px) {
   .card-class__title {
     font-size: 18px;
@@ -1841,6 +1891,11 @@ body.body--grey {
   line-height: 1.4;
   color: #858280;
   transition: color 0.2s ease;
+}
+@container classCard (max-width: 300px) {
+  .card-class__text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 560px) {
   .card-class__text {
@@ -5446,4 +5501,202 @@ body.body--grey {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+}
+
+.teacher {
+  background-color: #F6F9FC;
+  padding-bottom: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 1239px) {
+  .teacher {
+    padding: 90px 0;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .teacher {
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+}
+.teacher__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.teacher__profile {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.teacher__preview {
+  align-self: start;
+  aspect-ratio: 1/1;
+  max-width: 300px;
+  width: 100%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.teacher__image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.teacher__video-btn {
+  margin-top: -50px;
+  align-self: center;
+}
+.teacher__main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-self: start;
+  align-items: start;
+}
+.teacher__name {
+  font-size: 50px;
+  text-align: left;
+}
+.teacher__badge {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0.9;
+  background-color: #FFFFFF;
+  color: #211D1C;
+  border: 1px solid #E5E2E1;
+  white-space: nowrap;
+}
+.teacher__badge::before {
+  align-self: start;
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #E5E2E1;
+  background-color: #F6F9FC;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.teacher__badge--en::before {
+  background-image: url("../img/common/flag-en-24x16.svg");
+}
+.teacher__badge--ge::before {
+  background-image: url("../img/common/flag-ge-24x16.svg");
+}
+.teacher__description {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #211D1C;
+  text-align: left;
+  padding-right: clamp(0px, 1vw, 60px);
+}
+.teacher__details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+.teacher__sidebar {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.teacher__sidebar-title {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #211D1C;
+}
+.teacher__sidebar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 30px;
+}
+.teacher__sidebar-grid > .teacher__sidebar-item:first-child:last-child {
+  grid-column: 1/-1;
+  max-width: 100%;
+}
+.teacher__sidebar-item {
+  width: 100%;
+  max-width: none;
+  container-type: inline-size;
+  container-name: classCard;
+}
+.teacher__info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.teacher__bio-title, .teacher__experience-title {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #211D1C;
+}
+.teacher__bio, .teacher__experience {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.teacher__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #211D1C;
+  text-align: left;
+}
+.teacher__experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.teacher__experience-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #211D1C;
+  text-align: left;
+}
+.teacher__experience-item::before {
+  margin-top: 8px;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #B59992;
 }/*# sourceMappingURL=main.css.map */

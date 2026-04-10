@@ -39,6 +39,10 @@
         width: 100%;
         background-color: #f8f8f8;
 
+        @container classCard (max-width: 300px) {
+            border-radius: $radius-medium;
+        }
+
         @include mobile {
             border-radius: $radius-medium;
         }
@@ -63,6 +67,10 @@
         color: $color-dark;
         transition: color $transition-base;
 
+        @container classCard (max-width: 300px) {
+            font-size: 18px;
+        }
+
         @include mobile {
             font-size: 18px;
         }
@@ -73,6 +81,10 @@
         line-height: 1.4;
         color: $color-gray;
         transition: color $transition-base;
+
+        @container classCard (max-width: 300px) {
+            font-size: 14px;
+        }
 
         @include mobile {
             font-size: 14px;

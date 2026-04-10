@@ -247,5 +247,10 @@
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             fill="none" />
     </symbol>
+    <symbol id="play-video" viewBox="0 0 10 10">
+        <path
+            d="M2 1.69951C2 0.93703 2.81911 0.455062 3.48564 0.825357L9.42652 4.12584C10.1123 4.50685 10.1123 5.49315 9.42652 5.87416L3.48564 9.17464C2.81911 9.54494 2 9.06297 2 8.30049V1.69951Z"
+            fill="currentColor" />
+    </symbol>
 
 </svg>
