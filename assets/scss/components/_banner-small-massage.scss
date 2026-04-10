@@ -1,0 +1,79 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.banner-small-massage {
+    padding: 30px;
+    background-color: $color-primary;
+    background-image: url(../img/content/banners/banner-small-massage.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: $radius-large;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 20px;
+
+    @include tab-1024 {
+        justify-content: start;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include tab-768 {
+            gap: 10px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $color-white;
+
+        @include tab-1024 {
+            font-size: 30px;
+        }
+
+        @include tab-768 {
+            font-size: 26px;
+        }
+
+        @include mobile-lg {
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-white;
+
+        @include tab-768 {
+            font-size: 16px;
+        }
+
+        @include mobile-lg {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        align-self: self-start;
+
+        @include mobile-lg {
+            align-self: center;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
