@@ -20,14 +20,30 @@ export function initStickyNav() {
         threshold: 0
     };
 
+    // Функция для прокрутки навигации к активному пункту
+    const scrollToActiveLink = (link) => {
+        if (!link) return;
+        
+        // Используем scrollIntoView для центрирования активной кнопки в горизонтальном списке
+        link.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
                 
-                // Снимаем активность со всех ссылок
                 navLinks.forEach(link => {
-                    link.classList.toggle(activeClass, link.getAttribute('href') === `#${id}`);
+                    const isActive = link.getAttribute('href') === `#${id}`;
+                    link.classList.toggle(activeClass, isActive);
+                    
+                    if (isActive) {
+                        scrollToActiveLink(link);
+                    }
                 });
             }
         });
@@ -37,16 +53,12 @@ export function initStickyNav() {
         observer.observe(section);
     });
 
-    // Обработка клика (плавный скролл уже есть в CSS, но на всякий случай 
-    // если активный класс нужно переключить мгновенно не дожидаясь скролла)
+    // Обработка клика
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // Мы не отменяем дефолтное поведение ссылки-якоря, 
-            // так как scroll-behavior: smooth в CSS обеспечит плавность.
-            
-            // Но можно принудительно поставить активный класс
             navLinks.forEach(l => l.classList.remove(activeClass));
             link.classList.add(activeClass);
+            scrollToActiveLink(link);
         });
     });
 }
