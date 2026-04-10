@@ -26,6 +26,7 @@ a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -5052,7 +5053,7 @@ body.body--grey {
 .prices-nav {
   position: sticky;
   z-index: 2;
-  top: 80px;
+  top: 78px;
   padding: 10px 0;
   margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -5061,7 +5062,7 @@ body.body--grey {
 }
 @media (max-width: 767px) {
   .prices-nav {
-    top: 70px;
+    top: 68px;
   }
 }
 
