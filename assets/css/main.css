@@ -5053,7 +5053,7 @@ body.body--grey {
 .prices-nav {
   position: sticky;
   z-index: 2;
-  top: 78px;
+  top: 80px;
   padding: 10px 0;
   margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -5062,7 +5062,7 @@ body.body--grey {
 }
 @media (max-width: 767px) {
   .prices-nav {
-    top: 68px;
+    top: 70px;
     margin-bottom: 20px;
   }
 }
@@ -5084,12 +5084,12 @@ body.body--grey {
 }
 
 .prices-starter {
-  scroll-margin-top: 170px;
+  scroll-margin-top: 152px;
   background-color: #F6F9FC;
 }
 @media (max-width: 767px) {
   .prices-starter {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 128px;
   }
 }
 .prices-starter {
@@ -5186,12 +5186,12 @@ body.body--grey {
 }
 
 .pricing-groups {
-  scroll-margin-top: 170px;
+  scroll-margin-top: 152px;
   background-color: #F6F1EE;
 }
 @media (max-width: 767px) {
   .pricing-groups {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 128px;
   }
 }
 .pricing-groups {
@@ -5308,12 +5308,12 @@ body.body--grey {
 }
 
 .pricing-private {
-  scroll-margin-top: 170px;
+  scroll-margin-top: 152px;
   background-color: #FFFFFF;
 }
 @media (max-width: 767px) {
   .pricing-private {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 128px;
   }
 }
 .pricing-private {
@@ -5346,12 +5346,12 @@ body.body--grey {
 }
 
 .pricing-special {
-  scroll-margin-top: 170px;
+  scroll-margin-top: 152px;
   background-color: #F2F6EE;
 }
 @media (max-width: 767px) {
   .pricing-special {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 128px;
   }
 }
 .pricing-special {
@@ -5384,12 +5384,12 @@ body.body--grey {
 }
 
 .pricing-unlimited {
-  scroll-margin-top: 170px;
+  scroll-margin-top: 152px;
   background-color: #F6F9FC;
 }
 @media (max-width: 767px) {
   .pricing-unlimited {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 128px;
   }
 }
 .pricing-unlimited {

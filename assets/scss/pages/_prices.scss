@@ -30,7 +30,7 @@
 .prices-nav {
     position: sticky;
     z-index: 2;
-    top: calc($header-height - 2px);
+    top: $header-height;
     padding: 10px 0;
     margin-bottom: 40px;
     background-color: rgba($color-white, 0.95);
@@ -38,7 +38,7 @@
     overflow-x: hidden;
 
     @include mobile-lg {
-        top: calc($header-height-mobile - 2px);
+        top: $header-height-mobile;
         margin-bottom: 20px;
     }
 }
@@ -58,11 +58,11 @@
 }
 
 .prices-starter {
-    scroll-margin-top: 170px;
+    scroll-margin-top: 152px;
     background-color: $color-bg-light;
 
     @include mobile-lg {
-        scroll-margin-top: 130px;
+        scroll-margin-top: 128px;
     }
 
     padding: 90px 0;
@@ -158,11 +158,11 @@
 }
 
 .pricing-groups {
-    scroll-margin-top: 170px;
+    scroll-margin-top: 152px;
     background-color: $color-bg-main;
 
     @include mobile-lg {
-        scroll-margin-top: 130px;
+        scroll-margin-top: 128px;
     }
 
     padding: $margin-bottom-section 0;
@@ -271,11 +271,11 @@
 }
 
 .pricing-private {
-    scroll-margin-top: 170px;
+    scroll-margin-top: 152px;
     background-color: $color-white;
 
     @include mobile-lg {
-        scroll-margin-top: 130px;
+        scroll-margin-top: 128px;
     }
 
     padding: $margin-bottom-section 0;
@@ -306,11 +306,11 @@
 }
 
 .pricing-special {
-    scroll-margin-top: 170px;
+    scroll-margin-top: 152px;
     background-color: #F2F6EE;
 
     @include mobile-lg {
-        scroll-margin-top: 130px;
+        scroll-margin-top: 128px;
     }
 
     padding: $margin-bottom-section 0;
@@ -341,11 +341,11 @@
 }
 
 .pricing-unlimited {
-    scroll-margin-top: 170px;
+    scroll-margin-top: 152px;
     background-color: $color-bg-light;
 
     @include mobile-lg {
-        scroll-margin-top: 130px;
+        scroll-margin-top: 128px;
     }
 
     padding: $margin-bottom-section 0;
