@@ -25,30 +25,21 @@
         text-align: center;
     }
 
-    &__nav-wrapper {
-        position: sticky;
-        will-change: transform;
-        top: $header-height;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        background-color: rgba($color-white, 0.95);
-        backdrop-filter: blur(8px);
-        padding: 20px 0;
-        margin-bottom: 40px;
-        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
 
-        @include mobile-lg {
-            top: $header-height-mobile;
-            padding: 10px 0;
-            margin-bottom: 10px;
-        }
+.prices-nav {
+    position: sticky;
+    z-index: 2;
+    top: $header-height;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    background-color: rgba($color-white, 0.95);
+    backdrop-filter: blur(8px);
+    overflow-x: hidden;
+
+    @include mobile-lg {
+        top: $header-height-mobile;
     }
-
-    &__nav {
-        width: 100%;
-    }
-
 }
 
 .prices-section-inner {

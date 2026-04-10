@@ -5048,27 +5048,21 @@ body.body--grey {
 .prices-intro__title {
   text-align: center;
 }
-.prices-intro__nav-wrapper {
+
+.prices-nav {
   position: sticky;
-  will-change: transform;
-  top: 80px;
-  left: 0;
-  right: 0;
   z-index: 2;
+  top: 80px;
+  padding: 10px 0;
+  margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
-  padding: 20px 0;
-  margin-bottom: 40px;
+  overflow-x: hidden;
 }
 @media (max-width: 767px) {
-  .prices-intro__nav-wrapper {
+  .prices-nav {
     top: 70px;
-    padding: 10px 0;
-    margin-bottom: 10px;
   }
-}
-.prices-intro__nav {
-  width: 100%;
 }
 
 .prices-section-inner {
