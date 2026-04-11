@@ -378,7 +378,7 @@
 .pricing-banners {
     scroll-margin-top: 80px;
     background-color: $color-white;
-    padding: $margin-bottom-section 0;
+    // padding: $margin-bottom-section 0;
 
     @include tab-1024 {
         padding: $margin-bottom-section-tab-1024 0;

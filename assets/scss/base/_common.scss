@@ -39,6 +39,22 @@ body.body--grey {
     }
 }
 
+.mb {
+    margin-bottom: $margin-bottom-section;
+
+    @include tab-1024 {
+        margin-bottom: $margin-bottom-section-tab-1024;
+    }
+
+    @include tab-768 {
+        margin-bottom: $margin-bottom-section-tab-768;
+    }
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .container {
     max-width: $container-width + ($container-padding * 2);
     width: 100%;
