@@ -469,16 +469,68 @@
       </div>
     </section>
 
-    <section class="teacher-gallery">
+    <section class="slider-gallery mb">
       <div class="container">
-        <div class="teacher-gallery__inner">
-          <h2 class="visually-hidden">Фотографии с Евгением Куликовым</h2>
-          <div class="teacher-gallery__grid">
-            <img class="teacher-gallery__img" src="assets/img/content/teachers/large/evgeniy-kulikov-large.webp"
-              alt="Евгений Куликов" loading="lazy">
+        <div class="slider-gallery__wrapper ">
+          <h2 class="visually-hidden">Фотографии с Евгением Куликовым</h2>
+          <div class="slider-gallery__slider-wrapper custom-slider">
+
+            <div class="custom-slider__nav">
+              <div
+                class="swiper-button-prev slider-gallery__button-prev custom-slider__nav-prev custom-slider__nav--inside slider-button slider-button--outline">
+                <svg width="14" height="14">
+                  <use xlink:href="assets/img/common/sprite.svg#arrow-left"></use>
+                </svg>
+              </div>
+              <div
+                class="swiper-button-next slider-gallery__button-next custom-slider__nav-next custom-slider__nav--inside slider-button slider-button--outline">
+                <svg width="14" height="14">
+                  <use xlink:href="assets/img/common/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="swiper js-slider-gallery custom-slider__swiper--visible">
+              <div class="swiper-wrapper slider-gallery__slider-wrapper">
+                <!-- карточки -->
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__01.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__02.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__03.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__04.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__05.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide slider-gallery__item">
+                  <img src="assets/img/content/gallery/teachers/evgeniy-kulikov/evgeniy-kulikov-gallery__06.webp"
+                    alt="Евгений Куликов" class="slider-gallery__img" loading="lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+
+                <!-- конец карточки -->
+              </div>
+            </div>
           </div>
+
+          <div class="swiper-pagination gallery__pagination custom-slider__pagination"></div>
         </div>
-      </div>
     </section>
 
 
