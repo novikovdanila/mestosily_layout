@@ -3,6 +3,8 @@ import { initSliders } from './modules/sliders.js';
 import { initFilter } from './modules/filter.js';
 import { initLightbox } from './modules/glightbox-set.js';
 import { initStickyNav } from './modules/sticky-nav.js';
+import { initStickyBtn } from './modules/sticky-btn.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Инициализация хедера
@@ -30,4 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация липкой навигации для Прайса (Scroll Spy)
     initStickyNav();
+
+    // Инициализация липкой кнопки для мобильной версии
+    initStickyBtn();
 });
+

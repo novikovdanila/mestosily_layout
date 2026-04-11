@@ -242,3 +242,34 @@
         }
     }
 }
+
+.mobile-sticky-footer {
+    display: none; // Скрыта везде по умолчанию
+
+    @include mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 20px;
+        background: transparent;
+        // backdrop-filter: blur(10px);
+        z-index: 3;
+
+        // Плавное появление
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(100%); // Спрятана внизу за границей экрана
+        opacity: 0;
+
+        &.is-visible {
+            transform: translateY(0); // Выплывает вверх
+            opacity: 1;
+        }
+
+        &__btn {
+            width: 100%;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+}

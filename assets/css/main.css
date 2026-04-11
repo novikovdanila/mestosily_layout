@@ -1805,6 +1805,33 @@ body.body--grey {
   height: 14px;
 }
 
+.mobile-sticky-footer {
+  display: none;
+}
+@media (max-width: 560px) {
+  .mobile-sticky-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background: transparent;
+    z-index: 3;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  .mobile-sticky-footer.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .mobile-sticky-footer__btn {
+    width: 100%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
 .card-class {
   position: relative;
   background-color: #FFFFFF;
@@ -5713,6 +5740,7 @@ body.body--grey {
 @media (max-width: 767px) {
   .teacher__description {
     text-align: center;
+    padding-right: 0;
   }
 }
 @media (max-width: 560px) {
