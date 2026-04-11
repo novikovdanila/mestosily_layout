@@ -1,0 +1,58 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+.modal {
+    &__close {
+        background: $color-white;
+        opacity: 1;
+        border-radius: 50%;
+        padding: 12px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgba($color-secondary, 0.1);
+
+        @include hover {
+            background-color: rgba($color-white, 0.95);
+
+            svg path {
+                fill: $color-secondary;
+            }
+        }
+
+        @include mobile-lg {
+            padding: 10px;
+            width: 36px;
+            height: 36px;
+        }
+
+        svg path {
+            fill: $color-dark;
+        }
+    }
+
+    &__next,
+    &__prev {
+        background-color: $color-white;
+        border-radius: 50%;
+        padding: 16px;
+        width: auto;
+        height: auto;
+        border: 2px solid rgba($color-secondary, 0.1);
+
+
+        @include hover {
+            background-color: rgba($color-white, 0.9);
+            color: $color-secondary;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        @include tab-1024 {
+            display: none;
+        }
+    }
+}

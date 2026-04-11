@@ -1965,6 +1965,71 @@ body.body--grey {
   }
 }
 
+.modal__close {
+  background: #FFFFFF;
+  opacity: 1;
+  border-radius: 50%;
+  padding: 12px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(177, 105, 88, 0.1);
+}
+@media (hover: hover) {
+  .modal__close:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .modal__close:hover svg path {
+    fill: #B16958;
+  }
+}
+.modal__close:focus-visible {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.modal__close:focus-visible svg path {
+  fill: #B16958;
+}
+.modal__close:focus-visible {
+  outline: none;
+}
+@media (max-width: 767px) {
+  .modal__close {
+    padding: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
+.modal__close svg path {
+  fill: #211D1C;
+}
+.modal__next, .modal__prev {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 16px;
+  width: auto;
+  height: auto;
+  border: 2px solid rgba(177, 105, 88, 0.1);
+}
+@media (hover: hover) {
+  .modal__next:hover, .modal__prev:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #B16958;
+  }
+}
+.modal__next:focus-visible, .modal__prev:focus-visible {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #B16958;
+  outline: none;
+}
+.modal__next svg, .modal__prev svg {
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 1239px) {
+  .modal__next, .modal__prev {
+    display: none;
+  }
+}
+
 .card-class {
   position: relative;
   background-color: #FFFFFF;

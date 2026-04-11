@@ -175,14 +175,15 @@
           <div class="teacher__profile">
             <div class="teacher__preview">
               <img src="assets/img/content/teachers/evgeniy-kulikov.webp" alt="Евгений Куликов">
-              <button class="teacher__video-btn btn-video-play">
+              <a href="https://www.youtube.com/shorts/8hbtkjtMOtA"
+                class="teacher__video-btn btn-video-play js-video-btn">
                 <div class="btn-video-play__icon">
                   <svg>
                     <use xlink:href="assets/img/common/sprite.svg#play-video"></use>
                   </svg>
                 </div>
                 Смотреть видео
-              </button>
+              </a>
             </div>
 
             <div class="teacher__main-content">
@@ -762,8 +763,6 @@
           </div>
     </section>
 
-
-
     <div class="mobile-sticky-footer js-btn-sticky">
       <a href="https://t.me/MestoSilyBatumi_bot" target="_blank" class="btn btn--primary mobile-sticky-footer__btn">
         <svg width="18" height="18">
@@ -858,6 +857,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal-video">
+    <div class="modal__wrapper">
+      <button class="modal__close"></button>
+      <div class="modal__content">
+
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/extensions/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/extensions/glightbox/glightbox.min.js"></script>
