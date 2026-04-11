@@ -132,7 +132,7 @@
 
         @include mobile-lg {
             order: -1;
-            font-size: 28px;
+            font-size: 32px;
             text-align: center;
         }
     }
@@ -258,9 +258,9 @@
         line-height: 1.2;
         color: $color-dark;
 
-        @include mobile-lg {
-            font-size: 20px;
-        }
+        // @include mobile-lg {
+        //     font-size: 20px;
+        // }
 
         @include mobile {
             text-align: center;
@@ -323,9 +323,9 @@
         line-height: 1.2;
         color: $color-dark;
 
-        @include mobile-lg {
-            font-size: 20px;
-        }
+        // @include mobile-lg {
+        //     font-size: 20px;
+        // }
     }
 
     &__bio,

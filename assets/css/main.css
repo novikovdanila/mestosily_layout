@@ -1954,7 +1954,7 @@ body.body--grey {
     right: 0;
     padding: 15px 30px;
     background: transparent;
-    z-index: 3;
+    z-index: 2;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(100%);
     opacity: 0;
@@ -6004,7 +6004,7 @@ body.body--grey {
 @media (max-width: 767px) {
   .teacher__name {
     order: -1;
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
 }
@@ -6121,11 +6121,6 @@ body.body--grey {
   line-height: 1.2;
   color: #211D1C;
 }
-@media (max-width: 767px) {
-  .teacher__sidebar-title {
-    font-size: 20px;
-  }
-}
 @media (max-width: 560px) {
   .teacher__sidebar-title {
     text-align: center;
@@ -6179,11 +6174,6 @@ body.body--grey {
   font-weight: 500;
   line-height: 1.2;
   color: #211D1C;
-}
-@media (max-width: 767px) {
-  .teacher__bio-title, .teacher__experience-title {
-    font-size: 20px;
-  }
 }
 .teacher__bio, .teacher__experience {
   display: flex;
