@@ -72,6 +72,10 @@
             gap: 20px;
             align-items: center;
         }
+
+        @include mobile {
+            padding: 20px;
+        }
     }
 
     &__preview {

@@ -4,9 +4,23 @@
 .card-teacher {
     background-color: $color-white;
     border-radius: $radius-large;
-    border: 1px solid $color-border;
-    overflow: hidden;
+    // border: 1px solid $color-border;
+    // overflow: hidden;
     height: 100%;
+    box-shadow: inset 0 0 0 1px rgba($color-border, 0.7);
+
+    @include hover {
+        box-shadow: inset 0 0 0 1px rgba($color-border, 1);
+
+        .card-teacher__img img {
+            transform: scale(1.05);
+        }
+
+        .card-teacher__title,
+        .card-teacher__text {
+            color: $color-secondary;
+        }
+    }
 
     &__link {
         display: flex;
@@ -14,20 +28,6 @@
         height: 100%;
         text-decoration: none;
         color: inherit;
-
-        @include hover {
-            .card-teacher__img img {
-                transform: scale(1.05);
-            }
-
-            .card-teacher__title {
-                color: $color-secondary;
-            }
-
-            .card-teacher__text {
-                color: $color-secondary;
-            }
-        }
     }
 
     &__img {
@@ -99,7 +99,6 @@
 
     &__content {
         padding: 20px;
-        background-color: $color-white;
         display: flex;
         flex-direction: column;
         gap: 8px;
