@@ -301,6 +301,10 @@ body.body--grey {
 }
 
 .gclose {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
     background: $color-white !important;
     opacity: 1 !important;
     border-radius: 50% !important;
@@ -308,9 +312,10 @@ body.body--grey {
     width: 50px !important;
     height: 50px !important;
     border: 2px solid rgba($color-secondary, 0.1) !important;
+    transition: background-color $transition-base !important;
 
     @include hover {
-        background-color: rgba($color-white, 0.95) !important;
+        background-color: rgba($color-white, 0.9) !important;
 
         svg path {
             fill: $color-secondary !important;
@@ -321,12 +326,18 @@ body.body--grey {
         padding: 10px !important;
         width: 36px !important;
         height: 36px !important;
+
+        svg {
+            width: 16px !important;
+            height: 16px !important;
+        }
     }
 
     svg path {
         fill: $color-dark !important;
     }
 }
+
 
 .gnext,
 .gprev {

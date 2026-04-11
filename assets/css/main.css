@@ -456,6 +456,10 @@ body.body--grey {
 }
 
 .gclose {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
   background: #FFFFFF !important;
   opacity: 1 !important;
   border-radius: 50% !important;
@@ -463,17 +467,18 @@ body.body--grey {
   width: 50px !important;
   height: 50px !important;
   border: 2px solid rgba(177, 105, 88, 0.1) !important;
+  transition: background-color 0.2s ease !important;
 }
 @media (hover: hover) {
   .gclose:hover {
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
   }
   .gclose:hover svg path {
     fill: #B16958 !important;
   }
 }
 .gclose:focus-visible {
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
 }
 .gclose:focus-visible svg path {
   fill: #B16958 !important;
@@ -486,6 +491,10 @@ body.body--grey {
     padding: 10px !important;
     width: 36px !important;
     height: 36px !important;
+  }
+  .gclose svg {
+    width: 16px !important;
+    height: 16px !important;
   }
 }
 .gclose svg path {
@@ -2038,6 +2047,7 @@ body.body--grey {
 .modal__content {
   width: 100%;
   aspect-ratio: 9/16;
+  max-height: 90svh;
   border-radius: 20px;
   overflow: hidden;
   background-color: #000;
@@ -2047,6 +2057,8 @@ body.body--grey {
   height: 100%;
   border: none;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-class {
