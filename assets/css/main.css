@@ -1811,11 +1811,11 @@ body.body--grey {
 @media (max-width: 560px) {
   .mobile-sticky-footer {
     display: block;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 15px 20px;
+    padding: 15px 30px;
     background: transparent;
     z-index: 3;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -5883,9 +5883,10 @@ body.body--grey {
   text-align: left;
 }
 .teacher__experience-item::before {
+  flex-shrink: 0;
   margin-top: 8px;
   content: "";
-  display: inline-block;
+  display: flex;
   width: 6px;
   height: 6px;
   border-radius: 50%;
