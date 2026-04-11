@@ -5463,6 +5463,7 @@ body.body--grey {
   background-repeat: no-repeat;
   background-position: right;
   height: 100%;
+  min-height: 130px;
 }
 @media (max-width: 767px) {
   .prices-starter__banner {
