@@ -129,8 +129,8 @@ export function initSliders() {
 
         navigation: {
             addIcons: false,
-            nextEl: ".gallery__button-next",
-            prevEl: ".gallery__button-prev",
+            nextEl: ".slider-gallery__button-next",
+            prevEl: ".slider-gallery__button-prev",
         },
 
         pagination: {
