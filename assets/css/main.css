@@ -1965,25 +1965,54 @@ body.body--grey {
   }
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(26, 23, 20, 0.85);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal.is-open {
+  display: flex;
+}
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+}
 .modal__close {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
   background: #FFFFFF;
-  opacity: 1;
   border-radius: 50%;
   padding: 12px;
   width: 50px;
   height: 50px;
   border: 2px solid rgba(177, 105, 88, 0.1);
+  transition: background-color 0.2s ease;
 }
 @media (hover: hover) {
   .modal__close:hover {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
   }
   .modal__close:hover svg path {
     fill: #B16958;
   }
 }
 .modal__close:focus-visible {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .modal__close:focus-visible svg path {
   fill: #B16958;
@@ -1998,36 +2027,26 @@ body.body--grey {
     height: 36px;
   }
 }
+.modal__close svg {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
 .modal__close svg path {
   fill: #211D1C;
 }
-.modal__next, .modal__prev {
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  padding: 16px;
-  width: auto;
-  height: auto;
-  border: 2px solid rgba(177, 105, 88, 0.1);
+.modal__content {
+  width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #000;
 }
-@media (hover: hover) {
-  .modal__next:hover, .modal__prev:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #B16958;
-  }
-}
-.modal__next:focus-visible, .modal__prev:focus-visible {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #B16958;
-  outline: none;
-}
-.modal__next svg, .modal__prev svg {
-  width: 14px;
-  height: 14px;
-}
-@media (max-width: 1239px) {
-  .modal__next, .modal__prev {
-    display: none;
-  }
+.modal__content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 .card-class {

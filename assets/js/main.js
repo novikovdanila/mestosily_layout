@@ -4,6 +4,7 @@ import { initFilter } from './modules/filter.js';
 import { initLightbox } from './modules/glightbox-set.js';
 import { initStickyNav } from './modules/sticky-nav.js';
 import { initStickyBtn } from './modules/sticky-btn.js';
+import { initVideoModal } from './modules/modal-popup.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,5 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация липкой кнопки для мобильной версии
     initStickyBtn();
+
+    // Инициализация модального окна для видео
+    initVideoModal();
 });
 
