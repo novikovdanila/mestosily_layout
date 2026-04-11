@@ -1683,12 +1683,7 @@ body.body--grey {
 }
 @media (max-width: 767px) {
   .section-reviews__title {
-    font-size: 24px;
-  }
-}
-@media (max-width: 560px) {
-  .section-reviews__title {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 .section-reviews__more-wrapper {
@@ -6149,7 +6144,7 @@ body.body--grey {
 }
 @media (max-width: 560px) {
   .teacher__sidebar-grid {
-    row-gap: 20px;
+    row-gap: 30px;
     grid-template-columns: 1fr;
   }
 }

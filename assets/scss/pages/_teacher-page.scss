@@ -282,7 +282,7 @@
         }
 
         @include mobile {
-            row-gap: 20px;
+            row-gap: 30px;
             grid-template-columns: 1fr;
         }
     }
