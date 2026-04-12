@@ -1938,8 +1938,8 @@ body.body--grey {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .btn-video-play__icon svg {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 
 .mobile-sticky-footer {

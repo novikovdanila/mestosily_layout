@@ -236,9 +236,9 @@
             background-color $transition-base,
             color $transition-base;
 
-        svg {
-            width: 14px;
-            height: 14px;
+        & svg {
+            width: 10px;
+            height: 10px;
         }
     }
 }
