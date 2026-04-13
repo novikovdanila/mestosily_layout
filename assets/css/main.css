@@ -6253,7 +6253,6 @@ body.body--grey {
      object-fit: cover;
 }
 .class-page-hero__inner {
-  position: relative;
   display: flex;
   height: 544px;
   flex-direction: column;
@@ -6287,7 +6286,6 @@ body.body--grey {
   }
 }
 .class-page-hero__content {
-  position: relative;
   z-index: 2;
   width: 100%;
   min-width: 300px;
@@ -6356,4 +6354,37 @@ body.body--grey {
   .class-page-hero__btns {
     gap: 10px;
   }
+}
+@media (max-width: 767px) {
+  .class-page-hero__btn-to--outline {
+    border: 2px solid rgba(229, 226, 225, 0.6);
+  }
+}
+.class-page-hero__btns-out-wrapper {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .class-page-hero__btns-out-wrapper {
+    display: block;
+    padding-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .class-page-hero__btns-out-wrapper {
+    padding-top: 40px;
+  }
+}
+.class-page-hero__btns-target {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.class-page-hero__btns-target .class-page-hero__btns {
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.class-page-hero__btns-target .hero__btn {
+  width: 100%;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
