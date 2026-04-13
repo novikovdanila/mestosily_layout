@@ -6224,7 +6224,7 @@ body.body--grey {
   }
 }
 
-.class-page-hero__wrapper {
+.class-hero__wrapper {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
@@ -6234,11 +6234,11 @@ body.body--grey {
   background-color: #E7E6E3;
 }
 @media (max-width: 767px) {
-  .class-page-hero__wrapper {
+  .class-hero__wrapper {
     border-radius: 20px;
   }
 }
-.class-page-hero__bg {
+.class-hero__bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -6246,13 +6246,13 @@ body.body--grey {
   bottom: 0;
   z-index: 0;
 }
-.class-page-hero__bg img {
+.class-hero__bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.class-page-hero__inner {
+.class-hero__inner {
   display: flex;
   height: 544px;
   flex-direction: column;
@@ -6261,12 +6261,12 @@ body.body--grey {
   gap: 20px;
 }
 @media (max-width: 1239px) {
-  .class-page-hero__inner {
+  .class-hero__inner {
     height: 400px;
   }
 }
 @media (max-width: 1023px) {
-  .class-page-hero__inner {
+  .class-hero__inner {
     padding: 60px 0;
     justify-content: start;
     height: auto;
@@ -6275,17 +6275,17 @@ body.body--grey {
   }
 }
 @media (max-width: 767px) {
-  .class-page-hero__inner {
+  .class-hero__inner {
     padding: 40px 0;
     min-height: 570px;
   }
 }
 @media (max-width: 560px) {
-  .class-page-hero__inner {
+  .class-hero__inner {
     min-height: 484px;
   }
 }
-.class-page-hero__content {
+.class-hero__content {
   z-index: 2;
   width: 100%;
   min-width: 300px;
@@ -6295,82 +6295,325 @@ body.body--grey {
   flex-direction: column;
 }
 @media (max-width: 1239px) {
-  .class-page-hero__content {
+  .class-hero__content {
     max-width: 512px;
   }
 }
 @media (max-width: 1023px) {
-  .class-page-hero__content {
+  .class-hero__content {
     max-width: none;
     width: 100%;
     align-items: center;
     text-align: center;
   }
 }
-.class-page-hero__title {
+.class-hero__title {
   font-size: clamp(32px, 4vw, 60px);
   margin-bottom: 20px;
 }
 @media (max-width: 1239px) {
-  .class-page-hero__title {
+  .class-hero__title {
     font-size: 46px;
   }
 }
 @media (max-width: 1023px) {
-  .class-page-hero__title {
+  .class-hero__title {
     font-size: 40px;
   }
 }
 @media (max-width: 560px) {
-  .class-page-hero__title {
+  .class-hero__title {
     font-size: 32px;
   }
 }
-.class-page-hero__subtitle {
+.class-hero__subtitle {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 40px;
   opacity: 0.9;
 }
 @media (max-width: 1239px) {
-  .class-page-hero__subtitle {
+  .class-hero__subtitle {
     font-size: 18px;
     margin-bottom: 30px;
   }
 }
 @media (max-width: 560px) {
-  .class-page-hero__subtitle {
+  .class-hero__subtitle {
     font-size: 16px;
     margin-bottom: 30px;
   }
 }
-.class-page-hero__btns {
+.class-hero__btns {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  .class-page-hero__btns {
+  .class-hero__btns {
     gap: 10px;
   }
 }
 @media (max-width: 767px) {
-  .class-page-hero__btns--inside {
+  .class-hero__btns--inside {
     display: none;
   }
 }
-.class-page-hero__btns--outside {
+.class-hero__btns--outside {
   display: none;
 }
 @media (max-width: 767px) {
-  .class-page-hero__btns--outside {
+  .class-hero__btns--outside {
     display: flex;
     margin-top: 40px;
   }
 }
 @media (max-width: 560px) {
-  .class-page-hero__btn {
+  .class-hero__btn {
     width: 100%;
   }
+}
+
+.class-about__grid {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  row-gap: 90px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+@media (max-width: 1023px) {
+  .class-about__grid {
+    grid-template-columns: 9fr 3fr;
+    row-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .class-about__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.class-about__info {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .class-about__info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+.class-about__info-title {
+  text-align: left;
+  color: #211D1C;
+}
+.class-about__info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #211D1C;
+}
+.class-about__info-text p {
+  display: block;
+}
+@media (max-width: 1023px) {
+  .class-about__info-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 560px) {
+  .class-about__info-text {
+    font-size: 16px;
+  }
+}
+.class-about__benefits {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-x: hidden;
+}
+@media (max-width: 1023px) {
+  .class-about__benefits {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 767px) {
+  .class-about__benefits {
+    gap: 20px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0 40px;
+    margin: 0 -40px;
+  }
+}
+.class-about__benefits-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .class-about__benefits-header {
+    gap: 10px;
+  }
+}
+.class-about__benefits-title {
+  text-align: left;
+  color: #211D1C;
+  font-size: 44px;
+  line-height: 1.2;
+}
+@media (max-width: 1239px) {
+  .class-about__benefits-title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1023px) {
+  .class-about__benefits-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .class-about__benefits-title {
+    font-size: 26px;
+  }
+}
+.class-about__benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+@media (max-width: 1239px) {
+  .class-about__benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .class-about__benefits-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding: 0 40px;
+  }
+  .class-about__benefits-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+.class-about__benefits-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .class-about__benefits-item {
+    min-width: 300px;
+    border: 1px solid #E5E2E1;
+    border-radius: 20px;
+    padding: 20px 10px;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+.class-about__benefits-icon {
+  color: #B16958;
+  width: 32px;
+  height: 32px;
+}
+.class-about__benefits-icon svg {
+  width: 32px;
+  height: 32px;
+}
+.class-about__benefits-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .class-about__benefits-item-content {
+    align-items: center;
+  }
+}
+.class-about__benefits-item-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  color: #211D1C;
+}
+@media (max-width: 1023px) {
+  .class-about__benefits-item-title {
+    font-size: 18px;
+  }
+}
+.class-about__benefits-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #858280;
+}
+.class-about__benefits-item-text p {
+  display: block;
+}
+@media (max-width: 767px) {
+  .class-about__benefits-item-text {
+    text-align: center;
+  }
+}
+.class-about__media {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: end;
+}
+@media (max-width: 1023px) {
+  .class-about__media {
+    grid-row: 1/2;
+  }
+}
+@media (max-width: 767px) {
+  .class-about__media {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center;
+  }
+}
+.class-about__video-preview {
+  aspect-ratio: 318/480;
+  max-width: 318px;
+  width: 100%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.class-about__video-btn {
+  margin-top: -70px;
+  align-self: center;
 }/*# sourceMappingURL=main.css.map */
