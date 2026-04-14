@@ -420,6 +420,14 @@
                 transform: scale(1.03);
                 filter: brightness(1.1);
             }
+
+            .btn-video-play {
+                color: $color-secondary;
+
+                &__icon {
+                    background-color: $color-secondary;
+                }
+            }
         }
     }
 

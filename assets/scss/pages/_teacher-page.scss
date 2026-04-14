@@ -93,17 +93,36 @@
             order: 0;
             margin: 0 auto;
         }
-    }
 
-    &__image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        img {
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform $transition-base,
+                filter $transition-base;
+        }
+
+        @include hover {
+            img {
+                transform: scale(1.03);
+                filter: brightness(1.03);
+            }
+
+            .btn-video-play {
+                color: $color-secondary;
+
+                &__icon {
+                    background-color: $color-secondary;
+                }
+            }
+        }
     }
 
     &__video-btn {
         margin-top: -50px;
         align-self: center;
+        z-index: 2;
     }
 
     &__main-content {

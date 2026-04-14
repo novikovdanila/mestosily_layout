@@ -6113,15 +6113,43 @@ body.body--grey {
     margin: 0 auto;
   }
 }
-.teacher__image {
+.teacher__preview img {
+  cursor: pointer;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+@media (hover: hover) {
+  .teacher__preview:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.03);
+  }
+  .teacher__preview:hover .btn-video-play {
+    color: #B16958;
+  }
+  .teacher__preview:hover .btn-video-play__icon {
+    background-color: #B16958;
+  }
+}
+.teacher__preview:focus-visible img {
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+.teacher__preview:focus-visible .btn-video-play {
+  color: #B16958;
+}
+.teacher__preview:focus-visible .btn-video-play__icon {
+  background-color: #B16958;
+}
+.teacher__preview:focus-visible {
+  outline: none;
 }
 .teacher__video-btn {
   margin-top: -50px;
   align-self: center;
+  z-index: 2;
 }
 .teacher__main-content {
   display: flex;
@@ -6778,6 +6806,12 @@ body.body--grey {
     transform: scale(1.03);
     filter: brightness(1.1);
   }
+  .class-about__video-preview:hover .btn-video-play {
+    color: #B16958;
+  }
+  .class-about__video-preview:hover .btn-video-play__icon {
+    background-color: #B16958;
+  }
 }
 .class-about__video-preview:focus-visible {
   cursor: pointer;
@@ -6785,6 +6819,12 @@ body.body--grey {
 .class-about__video-preview:focus-visible img {
   transform: scale(1.03);
   filter: brightness(1.1);
+}
+.class-about__video-preview:focus-visible .btn-video-play {
+  color: #B16958;
+}
+.class-about__video-preview:focus-visible .btn-video-play__icon {
+  background-color: #B16958;
 }
 .class-about__video-preview:focus-visible {
   outline: none;
