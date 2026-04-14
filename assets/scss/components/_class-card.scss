@@ -18,6 +18,9 @@
         cursor: pointer;
 
         img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
             transition:
                 transform 0.3s ease,
                 filter 0.3s ease;

@@ -9,6 +9,9 @@
     cursor: pointer;
 
     img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
         transition:
             transform $transition-base,
             filter $transition-base;

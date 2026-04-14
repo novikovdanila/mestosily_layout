@@ -2239,6 +2239,10 @@ body.body--grey {
   cursor: pointer;
 }
 .card-class__link img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 @media (hover: hover) {
@@ -2364,6 +2368,10 @@ body.body--grey {
   cursor: pointer;
 }
 .card-teacher img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 @media (hover: hover) {
