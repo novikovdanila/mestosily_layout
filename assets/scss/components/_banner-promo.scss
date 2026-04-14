@@ -2,16 +2,6 @@
 @use '../base/mixins' as *;
 
 .banner-promo {
-    margin-bottom: $margin-bottom-section;
-
-    @include tab-1024 {
-        margin-bottom: $margin-bottom-section-tab-1024;
-    }
-
-    @include tab-768 {
-        margin-bottom: $margin-bottom-section-tab-768;
-    }
-
 
     &__wrapper {
         position: relative;
