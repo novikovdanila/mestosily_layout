@@ -52,13 +52,31 @@
     &__spoiler {
         display: flex;
         flex-direction: column;
-        gap: 14px;
         padding: 20px;
         background-color: $color-white;
         border-radius: $radius-large;
+        transition: box-shadow $transition-base;
 
         @include mobile {
             padding: 14px;
+        }
+
+        &.is-active-faq {
+
+            .faq__spoiler-title,
+            .faq__spoiler-icon {
+                color: $color-secondary;
+            }
+
+            .faq__spoiler-icon {
+                background-color: rgba($color-secondary, 0.1);
+                transform: rotate(180deg);
+            }
+
+            .faq__spoiler-body {
+                grid-template-rows: 1fr;
+                padding-top: 14px;
+            }
         }
     }
 
@@ -96,7 +114,7 @@
     }
 
     &__spoiler-icon {
-        align-self: flex-start;
+        align-self: center;
         flex-shrink: 0;
         display: flex;
         align-items: center;
@@ -106,10 +124,13 @@
         background-color: $color-bg-light;
         border-radius: 50%;
         color: $color-dark;
-        transition: background-color $transition-base;
+        transition:
+            background-color $transition-base,
+            color $transition-base,
+            transform $transition-base;
 
         svg {
-            transition: color $transition-base;
+            transition: color inherit;
             width: 16px;
             height: 16px;
         }
@@ -121,13 +142,23 @@
     }
 
     &__spoiler-body {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.4;
-        color: $color-gray-dark;
-        text-align: left;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition:
+            grid-template-rows $transition-base,
+            padding-top $transition-base;
+        overflow: hidden;
+
+        &-inner {
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: $color-gray-dark;
+            text-align: left;
+        }
     }
 }

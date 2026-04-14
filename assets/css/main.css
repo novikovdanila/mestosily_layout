@@ -1762,15 +1762,27 @@ body.body--grey {
 .faq__spoiler {
   display: flex;
   flex-direction: column;
-  gap: 14px;
   padding: 20px;
   background-color: #FFFFFF;
   border-radius: 20px;
+  transition: box-shadow 0.2s ease;
 }
 @media (max-width: 560px) {
   .faq__spoiler {
     padding: 14px;
   }
+}
+.faq__spoiler.is-active-faq .faq__spoiler-title,
+.faq__spoiler.is-active-faq .faq__spoiler-icon {
+  color: #B16958;
+}
+.faq__spoiler.is-active-faq .faq__spoiler-icon {
+  background-color: rgba(177, 105, 88, 0.1);
+  transform: rotate(180deg);
+}
+.faq__spoiler.is-active-faq .faq__spoiler-body {
+  grid-template-rows: 1fr;
+  padding-top: 14px;
 }
 .faq__spoiler-btn {
   display: flex;
@@ -1800,7 +1812,7 @@ body.body--grey {
   }
 }
 .faq__spoiler-icon {
-  align-self: flex-start;
+  align-self: center;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1810,10 +1822,10 @@ body.body--grey {
   background-color: #F6F9FC;
   border-radius: 50%;
   color: #211D1C;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .faq__spoiler-icon svg {
-  transition: color 0.2s ease;
+  transition: color inherit;
   width: 16px;
   height: 16px;
 }
@@ -1824,6 +1836,13 @@ body.body--grey {
   }
 }
 .faq__spoiler-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease, padding-top 0.2s ease;
+  overflow: hidden;
+}
+.faq__spoiler-body-inner {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;

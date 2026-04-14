@@ -5,6 +5,7 @@ import { initLightbox } from './modules/glightbox-set.js';
 import { initStickyNav } from './modules/sticky-nav.js';
 import { initStickyBtn } from './modules/sticky-btn.js';
 import { initVideoModal } from './modules/modal-popup.js';
+import { initFaq } from './modules/faq.js';
 // import { initDomTransfer } from './modules/dom-transfer.js';
 
 
@@ -40,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация модального окна для видео
     initVideoModal();
+
+    // Инициализация FAQ аккордеона
+    initFaq();
 
     // Инициализация модуля динамического переноса элементов
     // initDomTransfer();
