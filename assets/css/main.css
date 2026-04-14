@@ -6411,6 +6411,7 @@ body.body--grey {
   .class-about__info {
     grid-column: 1/2;
     grid-row: 1/2;
+    gap: 10px;
   }
 }
 .class-about__info-title {

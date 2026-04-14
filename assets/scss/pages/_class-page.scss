@@ -188,6 +188,7 @@
         @include mobile-lg {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
+            gap: 10px;
         }
     }
 
