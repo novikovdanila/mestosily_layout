@@ -6375,6 +6375,9 @@ body.body--grey {
   }
 }
 
+.class-about {
+  overflow-x: hidden;
+}
 .class-about__grid {
   display: grid;
   grid-template-columns: 8fr 4fr;
@@ -6392,7 +6395,8 @@ body.body--grey {
 }
 @media (max-width: 767px) {
   .class-about__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
   }
 }
@@ -6441,7 +6445,6 @@ body.body--grey {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  overflow-x: hidden;
 }
 @media (max-width: 1023px) {
   .class-about__benefits {
@@ -6451,10 +6454,7 @@ body.body--grey {
 @media (max-width: 767px) {
   .class-about__benefits {
     gap: 20px;
-    grid-column: 1/2;
-    grid-row: 3/4;
-    padding: 0 40px;
-    margin: 0 -40px;
+    order: 1;
   }
 }
 .class-about__benefits-header {
@@ -6513,6 +6513,8 @@ body.body--grey {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     scroll-padding: 0 40px;
+    padding: 0 40px;
+    margin: 0 -40px;
   }
   .class-about__benefits-grid::-webkit-scrollbar {
     display: none;
