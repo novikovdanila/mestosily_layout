@@ -152,6 +152,10 @@
         @include mobile-lg {
             font-size: 13px;
         }
+
+        @include mobile {
+            max-width: 200px;
+        }
     }
 
 
@@ -379,14 +383,6 @@
 .pricing-banners {
     scroll-margin-top: 80px;
     background-color: $color-white;
-
-    @include tab-1024 {
-        padding: $margin-bottom-section-tab-1024 0;
-    }
-
-    @include tab-768 {
-        padding: $margin-bottom-section-tab-768 0;
-    }
 
     &__inner {
         display: grid;

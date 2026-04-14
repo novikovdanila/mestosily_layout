@@ -5744,6 +5744,11 @@ body.body--grey {
     font-size: 13px;
   }
 }
+@media (max-width: 560px) {
+  .prices-starter__banner-description {
+    max-width: 200px;
+  }
+}
 
 .pricing-groups {
   scroll-margin-top: 152px;
@@ -5984,16 +5989,6 @@ body.body--grey {
 .pricing-banners {
   scroll-margin-top: 80px;
   background-color: #FFFFFF;
-}
-@media (max-width: 1239px) {
-  .pricing-banners {
-    padding: 90px 0;
-  }
-}
-@media (max-width: 1023px) {
-  .pricing-banners {
-    padding: 60px 0;
-  }
 }
 .pricing-banners__inner {
   display: grid;
