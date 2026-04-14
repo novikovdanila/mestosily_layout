@@ -87,19 +87,6 @@
 
 .rules-details {
     counter-reset: rules-counter; // Сбрасываем счетчик
-    // padding: $margin-bottom-section 0;
-    margin-bottom: $margin-bottom-section;
-
-
-    @include tab-1024 {
-        // padding: $margin-bottom-section-tab-1024 0;
-        margin-bottom: $margin-bottom-section-tab-1024;
-    }
-
-    @include tab-768 {
-        // padding: $margin-bottom-section-tab-768 0;
-        margin-bottom: $margin-bottom-section-tab-768;
-    }
 
     &__inner {
         display: flex;
