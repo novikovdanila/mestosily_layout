@@ -1,0 +1,133 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+.faq {
+    padding: $margin-bottom-section 0;
+    background-color: $color-bg-light;
+
+    @include tab-1024 {
+        padding: $margin-bottom-section-tab-1024 0;
+    }
+
+    @include tab-768 {
+        padding: $margin-bottom-section-tab-768 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        column-gap: 24px;
+
+        @include tab-768 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        @include mobile {
+            gap: 20px;
+        }
+
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include mobile {
+            gap: 10px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__item {}
+
+    &__spoiler {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px;
+        background-color: $color-white;
+        border-radius: $radius-large;
+
+        @include mobile {
+            padding: 14px;
+        }
+    }
+
+    &__spoiler-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+
+            .faq__spoiler-title,
+            .faq__spoiler-icon {
+                color: $color-secondary;
+            }
+
+            .faq__spoiler-icon {
+                background-color: rgba($color-secondary, 0.1);
+            }
+        }
+    }
+
+    &__spoiler-title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $color-dark;
+        text-align: left;
+        transition: color $transition-base;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__spoiler-icon {
+        align-self: flex-start;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        background-color: $color-bg-light;
+        border-radius: 50%;
+        color: $color-dark;
+        transition: background-color $transition-base;
+
+        svg {
+            transition: color $transition-base;
+            width: 16px;
+            height: 16px;
+        }
+
+        @include mobile {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &__spoiler-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-gray-dark;
+        text-align: left;
+    }
+}
