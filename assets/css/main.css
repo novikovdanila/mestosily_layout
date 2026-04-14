@@ -163,6 +163,21 @@ h6 {
   line-height: 1.2;
 }
 
+::-moz-selection {
+  background-color: #DEA293;
+  color: #FFFFFF;
+}
+
+::selection {
+  background-color: #DEA293;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #DEA293;
+  color: #FFFFFF;
+}
+
 html {
   scroll-behavior: smooth;
 }
