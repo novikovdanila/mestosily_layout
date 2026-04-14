@@ -311,6 +311,18 @@ body.body--grey {
   gap: 10px;
 }
 
+.scroll-anchor {
+  position: absolute;
+  top: 100px;
+  /* Твоя точка срабатывания */
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  /* Не мешает кликам */
+  visibility: hidden;
+}
+
 .subtitle {
   font-size: 20px;
 }
@@ -569,6 +581,7 @@ body.body--grey {
   }
 }
 .header__logo .logo-img {
+  transition: width 0.2s ease;
   width: 60px;
   height: auto;
   min-width: 50px;
@@ -1101,6 +1114,16 @@ body.body--grey {
 .header__tel-link:focus-visible {
   color: #B16958;
   outline: none;
+}
+.header {
+  transition: height 0.2s ease, box-shadow 0.2s ease;
+}
+.header--compact {
+  height: 70px;
+  box-shadow: 0 4px 14px 0 rgba(33, 29, 28, 0.04);
+}
+.header--compact .header__logo .logo-img {
+  width: 50px;
 }
 
 @keyframes burgerTopOpen {
@@ -6661,7 +6684,7 @@ body.body--grey {
     font-size: 30px;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 767px) {
   .class-about__benefits-title {
     font-size: 26px;
     text-align: center;

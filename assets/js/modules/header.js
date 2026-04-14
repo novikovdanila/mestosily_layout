@@ -60,4 +60,25 @@ export function initHeader() {
             langSwitcher.classList.remove('is-active');
         }
     });
+
+
+    // Header Compact
+    const header = document.querySelector('.header');
+    const anchor = document.querySelector('#scroll-anchor');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Если якорь НЕ виден (ушел выше экрана), добавляем класс
+            if (!entry.isIntersecting) {
+                header.classList.add('header--compact');
+            } else {
+                // Если якорь снова в зоне видимости, убираем класс
+                header.classList.remove('header--compact');
+            }
+        });
+    }, {
+        threshold: 0 // Срабатывает сразу при пересечении границы в 1 пиксель
+    });
+
+    observer.observe(anchor);
 }

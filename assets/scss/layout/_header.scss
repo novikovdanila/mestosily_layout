@@ -38,6 +38,7 @@
         }
 
         .logo-img {
+            transition: width $transition-base;
             width: 60px;
             height: auto;
             min-width: 50px;
@@ -583,6 +584,20 @@
             @include hover {
                 color: $color-secondary;
             }
+        }
+    }
+
+
+    // Header Compact
+    transition: height $transition-base,
+    box-shadow $transition-base;
+
+    &--compact {
+        height: 70px;
+        box-shadow: 0 4px 14px 0 rgba($color-dark, 0.04);
+
+        .header__logo .logo-img {
+            width: 50px;
         }
     }
 

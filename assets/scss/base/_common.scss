@@ -145,6 +145,18 @@ body.body--grey {
     gap: 10px;
 }
 
+.scroll-anchor {
+    position: absolute;
+    top: 100px;
+    /* Твоя точка срабатывания */
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    /* Не мешает кликам */
+    visibility: hidden;
+}
+
 .subtitle {
     font-size: 20px;
 

@@ -263,7 +263,7 @@
             font-size: 30px;
         }
 
-        @include mobile {
+        @include mobile-lg {
             font-size: 26px;
             text-align: center;
         }
