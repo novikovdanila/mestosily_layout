@@ -401,10 +401,27 @@
         position: relative;
         border-radius: $radius-large;
         overflow: hidden;
+
+        img {
+            transition:
+                transform $transition-base,
+                filter $transition-base;
+
+        }
+
+        @include hover {
+            cursor: pointer;
+
+            img {
+                transform: scale(1.03);
+                filter: brightness(1.1);
+            }
+        }
     }
 
     &__video-btn {
         margin-top: -70px;
         align-self: center;
+        z-index: 2;
     }
 }

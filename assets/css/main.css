@@ -2068,10 +2068,15 @@ body.body--grey {
   text-decoration: none;
   color: inherit;
   height: 100%;
+  cursor: pointer;
+}
+.card-class__link img {
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 @media (hover: hover) {
   .card-class__link:hover .card-class__img img {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    filter: brightness(1.05);
   }
   .card-class__link:hover .card-class__title {
     color: #B16958;
@@ -2081,7 +2086,8 @@ body.body--grey {
   }
 }
 .card-class__link:focus-visible .card-class__img img {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  filter: brightness(1.05);
 }
 .card-class__link:focus-visible .card-class__title {
   color: #B16958;
@@ -2109,13 +2115,6 @@ body.body--grey {
   .card-class__img {
     border-radius: 10px;
   }
-}
-.card-class__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.2s ease;
 }
 .card-class__content {
   padding: 0 4px;
@@ -2194,13 +2193,18 @@ body.body--grey {
   border-radius: 20px;
   height: 100%;
   box-shadow: inset 0 0 0 1px rgba(229, 226, 225, 0.7);
+  cursor: pointer;
+}
+.card-teacher img {
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 @media (hover: hover) {
   .card-teacher:hover {
     box-shadow: inset 0 0 0 1px #e5e2e1;
   }
-  .card-teacher:hover .card-teacher__img img {
-    transform: scale(1.05);
+  .card-teacher:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.05);
   }
   .card-teacher:hover .card-teacher__title,
   .card-teacher:hover .card-teacher__text {
@@ -2210,8 +2214,9 @@ body.body--grey {
 .card-teacher:focus-visible {
   box-shadow: inset 0 0 0 1px #e5e2e1;
 }
-.card-teacher:focus-visible .card-teacher__img img {
-  transform: scale(1.05);
+.card-teacher:focus-visible img {
+  transform: scale(1.03);
+  filter: brightness(1.05);
 }
 .card-teacher:focus-visible .card-teacher__title,
 .card-teacher:focus-visible .card-teacher__text {
@@ -2239,13 +2244,6 @@ body.body--grey {
     border-radius: 10px;
     height: auto;
   }
-}
-.card-teacher__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.2s ease;
 }
 .card-teacher__badge-wrapper {
   position: absolute;
@@ -2391,6 +2389,7 @@ body.body--grey {
   border-radius: 20px;
   background-color: #FFFFFF;
   overflow: hidden;
+  transition: filter 0.2s ease;
 }
 .slider-reviews__item::before {
   content: "";
@@ -2403,6 +2402,45 @@ body.body--grey {
   z-index: 1;
   pointer-events: none;
   background-image: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.slider-reviews__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 2px rgba(229, 226, 225, 0.5);
+  transition: box-shadow 0.2s ease;
+}
+.slider-reviews__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+@media (hover: hover) {
+  .slider-reviews__item:hover {
+    filter: brightness(0.98);
+  }
+  .slider-reviews__item:hover::after {
+    box-shadow: inset 0 0 0 2px rgba(222, 162, 147, 0.25);
+  }
+}
+.slider-reviews__item:focus-visible {
+  filter: brightness(0.98);
+}
+.slider-reviews__item:focus-visible::after {
+  box-shadow: inset 0 0 0 2px rgba(222, 162, 147, 0.25);
+}
+.slider-reviews__item:focus-visible {
+  outline: none;
 }
 @media (max-width: 560px) {
   .slider-reviews__item {
@@ -2422,12 +2460,6 @@ body.body--grey {
   display: block;
   width: 100%;
   height: 100%;
-}
-.slider-reviews__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .banner-firstlessons {
@@ -6616,7 +6648,30 @@ body.body--grey {
   border-radius: 20px;
   overflow: hidden;
 }
+.class-about__video-preview img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+@media (hover: hover) {
+  .class-about__video-preview:hover {
+    cursor: pointer;
+  }
+  .class-about__video-preview:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+  }
+}
+.class-about__video-preview:focus-visible {
+  cursor: pointer;
+}
+.class-about__video-preview:focus-visible img {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+.class-about__video-preview:focus-visible {
+  outline: none;
+}
 .class-about__video-btn {
   margin-top: -70px;
   align-self: center;
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */

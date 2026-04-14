@@ -15,10 +15,18 @@
         text-decoration: none;
         color: inherit;
         height: 100%;
+        cursor: pointer;
+
+        img {
+            transition:
+                transform 0.3s ease,
+                filter 0.3s ease;
+        }
 
         @include hover {
             .card-class__img img {
-                transform: scale(1.05);
+                transform: scale(1.03);
+                filter: brightness(1.05);
             }
 
             .card-class__title {
@@ -45,13 +53,6 @@
 
         @include mobile {
             border-radius: $radius-medium;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform $transition-base;
         }
 
     }
