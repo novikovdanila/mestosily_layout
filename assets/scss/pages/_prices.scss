@@ -2,6 +2,13 @@
 @use '../base/mixins' as *;
 
 
+.pricing-groups__title,
+.pricing-private__title,
+.pricing-special__title,
+.pricing-unlimited__title {
+    text-align: center;
+}
+
 .pricing-header__subtitle {
     text-align: center;
 }
@@ -158,8 +165,6 @@
         }
     }
 
-
-
 }
 
 .pricing-groups {
@@ -216,24 +221,6 @@
 
         @include mobile {
             padding: 20px 20px 0 20px;
-        }
-
-        &-title {
-            font-size: 30px;
-            font-weight: 500;
-            line-height: 1.2;
-            text-align: left;
-            margin: 20px 0;
-
-            @include tab-1024 {
-                font-size: 26px;
-            }
-
-            @include tab-768 {
-                font-size: 20px;
-                text-align: center;
-                margin: 0;
-            }
         }
 
         &-img {

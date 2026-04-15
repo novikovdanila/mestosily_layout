@@ -1134,13 +1134,8 @@ body.body--grey {
   transition: height 0.2s ease, box-shadow 0.2s ease;
 }
 .header--compact {
-  height: 70px;
   box-shadow: 0 4px 14px 0 rgba(33, 29, 28, 0.04);
 }
-.header--compact .header__logo .logo-img {
-  width: 50px;
-}
-
 @keyframes burgerTopOpen {
   0% {
     transform: translateY(0) rotate(0);
@@ -5643,6 +5638,13 @@ body.body--grey {
   text-align: center;
 }
 
+.pricing-groups__title,
+.pricing-private__title,
+.pricing-special__title,
+.pricing-unlimited__title {
+  text-align: center;
+}
+
 .pricing-header__subtitle {
   text-align: center;
 }
@@ -5867,25 +5869,6 @@ body.body--grey {
 @media (max-width: 560px) {
   .pricing-groups__banner {
     padding: 20px 20px 0 20px;
-  }
-}
-.pricing-groups__banner-title {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1.2;
-  text-align: left;
-  margin: 20px 0;
-}
-@media (max-width: 1239px) {
-  .pricing-groups__banner-title {
-    font-size: 26px;
-  }
-}
-@media (max-width: 1023px) {
-  .pricing-groups__banner-title {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
   }
 }
 .pricing-groups__banner-img {
